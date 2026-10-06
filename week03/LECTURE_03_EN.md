@@ -169,13 +169,12 @@ A proposal may change. It may not change silently. **Settle §1 (the title) and 
 
 ## The screens of your main flow — `week03/screens_03.md`
 
-The path a user takes, from logging in to the one thing your app exists for.
+The path from logging in to the one thing your app exists for. The rows below are from StudyRoom: **only the login row is the same for everyone**; the other rows are the screens of your own app.
 
 | # | Screen | What the user does there | Requirements |
 |---|---|---|---|
 | 1 | Log in | enters the e-mail address and the 4-digit code | REQ-001, REQ-006 |
 | 2 | Today's rooms | sees which rooms are free, hour by hour | REQ-002, REQ-003 |
-| 3 | Book a slot | picks a free slot and confirms it | REQ-002 |
 
 **At least five screens**, the login included. If you cannot name five screens and the requirements behind them, the project is not ready yet: find that out today. In Week 4, each row becomes one screen of your prototype.
 

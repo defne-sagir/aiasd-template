@@ -164,13 +164,12 @@ Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü �
 
 ## Ana akışınızın ekranları — `week03/screens_03.md`
 
-Kullanıcının giriş yapmaktan uygulamanızın var olma nedeni olan tek işe kadar izlediği yol.
+Girişten uygulamanızın var olma nedeni olan tek işe kadar izlenen yol. Aşağıdaki satırlar StudyRoom'dan: **yalnızca giriş satırı herkes için aynıdır**; diğer satırlar kendi uygulamanızın ekranlarıdır.
 
 | # | Ekran | Kullanıcı orada ne yapar | Gereksinimler |
 |---|---|---|---|
 | 1 | Giriş | e-posta adresini ve 4 haneli kodu girer | REQ-001, REQ-006 |
 | 2 | Bugünün odaları | hangi odaların saat saat boş olduğunu görür | REQ-002, REQ-003 |
-| 3 | Dilim ayırma | boş bir dilim seçer ve onaylar | REQ-002 |
 
 **Giriş dahil en az beş ekran.** Beş ekranı ve arkalarındaki gereksinimleri söyleyemiyorsanız proje henüz hazır değildir; bunu bugün öğrenin. 4. haftada her satır prototipinizin bir ekranı olur.
 

@@ -93,7 +93,7 @@ Delete this comment when you are done.                           Bitince bu yoru
      bağlayın — ya da aşağıya metin kutularıyla çizin. Araç taslağı değil,
      yapay zekâ değil: kendi eliniz, beş dakika. Telefon çerçevesi 390 px (REQ-006). -->
 
-![main screen](week03/screen.jpg)
+![main screen](screen.jpg)
 
 <!-- or / ya da:
 +----------------------------+
