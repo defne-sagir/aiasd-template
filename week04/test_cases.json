@@ -1,0 +1,59 @@
+{
+  "_how_to_fill_this_in": [
+    "One object per test case. A test case is one acceptance criterion from week02/requirements.json, turned into steps that anyone can follow and a result that anyone can check.",
+    "id: TC-NNN-NN. NNN is the number of the requirement it tests, and NN counts the test cases of that requirement: TC-004-01 and TC-004-02 both test REQ-004. As with the REQ ids, a test case id never changes its meaning. A test case you drop keeps its id and gets \"dropped\": true.",
+    "req: the REQ id it tests, exactly as in week02/requirements.json. One requirement per test case.",
+    "title: what is tested, in a few words, such as 'A wrong code is refused'.",
+    "precondition: what must be true before the first step, such as 'A code has been sent to deniz@example.com'. Write 'none' if nothing is needed.",
+    "steps: what the tester does, one action per line, with the real values to type: 'Enter deniz@example.com and tap Send code'. Someone who has never seen your project must be able to follow them.",
+    "expected: what the tester must see at the end, in one full sentence: a screen, a message, a number. Not 'it works', but 'The home screen opens and shows the three free rooms'.",
+    "Every must requirement has at least one test case. For at least three requirements, write a second test case for what happens when something goes wrong: a wrong code, an empty field, a slot that is already taken.",
+    "The three test cases below belong to the two requirements that everyone shares, REQ-001 and REQ-006. Keep them and adjust the wording to your screens. If your phone-screen requirement has another id, change the id and the req of TC-006-01 to match it (REQ-007 gives TC-007-01). Replace the fourth one with your own, and add as many as you need.",
+    "You may delete this block once you have read it; the checker ignores it."
+  ],
+  "project": "the title from PROPOSAL.md §1",
+  "test_cases": [
+    {
+      "id": "TC-001-01",
+      "req": "REQ-001",
+      "title": "Log in with the code from the e-mail",
+      "precondition": "none",
+      "steps": [
+        "Open the app",
+        "Enter deniz@example.com and tap Send code",
+        "Enter the 4-digit code from the e-mail and tap Log in"
+      ],
+      "expected": "The home screen opens. No screen asks for a password."
+    },
+    {
+      "id": "TC-001-02",
+      "req": "REQ-001",
+      "title": "A wrong code is refused",
+      "precondition": "A code has been sent to deniz@example.com",
+      "steps": [
+        "On the code screen, enter 0000 (a code that was not sent) and tap Log in"
+      ],
+      "expected": "The message 'Wrong code' appears; the user stays on the code screen and can try again."
+    },
+    {
+      "id": "TC-006-01",
+      "req": "REQ-006",
+      "title": "Every screen fits a phone 390 px wide",
+      "precondition": "The browser's phone view is set to 390 px wide, or the app is open on a phone",
+      "steps": [
+        "Open every screen of the app, one after the other"
+      ],
+      "expected": "No screen has a horizontal scroll bar, no text is cut off, and every button can be reached."
+    },
+    {
+      "id": "TC-002-01",
+      "req": "REQ-002",
+      "title": "…",
+      "precondition": "…",
+      "steps": [
+        "…"
+      ],
+      "expected": "…"
+    }
+  ]
+}

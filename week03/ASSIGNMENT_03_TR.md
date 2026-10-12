@@ -8,7 +8,7 @@
 >
 > **Bu derste projeniz kesinleşir: başlığı ve içeriği.** Dönemin geri kalanında onun
 > üzerinde çalışacaksınız; bu karara bugün, grubunuzla, gereken zamanı ayırın. Derse
-> sorgulanmaya hazır bir projeyle gelin, hâlâ aradığınız bir projeyle değil.
+> sorgulanmaya hazır bir projeyle gelin, hala aradığınız bir projeyle değil.
 
 Geçen hafta ne yapacağınıza karar verdiniz. Bu hafta üç sınıf arkadaşınız bu karar
 hakkında ne düşündüğünü söyler, siz neyi değiştireceğinize karar verirsiniz ve teklifin
@@ -50,9 +50,9 @@ Altı slayt, her birinin yönergesi dosyanın içinde:
 
 7. slayt sabittir: değerlendirenlerinizin cevaplayacağı üç soru.
 
-**Kendiniz yazın — bu dosyada yapay zekâ yok.** Ne metin, ne yapı. Bu slaytlardaki her
+**Kendiniz yazın — bu dosyada yapay zeka yok.** Ne metin, ne yapı. Bu slaytlardaki her
 şey sizin hayatınız ve sizin çevreniz hakkında; bir asistan bunu bilemez ve ben grupta ya
-da derste herhangi bir slaytı sorabilirim. Haftanın geri kalanı farklı: orada yapay zekâ
+da derste herhangi bir slaytı sorabilirim. Haftanın geri kalanı farklı: orada yapay zeka
 her zamanki gibi bir araçtır ve `ai_log_03.md` onu kullanmanızı ister.
 
 2. ve 3. slaytların arkasında iki kural var ve dönem boyunca geçerli: **proje sizin bir
@@ -69,7 +69,7 @@ değişemez. Bu, dönemin en önemli kararıdır; ona zaman ayırın: projeyi in
 sınayın, sonra grubunuzun cevapları önünüzdeyken §1'i (başlık) ve §3–§4'ü (problem ve
 ürün) kesinleştirmek için turdan sonra en az yarım saat ayırın. Grubunuza projenin gerçek
 olup olmadığını ve bitirilip bitirilemeyeceğini sorun.
-Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak
+Bugünden sonra yalnızca teknik olarak imkansız çıkan bir proje değişebilir; o da ancak
 benim bir issue'da yazılı onayımla.
 
 ---
@@ -84,16 +84,16 @@ Dört kişilik grubunuzu dersin başında kendiniz kurarsınız. Sınıf dörde 
 öğrenci numaraları. Her üye tam olarak aynı listeyi yazar. Dersten sonra listeleri
 karşılaştırırım; aynı değilse grubun her üyesi ders sonu notundan bir puan kaybeder. Herkes kendi bilgisayarından beş dakika sunar;
 diğer üçü dinler, sonra 7. slayttaki üç sorunun her biri için birer cümle **yazar** —
-kâğıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 45 dakika. Ne
+kağıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 45 dakika. Ne
 düşünüyorsanız söyleyin; nazik bir "iyi olmuş" kimseye yardım etmez, kimseye puan
 getirmez.
 
-**Bu grup, dönemin geri kalanında sizin grubunuzdur.** 4. Hafta'dan itibaren dördünüz
-**her hafta, ders ile Cumartesi arasında, bir saatlik bir çevrimiçi toplantı** yaparsınız
+**Bu grup, dönemin geri kalanında sizin grubunuzdur.** 4. Hafta'dan itibaren grubunuz
+**her hafta, ders ile Cumartesi arasında, bir saatlik bir çevrimiçi toplantı** yapar
 — Teams, Meet, Discord, ne isterseniz — ve her biriniz o hafta projesinde neyin değiştiğini
-anlatır; diğer üçü ne düşündüğünü söyler. O andan sonra `weekNN/contributors_NN.json`
-içindeki üç kayıt bu toplantıdan gelir: kim ne dedi, alıntıyla, ve siz ne yaptınız.
-Toplantıda olmayan biri için kimse o üç kaydı yazamaz; toplantıyı kaçırmak kendiliğinden
+anlatır; diğerleri ne düşündüğünü söyler. O andan sonra `weekNN/group_NN.json`
+içindeki kayıtlar bu toplantıdan gelir: kim ne dedi, alıntıyla, ve siz ne yaptınız.
+Toplantıda olmayan biri için kimse o kaydı yazamaz; toplantıyı kaçırmak kendiliğinden
 görünür. İlkini bu hafta yapabilirsiniz.
 
 ### 2. `week03/contributors_03.json` — üç değerlendiren
@@ -158,7 +158,7 @@ zayıf/güçlü örneği var; StudyRoom örnekleri devam ediyor.
 
 - **§8 Pazar ve hedef kullanıcılar** — kim, kaç kişi, nereden biliyorsunuz. 3. slayttaki
   beş test kullanıcınız bu bölümün ilk satırı.
-- **§9 Rakipler** — sorunu bugün çözen üç şey; kâğıt liste de sayılır.
+- **§9 Rakipler** — sorunu bugün çözen üç şey; kağıt liste de sayılır.
 - **§10 Karşılaştırma ve üstünlüğünüz** — küçük bir tablo, kullanıcının ölçütleri, tek cümle.
 - **§11 Ticari potansiyel** — kendini nasıl finanse eder; "ticari niyet yok, değeri X"
   gerekçelendirirseniz dürüst bir cevaptır.
@@ -168,7 +168,7 @@ zayıf/güçlü örneği var; StudyRoom örnekleri devam ediyor.
   Seçiminiz kesinse geliştirici hesabınızı bu hafta açabilirsiniz (S1, 4. haftada
   notlanır), çünkü kimlik kontrolü bir günden bir haftaya kadar sürer.
 
-### 7. Yapay zekâyı düşman gözüyle okutun — `week03/ai_log_03.md`
+### 7. Yapay zekayı düşman gözüyle okutun — `week03/ai_log_03.md`
 
 Bu hafta asistan, hayır demek isteyen yatırımcıyı oynar. Bölüm B'nizi verin ve en güçlü
 üç itirazı isteyin. Sonra **birini teklifte cevaplayın** ve **birinin yanlış olduğunu
@@ -207,7 +207,7 @@ her şey aşağıda.
 - [ ] `PROPOSAL.md` §8–§12 dolu; §12 mağazayı, ücretini ve inceleme süresini adlandırıyor
 - [ ] `week03/ai_log_03.md` — üç itiraz, biri teklifte cevaplanmış, birinin yanlışlığı gösterilmiş, yazışma yapıştırılmış
 - [ ] `requirements.json` güncel — bundan sonra bir id'nin anlamı değişmez
-- [ ] GitHub'da kontroller yeşil; 1. ve 2. hafta hâlâ geçiyor
+- [ ] GitHub'da kontroller yeşil; 1. ve 2. hafta hala geçiyor
 
 ---
 

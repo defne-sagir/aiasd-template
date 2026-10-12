@@ -11,7 +11,7 @@ Open it in VS Code with the "Marp for VS Code" extension        VS Code'da "Marp
 (preview button top right) and present from your own laptop.    önizleme düğmesi) ve kendi bilgisayarınızdan sunun.
 Export to PDF or PPTX from the same button if you prefer.        İsterseniz aynı düğmeden PDF ya da PPTX'e aktarın.
 
-WRITE IT YOURSELF. No AI for this file — not the text, not       KENDİNİZ YAZIN. Bu dosyada yapay zekâ yok — ne metin, ne
+WRITE IT YOURSELF. No AI for this file — not the text, not       KENDİNİZ YAZIN. Bu dosyada yapay zeka yok — ne metin, ne
 the structure. Everything here is about YOUR life and YOUR       yapı. Buradaki her şey SİZİN hayatınız ve SİZİN
 people; an assistant cannot know it. In the group, and in        çevreniz; bir asistan bunu bilemez. Grupta ve derste
 class, I will ask about any slide.                               herhangi bir slayt hakkında soru sorabilirim.
@@ -53,7 +53,7 @@ Delete this comment when you are done.                           Bitince bu yoru
      Name and how you know them is enough. These are the users of your
      User Acceptance Test in Week 9; you will come back to this list.
      Erişebildiğiniz gerçek kişiler — sınıf arkadaşı, aile, kulüp, kullandığınız
-     bir dükkân. Ad ve nereden tanıdığınız yeter. 9. haftadaki kullanıcı kabul
+     bir dükkan. Ad ve nereden tanıdığınız yeter. 9. haftadaki kullanıcı kabul
      testinin kullanıcıları bunlar; bu listeye geri döneceksiniz. -->
 
 | # | Name | How you know them | Why they have the same problem |
@@ -89,9 +89,9 @@ Delete this comment when you are done.                           Bitince bu yoru
 <!-- Draw it. On paper, photograph it, put the image in week03/ and link it
      here — or draw it with text boxes below. Not a tool mock-up, not AI: your
      hand, five minutes. The phone frame is 390 px wide (REQ-006).
-     Çizin. Kâğıda çizip fotoğraflayın, görseli week03/ içine koyup buraya
+     Çizin. Kağıda çizip fotoğraflayın, görseli week03/ içine koyup buraya
      bağlayın — ya da aşağıya metin kutularıyla çizin. Araç taslağı değil,
-     yapay zekâ değil: kendi eliniz, beş dakika. Telefon çerçevesi 390 px (REQ-006). -->
+     yapay zeka değil: kendi eliniz, beş dakika. Telefon çerçevesi 390 px (REQ-006). -->
 
 ![main screen](screen.jpg)
 

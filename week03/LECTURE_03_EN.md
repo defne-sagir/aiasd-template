@@ -191,13 +191,12 @@ The path from logging in to the one thing your app exists for. The rows below ar
 
 ## This group stays — every week, one hour online
 
-From **Week 4**: the four of you meet **online, one hour, between the lecture and
+From **Week 4**: your group meets **online, one hour, between the lecture and
 Saturday**. Teams, Meet, Discord — your choice.
 
-Each of you: what changed in your project this week. The other three: what they think.
+Each of you: what changed in your project this week. The others: what they think.
 
-Your **three contributors every week** are these three people — their sentences, quoted,
-and what you did about them, in `weekNN/contributors_NN.json`.
+**Every week**, `weekNN/group_NN.json` has an entry for each of them: their sentences, quoted, and what you did about them.
 
 Nobody can write that for someone who was not there. First meeting: this week, if you like.
 

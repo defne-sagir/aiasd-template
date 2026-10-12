@@ -3,7 +3,7 @@
 *Atlas Üniversitesi · 2026–27 Güz · Prof. Dr. Vedat Coşkun*
 *Bu sayfadan sunulur. Bölüm bölüm kaydırın; her `---` bir slayttır.*
 
-<!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 s:
+<!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 saat:
 10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:45'e kadar çalışma · 11:45'in hemen ardından dondurma. -->
 
 ---
@@ -59,16 +59,15 @@ Ayrıntıları değişmeye devam edebilir: özellikler, gereksinimler, kapsam. H
 
 **Bu, dönemin en önemli kararıdır. Ona zaman ayırın.** Projeyi inceleme turunda sınayın; sonra grubunuzun cevapları önünüzdeyken §1'i (başlık) ve §3–§4'ü (problem ve ürün) kesinleştirmek için en az yarım saat ayırın.
 
-Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak benim bir issue'da yazılı onayımla.
+Bugünden sonra yalnızca teknik olarak imkansız çıkan bir proje değişebilir; o da ancak benim bir issue'da yazılı onayımla.
 
 ---
 
 ## Pitch nedir
 
-Pitch, bir fikri karar verecek birine kısa, sıralı ve somut biçimde anlatıp bir şey
-istemektir: para, zaman, bir evet.
+Pitch, bir fikri, karar verecek birine kısa, sıralı ve somut biçimde anlatıp bir şey istemektir: para, zaman, bir evet.
 
-- **Kısa**, çünkü dikkat kıt kaynaktır.
+- **Kısa**, çünkü dikkat kıt bir kaynaktır.
 - **Sıralı**: sorun → çözüm → kim → neden siz → ne istiyorsunuz.
 - **Somut**: sayılar, isimler, bir örnek. Sıfat kanıt değildir.
 
@@ -87,8 +86,7 @@ bir video**, kısa bir form. Yüzlerce başvuru bu üç şeyle elenir. On slayt:
 neden şimdi · sayılarla pazar · rakipler ve farkınız · iş modeli · yol haritası ve riskler ·
 ekip · istenen · sonraki adım.
 
-Bugünkü altı slaydınız bu listenin ilk yarısı. Cumartesi teslim edilecek Bölüm B ikinci
-yarısı. Aralık'taki savunma küçük bir jüri.
+Bugünkü altı slaydınız bu listenin ilk yarısı; cumartesi teslim edeceğiniz Bölüm B ikinci yarısı. Aralıktaki savunma ise küçük bir jüri önünde.
 
 ---
 
@@ -101,9 +99,9 @@ yarısı. Aralık'taki savunma küçük bir jüri.
 5. Ana ekran, **elle çizilmiş**
 6. Emin olmadığınız tek şey
 
-7. slayt sabit: değerlendirenlerinizin cevaplayacağı üç soru.
+Yedinci slayt sabittir: değerlendirenlerinizin cevaplayacağı üç soru.
 
-**Siz yazdınız, yapay zekâ yok.** İçindeki her şey sizin hayatınız ve çevreniz. Herhangi
+**Siz yazdınız, yapay zeka yok.** İçindeki her şey sizin hayatınız ve çevreniz. Herhangi
 bir slaytı sorabilirim.
 
 ---
@@ -124,13 +122,13 @@ bir slaytı sorabilirim.
 
 ## İnceleme turu — dörtlü gruplar
 
-**Dört kişilik grubunuzu şimdi kendiniz kurun.** Grup dönem boyunca sizinle kalacak; haftada bir çevrim içi buluşabileceğiniz kişileri seçin. Sınıf dörde bölünmüyor ve arta mı kaldınız? Bir gruba katılın, o grup beş kişi olur. Üç kişilik grup yok.
+**Dört kişilik grubunuzu şimdi kendiniz kurun.** Grup dönem boyunca sizinle kalacak; haftada bir çevrim içi buluşabileceğiniz kişileri seçin. Sınıf dörde bölünmediği için açıkta mı kaldınız? Bir gruba katılın; o grup beş kişi olur. Üç kişilik grup yok.
 
 **Grubunuzu `week03/group_03.json` dosyasına yazın:** kendi numaranız dahil bütün üyelerin numaraları. Her üye aynı listeyi yazar. Listeler farklıysa grubun her üyesi bir puan kaybeder.
 
-Herkes: kendi bilgisayarından **5 dakika** sunum. Diğer üçü dinler, sonra üç sorunun her biri için birer cümle **yazar** ve verir — kâğıt ya da metin dosyası. Sonra sıradaki. Dört tur, yaklaşık **45 dakika**.
+Herkes kendi bilgisayarından **5 dakika** sunar. Diğer üçü dinler; sonra üç sorunun her biri için birer cümle **yazar** ve sunana verir — kağıtta ya da bir metin dosyasında. Sonra sıradaki. Dört tur, yaklaşık **45 dakika**.
 
-Değerlendirenler: ne düşünüyorsanız söyleyin. "İyi olmuş" kimseye yardım etmez, kimseye puan getirmez.
+Değerlendirenler: ne düşünüyorsanız onu söyleyin. "İyi olmuş" kimseye yardım etmez, kimseye puan getirmez.
 
 <!-- Grupları kurmaları için üç dakika verin; artanları gruplara yönlendirin. Dolaşın. 12 dakikada bir uyarın. -->
 
@@ -138,26 +136,24 @@ Değerlendirenler: ne düşünüyorsanız söyleyin. "İyi olmuş" kimseye yard�
 
 ## Üç soru — 7. slayt
 
-1. **Gerçek mi?** Bu sorunun kendisinde ve 3. slayttaki beş kişide yaşandığına sizi ikna
-   etti mi?
+1. **Gerçek mi?** Bu sorunu kendisinin ve 3. slayttaki beş kişinin gerçekten yaşadığına sizi ikna etti mi?
 2. **Burada kullanılabilir mi?** O beş kişi 9. haftada bunu gerçekten kullanabilir mi —
    onları ne durdurur?
 3. **Fazla mı, az mı?** Hangi parça 11. haftaya yetişmez — ya da ürün tek ekrana mı inmiş?
 
-Her birine bir cümle. Sunan kişi cümlelerinizi reposuna geçirir — adınız yanlarına yazılır
-ve onlar için katkı bonusu kazanırsınız.
+Her birine bir cümle. Sunan kişi cümlelerinizi reposuna geçirir; yanlarına adınız yazılır ve bunlar size katkı bonusu kazandırır.
 
 ---
 
 ## Turdan sonra — dersin sonuna (11:45) kadar
 
-**`week03/contributors_03.json`** — üç değerlendireniniz, rol `reviewer`, öğrenci numaraları ve her biri için **yazdığı en yararlı cümle, alıntı olarak**. Sonra `accepted: true/false` ve `why`. Gerekçeyle reddetmek olur; arkasında hiçbir şey olmayan "dedi, değiştirdim" olmaz.
+**`week03/contributors_03.json`** — üç değerlendireniniz: `reviewer` rolü, öğrenci numaraları ve her birinin **yazdığı en yararlı cümle, alıntı olarak**. Sonra `accepted: true/false` ve `why`. Gerekçeyle reddetmek olur; arkasında hiçbir şey olmayan "dedi, değiştirdim" olmaz.
 
-**`PROPOSAL.md`** — üç cevap önünüzdeyken §1–§7'yi gözden geçirin. Her değişiklik dosyanın sonundaki Değişiklik günlüğüne **tarihli bir satır**:
+**`PROPOSAL.md`** — üç cevap önünüzdeyken §1–§7'yi gözden geçirin. Her değişiklik için dosyanın sonundaki Değişiklik günlüğüne **tarihli bir satır**:
 
-`2026-10-07 — §4: grup sohbeti çıkarıldı; iki değerlendiren WhatsApp'ın yanında kimsenin kullanmayacağını söyledi.`
+`2026-10-07 — §4: grup sohbeti çıkarıldı; iki değerlendiren WhatsApp varken kimsenin kullanmayacağını söyledi.`
 
-Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü şimdi kesinleştirin: dersin sonunda (11:45) değişmez hâle geliyorlar.**
+Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü şimdi kesinleştirin: dersin sonunda (11:45) değişmez hale geliyorlar.**
 
 ---
 
@@ -171,28 +167,26 @@ Girişten uygulamanızın var olma nedeni olan tek işe kadar izlenen yol. Aşa�
 | 1 | Giriş | e-posta adresini ve 4 haneli kodu girer | REQ-001, REQ-006 |
 | 2 | Bugünün odaları | hangi odaların saat saat boş olduğunu görür | REQ-002, REQ-003 |
 
-**Giriş dahil en az beş ekran.** Beş ekranı ve arkalarındaki gereksinimleri söyleyemiyorsanız proje henüz hazır değildir; bunu bugün öğrenin. 4. haftada her satır prototipinizin bir ekranı olur.
+**Giriş dahil en az beş ekran.** Beş ekranı ve arkalarındaki gereksinimleri söyleyemiyorsanız proje henüz hazır değildir; bunu bugün fark etmek daha iyidir. 4. haftada her satır prototipinizin bir ekranı olur.
 
 ---
 
 ## Vaktiniz kalırsa
 
-- Birbirinizin `must` gereksinimlerinin kabul ölçütlerini okuyun. Test edenin kontrol edemeyeceği her birini işaretleyin; örneğin "kullanıcılar memnun kalır".
+- Birbirinizin `must` gereksinimlerinin kabul ölçütlerini okuyun. Test edenin kontrol edemeyeceği her ölçütü işaretleyin; örneğin "kullanıcılar memnun kalır".
 - Haftalık bir saatlik çevrim içi toplantınızın gününü ve aracını kararlaştırın.
-- Bölüm B'ye başlayın: §8'e ve §12'deki mağaza seçimine, ben buradayken.
+- Ben buradayken Bölüm B'ye başlayın: §8'den ve §12'deki mağaza seçiminden.
 - Mağaza seçiminiz kesin mi? Geliştirici hesabınızı (S1) şimdiden açabilirsiniz. Kimlik kontrolü günler sürer; S1 4. haftada notlanır.
 
 ---
 
-## Bu grup kalıyor — her hafta bir saat çevrimiçi
+## Bu grup kalıyor — her hafta bir saat çevrim içi
 
-**4. Hafta'dan** itibaren dördünüz **ders ile Cumartesi arasında, çevrimiçi, bir saat**
-buluşuyorsunuz. Teams, Meet, Discord — siz seçin.
+**4. haftadan** itibaren grubunuz **dersle cumartesi arasında çevrim içi bir saat** buluşur. Teams, Meet, Discord — siz seçin.
 
-Her biriniz: bu hafta projende ne değişti. Diğer üçü: ne düşünüyor.
+Her biriniz: bu hafta projenizde ne değişti. Diğerleri: ne düşünüyor.
 
-**Her haftaki üç katkıcınız** bu üç kişi — cümleleri alıntıyla, ve siz ne yaptınız,
-`weekNN/contributors_NN.json` içinde.
+**Her hafta** `weekNN/group_NN.json` dosyasında her üye için bir kayıt: söyledikleri alıntı olarak ve sizin ne yaptığınız.
 
 Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta.
 
@@ -200,13 +194,13 @@ Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta
 
 ## Gereksinimler — id'ler kalıcı, liste açık
 
-`requirements.json` hâlâ değişebilir: ekleyin, yeniden yazın, çıkarın (id kalır, `"dropped": true`).
+`requirements.json` hala değişebilir: ekleyin, yeniden yazın, çıkarın (id kalır, `"dropped": true`).
 
-**Cumartesiden itibaren bir id'nin anlamı hiç değişmez.** `REQ-004` Aralık'ta da aynı şeyi ifade etmeli.
+**Cumartesiden itibaren bir id'nin anlamı hiç değişmez.** `REQ-004` aralıkta da aynı şeyi ifade etmeli.
 
-**Liste 5. Hafta sonuna kadar açık kalır.** 4. Hafta'da kabul ölçütlerinizden test case'ler yazıp tıklanabilir prototip üzerinde yürütürsünüz; eksik çıkan, değişiklik günlüğüne bir satırla listeye girer.
+**Liste 5. haftanın sonuna kadar açık kalır.** 4. haftada kabul ölçütlerinizden test case'ler yazıp tıklanabilir prototip üzerinde yürütürsünüz; eksik çıkan her şey değişiklik günlüğüne bir satırla listeye girer.
 
-**5. Hafta sonu: gereksinimler + test case'ler = taban çizginiz (baseline).** Ondan sonra değişiklikler bir değişiklik talebiyle yapılır.
+**5. haftanın sonu: gereksinimler + test case'ler = taban çizginiz (baseline).** Bundan sonra değişiklikler ancak bir değişiklik talebiyle yapılır.
 
 REQ-001 (e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkeste olduğu gibi kalır.
 
@@ -221,8 +215,7 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Turdan sonra ve dersin sonunda, **11:45**'te bir kez daha push. Hemen ardından her
-repoyu donduruyorum. Push edilmeyen yoktur.
+Turdan sonra ve dersin sonunda, **11:45**'te bir kez daha push edin. Hemen ardından her repoyu donduruyorum. Push edilmemiş iş yok sayılır.
 
 Bu dönem push saatleri: **10:00, 11:00 ve ders sonu (11:45)** — ve bir şeyi her bitirdiğinizde.
 
@@ -230,16 +223,13 @@ Bu dönem push saatleri: **10:00, 11:00 ve ders sonu (11:45)** — ve bir şeyi 
 
 ## Cumartesi 23:59'a kadar — Bölüm B, §8–§12
 
-Neden yapmaya değer olduğunu söyleyen yarı. `PROPOSAL.md` içinde her bölümün NEDEN / NE /
-zayıf / güçlü örneği var.
+Projenin neden yapmaya değer olduğunu söyleyen yarı. `PROPOSAL.md` içinde her bölüm için NEDEN / NE açıklaması ile zayıf ve güçlü birer örnek var.
 
-- **§8 Pazar** — kim, kaç kişi, nereden biliyorsunuz. Beş test kullanıcınız ilk satır.
-- **§9 Rakipler** — bugün bunu çözen üç şey. Kâğıt liste de sayılır.
-- **§10 Karşılaştırma** — *kullanıcının* ölçütleriyle küçük bir tablo, tek cümle.
-- **§11 Ticari potansiyel** — kendini nasıl finanse eder; gerekçeliyse "ticari niyet yok,
-  değeri X" dürüsttür.
-- **§12 Riskler** — 11. haftaya kadar sizi durduracak üç şey, her birine plan ve yedek.
-  **Mağazayı adlandırın** (S0): ücret, inceleme süresi. Önce `AI_PLATFORMS_AND_STORES_TR.md`.
+- **§8 Pazar** — kim, kaç kişi, nereden biliyorsunuz. Beş test kullanıcınız ilk satırdır.
+- **§9 Rakipler** — bugün bunu çözen üç şey. Bir kağıt liste de sayılır.
+- **§10 Karşılaştırma** — *kullanıcının* ölçütleriyle küçük bir tablo ve tek cümle.
+- **§11 Ticari potansiyel** — kendini nasıl finanse eder; gerekçesi varsa "ticari niyet yok, değeri X" demek de dürüst bir cevaptır.
+- **§12 Riskler** — 11. haftaya kadar sizi durdurabilecek üç şey; her biri için bir plan ve bir yedek. **Mağazayı adlandırın** (S0): ücret, inceleme süresi. Önce `AI_PLATFORMS_AND_STORES_TR.md` dosyasını okuyun.
 
 ---
 
@@ -252,10 +242,9 @@ Bu hafta asistan, **hayır** demek isteyen yatırımcıyı oynar.
 3. Biri **haksız**: nedenini gösterin — bir sayı, bir kaynak, kontrol ettiğiniz bir şey.
 4. Yazışmayı yapıştırın.
 
-"Yararlı geri bildirim verdi" puan getirmez. İyi itirazı kötüsünden ayırmak beceridir.
+"Yararlı geri bildirim verdi" puan getirmez. İyi itirazı kötüsünden ayırmak bir beceridir.
 
-**Günlüğü kendiniz yazın.** Kanıt bloğu dışında asistan yok, dil için bile. Diliniz
-notlanmaz; asistanın yazdığı bir günlük en çok 1 alır.
+**Günlüğü kendiniz yazın.** Kanıt bloğu dışında asistan yok, dil için bile. Diliniz notlanmaz; asistanın yazdığı bir günlük en çok 1 puan alır.
 
 ---
 
@@ -274,9 +263,9 @@ Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10
 
 ## Gelecek hafta: prototip ve test case'ler
 
-**4. Hafta:** ana akışınızın tıklanabilir bir prototipi ve kabul ölçütlerinizden yazılmış test case'ler.
+**4. hafta:** ana akışınızın tıklanabilir bir prototipi ve kabul ölçütlerinizden yazılmış test case'ler.
 
-Grubunuz test case'leri prototip üzerinde yürütür; çalışmayan şey, gereksinimlerde neyin eksik olduğunu gösterir.
+Grubunuz test case'leri prototip üzerinde yürütür; çalışmayan her şey gereksinimlerde neyin eksik olduğunu gösterir.
 
 **Gelecek haftaya kadar:** kabul ölçütlerinizi yeniden okuyun. Bir testçinin ne görmesi gerektiğini söylemeyen her ölçütü yeniden yazın.
 
@@ -287,8 +276,7 @@ Grubunuz test case'leri prototip üzerinde yürütür; çalışmayan şey, gerek
 **Bir öğrenci, bir bilgisayar, bir GitHub hesabı.** Arkadaşınızın bilgisayarında ya da onun
 oturumunda yapılan iş ders için puan getirmez. Bilgisayarınızı şarjı dolu getirin.
 
-**Yoklama sisteminde kayıtlı değilseniz gelmemiş sayılırsınız.** Ders slotunun beş puanı o
-zaman gider, ne push edilmiş olursa olsun.
+**Yoklama sisteminde kayıtlı değilseniz gelmemiş sayılırsınız.** Ne push edilmiş olursa olsun, ders slotunun beş puanı o zaman gider.
 
 ---
 

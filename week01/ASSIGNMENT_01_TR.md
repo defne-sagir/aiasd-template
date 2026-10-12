@@ -1,6 +1,6 @@
 # 1. Hafta Ödevi — Temeller: Ortam, Git ve LLM'lerle İlk Temas
 
-**Teslim:** Cumartesi 23:59 · Proje deponuza commit edin
+**Teslim:** Cumartesi 23:59 · Proje reponuza commit edin
 
 > **Dersten önce** reponuzun kökündeki üç ön okuma belgesini okuyun (`AI_Doc2`, `AI_Doc3`, `AI_Doc4`): *AI Technical
 > Background* (kavramlar), *Development Environment and Tools* (ortam ve araçlar) ve
@@ -11,7 +11,7 @@
 
 ## Görevler
 
-### 1. Şablondan proje deponuzu oluşturun
+### 1. Şablondan proje reponuzu oluşturun
 `https://github.com/vedatcoskun-course/aiasd-template` adresine gidin ve
 **Use this template → Create a new repository** düğmesine tıklayın. O formda üç şey var:
 
@@ -25,22 +25,22 @@ Settings'ten hemen değiştirin ve bana söyleyin.
 
 **Include all branches:** kapalı bırakın.
 
-Sonra depoyu bilgisayarınıza klonlayın.
+Sonra repoyu bilgisayarınıza klonlayın.
 
 Şimdi beni Collaborator olarak ekleyin: **Settings → Collaborators → Add people**, ardından
 **`VedatCOSKUN`** araması yapın — tam bu yazım, tiresiz; notunuzu veren hesap budur. Bu
-olmadan deponuz benim için görünmezdir ve hafta teslim edilmemiş sayılır.
+olmadan reponuz benim için görünmezdir ve hafta teslim edilmemiş sayılır.
 
 Beni eklemek, kabul etmem gereken bir davet gönderir; dolayısıyla bir şey görebilmem için
 kısa bir gecikme olur. Başka bir şey yapmanız gerekmez — ama ders sonu panosunda sizin
 için hiçbir şey görünmüyorsa ilk baktığımız yer burasıdır.
 
-Depo bilerek private: öğrenci numaranızı ve adınızı taşıyor, bunların açık internette işi
+Repo bilerek private: öğrenci numaranızı ve adınızı taşıyor, bunların açık internette işi
 yok. Ders bittikten sonra public yapmakta serbestsiniz.
 
 ### 2. `student.json` dosyasını doldurun
 
-Dosya, az önce oluşturduğunuz deponun kökünde, tüm değerleri boş olarak zaten duruyor.
+Dosya, az önce oluşturduğunuz reponun kökünde, tüm değerleri boş olarak zaten duruyor.
 Yenisini oluşturmayın — o dosyayı açıp doldurun. Beş alan, hepsi zorunlu:
 
 ```json
@@ -55,9 +55,9 @@ Yenisini oluşturmayın — o dosyayı açıp doldurun. Beş alan, hepsi zorunlu
 
 **nickname**, her ders sonunda yansıtılan sınıf panosunda görünen addır; kendi satırınızı
 bir bakışta bulmanız için. Yalnızca harf, rakam, `-` ve `_`; 2–20 karakter. Ötesi size
-kalmış — Aralık'ta hâlâ tanıyacağınız bir şey seçin.
+kalmış — Aralık'ta hala tanıyacağınız bir şey seçin.
 
-**`section`**, kayıtlı olduğunuz şubeye göre `en` ya da `tr`. Deponuz, hangi haftaya göre
+**`section`**, kayıtlı olduğunuz şubeye göre `en` ya da `tr`. Reponuz, hangi haftaya göre
 denetleneceğini derse bununla sorar; yanlış yazarsanız size yanlış haftanın kontrolleri
 gösterilir.
 
@@ -78,7 +78,7 @@ Kanıtı `week01/setup_proof.md` dosyasına kaydedin — `python --version`, `pi
 görüntüleri.
 
 ### 4. `week01/hello.py` dosyasını yazın
-Python'ı yalnızca çalıştırabildiğinizi değil, yazabildiğinizi gösteren küçük bir betik.
+Python'ı yalnızca çalıştırabildiğinizi değil, yazabildiğinizi gösteren küçük bir script.
 `input()` ile bir ad okumalı ve **bir f-string, bir liste ve bir for döngüsü**
 kullanmalı. Kısa tutun — on satır fazlasıyla yeter.
 
@@ -110,7 +110,7 @@ anlayamaz — bu yüzden görev, yapıştırılmış bir yanıtın oturmayacağ�
   söyleyin. Konuşmanızda bulunmayan bir model bu paragrafı yazamaz.
 - **Token'ları açıklarken örnek olarak kendi `hello.py` dosyanızı kullanın:** sizce kendi
   on satırınız kaç token ve bu sayı neden kelime sayısıyla aynı değil?
-- **Hâlâ anlamadığınız şeyle bitirin.** Dürüst bir paragraf. Bir dil modelinin en kötü
+- **Hala anlamadığınız şeyle bitirin.** Dürüst bir paragraf. Bir dil modelinin en kötü
   olduğu kısım budur, çünkü neyi kaçırdığınızı bilmez — ve en dikkatle okuduğum kısım
   da budur.
 
@@ -142,11 +142,11 @@ olmadıkça okumam.
 
 ### 8. `.gitignore` dosyanızı doğrulayın
 `.venv`, `.env` ve `__pycache__` zaten içinde olmalı.
-Depo kökünde `.env.example` oluşturun — yalnızca değişken adları, asla değerler.
+Repo kökünde `.env.example` oluşturun — yalnızca değişken adları, asla değerler.
 
 ### 9. Kontrolleri kendiniz çalıştırın
 
-Deponuz her push'ta kendi teslimlerini denetler ve açmanız gereken bir şey yoktur: hangi
+Reponuz her push'ta kendi teslimlerini denetler ve açmanız gereken bir şey yoktur: hangi
 haftada olduğunu derse sorar, dolayısıyla gördüğünüz şey her zaman size karşı çalıştırılan
 şeydir.
 
@@ -156,7 +156,7 @@ Push etmeden önce aynı kontrolleri yerelde çalıştırın:
 python .github/check_deliverables.py
 ```
 
-Bildirdiklerini düzeltin. GitHub'daki kırmızı çarpı bir not değil, bilgidir — hâlâ bir şey
+Bildirdiklerini düzeltin. GitHub'daki kırmızı çarpı bir not değil, bilgidir — hala bir şey
 yapabilecekken neyin eksik olduğunu söyler.
 
 ### 10. Commit ve push
@@ -183,7 +183,7 @@ zaman bu ikisinden biridir ve ikisi de bir dakikada düzelir.
 
 ## Teslim listesi
 - [ ] `student.json` — beş alan da dolu, `section` doğru
-- [ ] Depo **private** ve ben Collaborator olarak ekliyim
+- [ ] Repo **private** ve ben Collaborator olarak ekliyim
 - [ ] `week01/setup_proof.md` — ortam doğrulanmış
 - [ ] `week01/hello.py` — çalışıyor; f-string, liste ve for döngüsü kullanıyor
 - [ ] `week01/llm_notes.md` — kendi cümlelerinizle 300+ kelime, bir model hatası ve bir sorunun iki farklı ifadesi
@@ -191,19 +191,19 @@ zaman bu ikisinden biridir ve ikisi de bir dakikada düzelir.
 - [ ] `.gitignore` `.venv`, `.env`, `__pycache__` içeriyor; `.env.example` mevcut
 - [ ] Kontroller GitHub'da yeşil
 - [ ] En az 3 commit push edilmiş
-- [ ] Depo adı tam olarak `aiasd-project`, bildirdiğiniz kullanıcı adının altında
+- [ ] Repo adı tam olarak `aiasd-project`, bildirdiğiniz kullanıcı adının altında
 
 ---
 
 ## Bu hafta nasıl notlanıyor
 
-Bu hafta olağan ritmin istisnasıdır. 2. Hafta'dan itibaren her dersin sonunda deponuzdan
+Bu hafta olağan ritmin istisnasıdır. 2. Hafta'dan itibaren her dersin sonunda reponuzdan
 beş puan, Cumartesi 23:59'da beş puan okunur. 1. Hafta'da ders sonunda hiçbir şey
 alınmaz — çoğunuzun henüz çalışan bir ortamı olmayacak ve kurulum notlanan bir iş
-değildir. **Bu hafta beş puan değerindedir; tamamı Cumartesi 23:59'da deponuzdan
+değildir. **Bu hafta beş puan değerindedir; tamamı Cumartesi 23:59'da reponuzdan
 okunur:**
 
-- **3** — otomatik kontroller: şablondan oluşturulmuş depo, private, ben Collaborator,
+- **3** — otomatik kontroller: şablondan oluşturulmuş repo, private, ben Collaborator,
   `student.json` tam, `setup_proof.md`, üç gereksinimi karşılayan `hello.py`, kendi
   cümlelerinizle `llm_notes.md`, `.gitignore` ve `.env.example`, kontroller yeşil.
 - **1** — commit disiplini: haftaya yayılmış en az üç commit; Cumartesi gecesi tek push
@@ -212,7 +212,7 @@ okunur:**
   yapıştırılmış yazışma. Bunu kendim okuyorum.
 
 Teslim saati her hafta aynıdır, dolayısıyla hesaplanacak bir şey yok: Cumartesi gece
-yarısı deponuzda ne varsa, notladığım odur.
+yarısı reponuzda ne varsa, notladığım odur.
 
 Bir LLM bu ödevin istediği her dosyayı üretebilir. Yapamadığı şey, o dosyaları
 çevresindeki on haftayla tutarlı kılmak ya da kendi hatalarını sizin yerinize fark

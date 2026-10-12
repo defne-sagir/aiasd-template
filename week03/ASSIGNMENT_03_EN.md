@@ -88,12 +88,12 @@ questions on slide 7 — on paper or in a text file, handed to the presenter. Fo
 about 45 minutes. Say what you think; a polite "it is good" helps nobody and earns nobody
 anything.
 
-**This group is your group for the rest of the term.** From Week 4 the four of you meet
+**This group is your group for the rest of the term.** From Week 4 your group meets
 **online for one hour every week, between the lecture and Saturday** — Teams, Meet,
 Discord, whatever you like — and each of you presents what changed in your project that
-week; the other three say what they think. The three entries in your
-`weekNN/contributors_NN.json` come from that meeting from then on: who said what, quoted,
-and what you did about it. Nobody can write those three entries for someone who was not
+week; the others say what they think. The entries in your
+`weekNN/group_NN.json` come from that meeting from then on: who said what, quoted,
+and what you did about it. Nobody can write those entries for someone who was not
 there, so missing the meeting shows by itself. You may hold the first one this week
 already.
 

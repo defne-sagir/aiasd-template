@@ -123,14 +123,14 @@ Her kullanım senaryosunu iskeletin gösterdiği biçimde yazın: bir ad, aktör
 gereksinimler, üç–altı numaralı adımda **ana akış** ve **ne ters gidebilir**. Son kısım
 genelde atlanır; eksik gereksinimleri bulduran da odur.
 
-### 7. Taslak için yapay zekâ kullanın — sonra yanlışını yakalayın — `week02/ai_log_02.md`
+### 7. Taslak için yapay zeka kullanın — sonra yanlışını yakalayın — `week02/ai_log_02.md`
 
 İki farklı asistandan, §1–§4'ünüze dayanarak *sizin* projeniz için öncelikleri ve kabul
 ölçütleriyle sekiz gereksinim isteyin. İkisine aynı istemi verin (iskelet bir istem
 öneriyor). Otoriter görünen ama ürününüz için yanlış
 gereksinimler üretecekler — uydurma özellikler, elinizde olmayan veriler, §4'ünüzle
 çelişen kısıtlar. **Böyle bir hatayı belgeleyin**, yazışmayı Evidence bloğuna yapıştırın,
-nasıl fark ettiğinizi ve neyi değiştirdiğinizi söyleyin. Yapay zekânın yardımcı olduğunu
+nasıl fark ettiğinizi ve neyi değiştirdiğinizi söyleyin. Yapay zekanın yardımcı olduğunu
 söyleyip başka bir şey söylemeyen günlük hiçbir şey kazandırmaz; boş Evidence bloğu da.
 
 ### 8. Yeniden push, kontroller yeşil
@@ -158,8 +158,8 @@ disiplini puanına mal olur.
 - [ ] `PROPOSAL.md` §5–§7 dolu; §5 mobil, web ve sunucuyu adlandırıyor ve Mermaid diyagramı var
 - [ ] `week02/requirements.json` — her gereksinimde `priority` (hepsi `must` değil) ve `acceptance` testi
 - [ ] `week02/SRS.md` — aktörler, ana akışı ve ne ters gidebileceğiyle ≥3 kullanım senaryosu, kullanım senaryosu diyagramı, aynı kimliklerle gereksinimler
-- [ ] `week02/ai_log_02.md` — belgelenmiş bir yapay zekâ hatası, yapıştırılmış Evidence bloğu, nasıl fark ettiğiniz
-- [ ] Kontroller GitHub'da yeşil; 1. Hafta hâlâ geçiyor
+- [ ] `week02/ai_log_02.md` — belgelenmiş bir yapay zeka hatası, yapıştırılmış Evidence bloğu, nasıl fark ettiğiniz
+- [ ] Kontroller GitHub'da yeşil; 1. Hafta hala geçiyor
 - [ ] Haftaya yayılmış en az üç commit
 
 ---
