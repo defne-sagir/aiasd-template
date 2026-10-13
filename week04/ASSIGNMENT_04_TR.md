@@ -2,6 +2,17 @@
 
 **Teslim:** ders içi bölüm dersin sonuna kadar (11:45) · kalanı Cumartesi 23:59 · Proje reponuza commit edin
 
+## Ne, ne zaman teslim edilir
+
+| Ne zaman | Ne yaparsınız | Nerede |
+|---|---|---|
+| **Dersten önce** | Hangi gereksinimlerinizin `must` olduğunu not edin; ana akışınızı seçin | aşağıdaki kutu |
+| **Derste, 11:45'e kadar push** | En az 5 ekranlı bir prototip · her `must` gereksinim için bir test case · **walk-through, 1. tur: collaborator'ınız sizin bilgisayarınızda test case'lerinizden en az 4'ünü yürütür, en az 2'si ana akıştan** · `walkthrough_04.json` ve `group_04.json`, sizin yazdığınız · 10:00, 11:00 ve 11:45'te push | §1–§5 |
+| **Dersin olduğu gün** | Geliştirici hesabınıza başvurun (S1) | §8 |
+| **Cumartesi 23:59'a kadar** | Her `fail`'i düzeltin · **walk-through, 2. tur, çevrim içi: yalnızca `fail` olan test case'ler yeniden yürütülür** · `requirements.json` ve `test_cases.json` Değişiklik günlüğü satırlarıyla güncellenir · en az 7 ekran · bir şey ters gittiğinde ne olacağını test eden 3 test case · `accepted` ve `why` · `store.json` · `ai_log_04.md` | §6–§10 |
+
+Walk-through'un 1. turu hafta sonuna bırakılamaz: reponuzun dersin sonundaki (11:45) halinden okunur. Cumartesi yalnızca `fail` olan test case'ler yeniden yürütülür.
+
 > ## AI log'u (yapay zeka günlüğü) insan yazar. İstisna yok.
 >
 > `week04/ai_log_04.md` dosyasını **siz**, kendi cümlelerinizle yazarsınız. Evidence bloğunun ve
@@ -74,6 +85,8 @@ Ders üç bölümdür. Yaklaşık 25 dakika anlatım; sonra 10:30 civarına kada
 
 ### 1. Prototip — `week04/prototype/`
 
+**Ne zaman:** derste en az beş ekran, 11:45'e kadar push; Cumartesi 23:59'a kadar en az yedi ekran (§7).
+
 Prototip, uygulamanın daha hiçbir parçası yapılmadan nasıl kullanılacağını gösterir.
 Sunucu yoktur ve veriler uydurmadır; gerçek olan akıştır: hangi ekranın hangisinden sonra
 geldiği, her ekranın ne istediği ve bir şey ters gittiğinde kullanıcının ne gördüğü.
@@ -128,6 +141,8 @@ bir ekran, bir commit.
 
 ### 2. Test case'ler — `week04/test_cases.json`
 
+**Ne zaman:** her `must` gereksinim için bir test case derste, 11:45'e kadar push, çünkü collaborator'ınız onları derste yürütür; bir şey ters gittiğinde ne olacağını test eden test case'ler Cumartesi 23:59'a kadar.
+
 Test case, herkesin izleyebileceği adımlara ve herkesin kontrol edebileceği bir sonuca
 dönüştürülmüş tek bir kabul ölçütüdür. StudyRoom'un bir gereksinimi iki test case'e şöyle
 dönüşür:
@@ -162,7 +177,9 @@ günlüğüne bir satır yazın) ya da silinmesi gereken bir test case'tir.
 ZAYIF: *"TC-002-01 — Ayırma çalışıyor. Adımlar: bir oda ayır. Beklenen: başarılı."*
 GÜÇLÜ: yukarıdaki tablodaki iki satır.
 
-### 3. Walk-through — collaborator'ınızla
+### 3. Walk-through — collaborator'ınızla, derste
+
+**Ne zaman:** 1. tur derste, yaklaşık 10:30 ile 11:30 arasında yapılır ve `walkthrough_04.json` 11:45'e kadar push edilir. Sonraya bırakılamaz: ders sonu okuması ona bakar. 2. tur Cumartesi 23:59'a kadar, çevrim içi ve yalnızca `fail` olan test case'ler için yapılır (§6).
 
 **Collaborator'ınız**, kendi dersinizden, herhangi bir gruptan seçtiğiniz tek bir sınıf
 arkadaşınızdır. Walk-through başlamadan önce kim olduğunu aranızda kararlaştırın. İki arkadaş
@@ -175,7 +192,7 @@ yaklaşık on iki dakika düşer.
   yardım etmez. Sahip her yürütmeyi, collaborator'ın en yararlı cümlesiyle birlikte kağıda
   not eder ve tur biter bitmez `walkthrough_04.json` dosyasına yazar.
 - **Collaborator'ınız** bir test case'in adımlarını yüksek sesle okur, tam olarak
-  söylediklerini yapar ve ne gördüğünü söyler. Test case'lerinizden **en az dördünü**
+  söylediklerini yapar ve ne gördüğünü söyler. Test case'lerinizden **en az dördünü**, burada derste,
   yürütür ve bunlardan en az ikisi girişe değil, ana akışa aittir.
 - **Her yürütmenin tek bir sonucu vardır.** `pass`: collaborator "expected" alanında yazanı
   gördü. `fail`: görmedi; not, onun yerine ne gördüğünü söyler. `blocked`: prototip
@@ -204,6 +221,8 @@ verirsiniz.
 
 ### 4. `week04/group_04.json` — collaborator'ınız
 
+**Ne zaman:** collaborator'ınızın kaydı ve alıntılanan cümle derste, 11:45'e kadar push; `accepted` ve `why` Cumartesi 23:59'a kadar.
+
 Dosya 3. Hafta'daki adını korur, ama bu hafta **tek bir kayıt** içerir: collaborator'ınız,
 rol `collaborator`, 9 haneli öğrenci numarasıyla (sizinki değil). Onun için **bulduğu ya da
 söylediği en yararlı şey, tam bir cümle olarak alıntılanmış**, onun sözleriyle, sizin yazdığınız.
@@ -231,8 +250,8 @@ repoları dondururum. Push edilmemiş olan yoktur.
 
 - **Her `fail`'i düzeltin.** Genellikle prototip değişir. Bazen yanlış olan test case ya da
   gereksinimdir: o zaman onu değiştirin ve nedenini Değişiklik günlüğüne yazın.
-- **Collaborator'ınızla çevrim içi ikinci tur.** `fail` olan her test case, düzeltmeden sonra
-  yeniden yürütülür: düzeltilmiş prototipi ekran paylaşımıyla açarsınız, collaborator'ınız
+- **Collaborator'ınızla çevrim içi ikinci tur, Cumartesi 23:59'dan önce.** Yalnızca 1. turda
+  `fail` olan test case'ler, her biri düzeltildikten sonra, yeniden yürütülür: düzeltilmiş prototipi ekran paylaşımıyla açarsınız, collaborator'ınız
   `fail` olan her test case'in adımlarını yüksek sesle okur ve siz tam olarak söylediğini
   tıklarsınız. Collaborator'ınız grubunuzdaysa grup toplantınız bunun için doğal yerdir; değilse
   ikinizin seçeceği herhangi bir görüşme olur. Bu yürütmeleri `walkthrough_04.json` dosyasına
@@ -256,6 +275,8 @@ gereksinimlerini `serves:` yorumunda söyler. Toplamda **en az yedi ekran** gere
 Renkler ve yazı tipleri önemli değildir; önemli olan akıştır.
 
 ### 8. S1 — geliştirici hesabınız, `week04/store.json`
+
+**Ne zaman:** başvuru dersin olduğu gün; `store.json` ve ekran görüntüsü Cumartesi 23:59'a kadar.
 
 Teklifinizin §12'sinde adını verdiğiniz mağazada geliştirici hesabınızı açın ve bunu
 **dersin olduğu gün** yapın: kimlik kontrolü bir günden bir haftaya kadar sürer ve sonraki
@@ -294,14 +315,14 @@ istediklerinin hepsi aşağıdadır.
 
 ## Teslim listesi
 
-**Derste, dersin sonuna (11:45) kadar**
+**Derste, 11:45'e kadar push (walk-through'un 1. turu dahil)**
 - [ ] `week04/prototype/` — `index.html` dahil en az beş ekran, hepsine tıklayarak ulaşılıyor, köşeli parantezli kısım kalmamış
 - [ ] `week04/test_cases.json` — her `must` gereksinim için en az bir test case
-- [ ] `week04/walkthrough_04.json` — collaborator'ınız test case'lerinizden en az dördünü, en az ikisi ana akıştan olmak üzere yürüttü; her `fail` ve `blocked` için bir not; sizin yazdığınız, elle
+- [ ] `week04/walkthrough_04.json` — 1. tur, derste: collaborator'ınız test case'lerinizden en az dördünü, en az ikisi ana akıştan olmak üzere yürüttü; her `fail` ve `blocked` için bir not; sizin yazdığınız, elle
 - [ ] `week04/group_04.json` — collaborator'ınız (tek kayıt), ondan alıntılanmış bir bulgu; sizin yazdığınız, elle
 
-**Cumartesi'ye kadar**
-- [ ] `fail` olan her test case ikinci turda yeniden yürütüldü ya da Değişiklik günlüğünde bir satırla çıkarıldı
+**Cumartesi 23:59'a kadar**
+- [ ] `fail` olan her test case çevrim içi ikinci turda yeniden yürütüldü ya da Değişiklik günlüğünde bir satırla çıkarıldı
 - [ ] `requirements.json` ve `test_cases.json` güncellendi; kimlikleri anan bir Değişiklik günlüğü satırı
 - [ ] En az yedi ekran; her işlevsel `must` gereksinimin bir ekranı var; her ekranın `serves:` yorumu var
 - [ ] En az üç gereksinimin, bir şey ters gittiğinde ne olacağını test eden bir test case'i var

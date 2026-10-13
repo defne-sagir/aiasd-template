@@ -1,6 +1,17 @@
 # Week 4 Assignment — Clickable Prototype and Test Cases
 
-**Due:** lab part pushed by the end of the lecture (11:45) · the rest Saturday 23:59 · Commit to your project repository
+**Due:** the lecture part pushed by 11:45 · the rest Saturday 23:59 · Commit to your project repository
+
+## When is what due
+
+| When | What you do | Where |
+|---|---|---|
+| **Before the lecture** | Note which of your requirements are `must`; choose your main flow | the box below |
+| **In the lecture, pushed by 11:45** | A prototype with at least 5 screens · a test case for every `must` requirement · **walk-through, round 1: your collaborator runs at least 4 of your test cases on your laptop, at least 2 of them from the main flow** · `walkthrough_04.json` and `group_04.json`, typed by you · pushes at 10:00, 11:00 and 11:45 | §1–§5 |
+| **On the day of the lecture** | Apply for your developer account (S1) | §8 |
+| **By Saturday 23:59** | Fix every fail · **walk-through, round 2, online: only the test cases that failed are run again** · `requirements.json` and `test_cases.json` updated, with Change log lines · at least 7 screens · 3 test cases for when something goes wrong · `accepted` and `why` · `store.json` · `ai_log_04.md` | §6–§10 |
+
+Round 1 of the walk-through cannot be moved to the weekend: it is read from your repository as it stands at the end of the lecture (11:45). On Saturday only the failed test cases are run again.
 
 > ## The AI log is written by a human. No exceptions.
 >
@@ -66,7 +77,7 @@ the rules), `week04/test_cases.json`, `week04/walkthrough_04.json`,
 
 ---
 
-## In the lab — pushed by the end of the lecture (11:45)
+## In the lecture — pushed by 11:45
 
 The lab has three parts. About 25 minutes of explanation; then you build until about
 10:30 (push at 10:00, whatever state the work is in); then the walk-through with your
@@ -74,6 +85,8 @@ collaborator until about 11:30 (push at 11:00, or right after your own turn if 1
 the last fifteen minutes for your files, the checker and the push at the end of the lecture (11:45).
 
 ### 1. The prototype — `week04/prototype/`
+
+**When:** at least five screens in the lecture, pushed by 11:45; at least seven by Saturday 23:59 (§7).
 
 A prototype shows how the app will be used before any of it is built. There is no server
 and the data is invented; what is real is the flow: which screen comes after which, what
@@ -127,6 +140,8 @@ commit.
 
 ### 2. The test cases — `week04/test_cases.json`
 
+**When:** a test case for every `must` requirement in the lecture, pushed by 11:45, because your collaborator runs them there; the test cases for when something goes wrong by Saturday 23:59.
+
 A test case is one acceptance criterion turned into steps that anyone can follow and a
 result that anyone can check. Here is how one StudyRoom requirement becomes two test
 cases:
@@ -140,8 +155,8 @@ cases:
 
 The rules:
 
-- **Every `must` requirement has at least one test case.** Write them in the lab, because
-  your collaborator runs them before the end of the lecture (11:45).
+- **Every `must` requirement has at least one test case.** Write them in the lecture, because
+  your collaborator runs them there, before 11:45.
 - **The id says which requirement it tests**: TC-002-01 and TC-002-02 both test REQ-002.
   A test case id never changes its meaning, as with the REQ ids.
 - **The steps use real values** ("Room 3, 16:00 to 17:30", not "a room and a time"), and
@@ -159,7 +174,9 @@ requirement (add it, with a Change log line) or a test case to delete.
 WEAK: *"TC-002-01 — Booking works. Steps: book a room. Expected: success."*
 STRONG: the two rows in the table above.
 
-### 3. The walk-through — with your collaborator
+### 3. The walk-through — with your collaborator, in the lecture
+
+**When:** round 1 happens in the lecture, from about 10:30 to 11:30, and `walkthrough_04.json` is pushed by 11:45. It cannot be done later: the end-of-lecture reading looks for it. Round 2 is by Saturday 23:59, online, and only for the test cases that failed (§6).
 
 Your **collaborator** is one classmate of your choice, from your own lecture, from any group.
 Agree on who it is before the walk-through starts. Two classmates often choose each other and
@@ -171,7 +188,7 @@ take turns, but they do not have to. Each prototype gets about twelve minutes.
   The owner notes each run on paper, with the collaborator's most useful sentence, and types
   the runs into `walkthrough_04.json` right after the turn.
 - **Your collaborator** reads the steps of one test case aloud, does exactly what they say,
-  and says what they see. They run **at least four** of your test cases, and at least two of
+  and says what they see. They run **at least four** of your test cases, here in the lecture, and at least two of
   them belong to the main flow, not to the login.
 - **Each run has one result.** `pass`: the collaborator saw what "expected" says. `fail`:
   they did not, and the note says what they saw instead. `blocked`: it cannot be checked on a
@@ -198,6 +215,8 @@ for a way to cancel the booking". No test case covers it, because no requirement
 it. Write it in a note; by Saturday you decide whether it becomes a requirement.
 
 ### 4. `week04/group_04.json` — your collaborator
+
+**When:** your collaborator's entry and the quoted sentence in the lecture, pushed by 11:45; `accepted` and `why` by Saturday 23:59.
 
 The file keeps its name from Week 3, but this week it holds **one entry: your collaborator**, role
 `collaborator`, with their 9-digit student number (not yours). For them, **the most useful
@@ -226,8 +245,8 @@ freeze every repository. What is not pushed does not exist.
 
 - **Fix every fail.** Usually the prototype changes. Sometimes the test case was wrong,
   or the requirement was: then change that instead, and say why in the Change log.
-- **Round 2 with your collaborator, online.** Each failed test case is run again after the
-  fix: you share the screen with the fixed prototype, your collaborator reads the steps of
+- **Round 2 with your collaborator, online, before Saturday 23:59.** Only the test cases that
+  failed in round 1 are run again, each after its fix: you share the screen with the fixed prototype, your collaborator reads the steps of
   each failed test case aloud, and you click exactly what they say. Your group meeting is the
   natural place if your collaborator is in your group; otherwise use any call you both choose.
   Add these runs to `walkthrough_04.json` with `"round": 2`, written by you. A test case that you
@@ -250,6 +269,8 @@ screen names its requirements in the `serves:` comment. In all you need **at lea
 screens**. Colours and fonts do not matter; the flow does.
 
 ### 8. S1 — your developer account, `week04/store.json`
+
+**When:** apply on the day of the lecture; `store.json` and the screenshot by Saturday 23:59.
 
 Open your developer account with the store you named in §12 of your proposal, and do it
 **on the day of the lecture**: the identity check takes from one day to a week, and no
@@ -288,14 +309,14 @@ asks for is listed below.
 
 ## Deliverables checklist
 
-**In the lab, by the end of the lecture (11:45)**
+**In the lecture, pushed by 11:45 (round 1 of the walk-through included)**
 - [ ] `week04/prototype/` — at least five screens, `index.html` included, all reachable by clicking, no [bracketed] parts left
 - [ ] `week04/test_cases.json` — at least one test case for every `must` requirement
-- [ ] `week04/walkthrough_04.json` — your collaborator ran at least four of your test cases, at least two of them from the main flow; a note for every `fail` and `blocked`; written by you, by hand
+- [ ] `week04/walkthrough_04.json` — round 1, in the lecture: your collaborator ran at least four of your test cases, at least two of them from the main flow; a note for every `fail` and `blocked`; written by you, by hand
 - [ ] `week04/group_04.json` — your collaborator (one entry), a quoted finding from them, written by you, by hand
 
-**By Saturday**
-- [ ] Every failed test case run again in round 2, or dropped with a Change log line
+**By Saturday 23:59**
+- [ ] Every failed test case run again in round 2, online, or dropped with a Change log line
 - [ ] `requirements.json` and `test_cases.json` updated; a Change log line that names the ids
 - [ ] At least seven screens; every functional `must` requirement has a screen; every screen has its `serves:` comment
 - [ ] At least three requirements with a test case for when something goes wrong
