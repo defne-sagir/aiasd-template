@@ -142,8 +142,7 @@ WHAT: the approach in plain words, one or two sentences for each of these:
   - the SERVER: what it keeps and what it decides (rules, timers, permissions);
   - the DATA: which database, hosted where;
   - LOGIN: every project logs in with an e-mail code or OTP — say who sends the code;
-  - AI: where it is used inside the product, if at all (the course chatbot comes later
-    and does not count here).
+  - AI: where it is used inside the product, if at all.
 The words mobile, web and server must all appear; the checker looks for them.
 CHECK YOURSELF: for each feature in §4, can you say which part does it? Does any client
 store data that only the server should hold?
@@ -189,7 +188,7 @@ hosting free, or do you know the price? Does the store you have in mind accept t
 WEAK:   "React, Python, AI, cloud, database."
 STRONG: "Mobile: Flutter (Android first). Web: Flutter web. Server: FastAPI (Python 3.12).
          Database: PostgreSQL on Render (free tier). Login e-mail: Resend. Store: Google
-         Play. AI: none in the product; the course chatbot runs on Ollama."
+         Play. AI: none in the product."
 -->
 
 ### 7. Success criteria (about 400 characters)
