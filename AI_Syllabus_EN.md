@@ -24,7 +24,7 @@ On completing the course the student can:
 1. **Write a project proposal.** The student starts from a real problem of their own and writes Part A, which describes the problem and the solution, names the stakeholders and gives the use cases, and Part B, which analyses the market and the competitors, judges the commercial potential and lists the technical risks, and pitches it in five minutes (Weeks 2–3).
 2. **Engineer requirements.** The student manages the functional and non-functional requirements as an SRS (Software Requirements Specification, the document that lists what the system must do). Every requirement carries an identifier of the form REQ-NNN, is traceable, keeps its meaning once given, and enters a baseline after the prototype review, and the student makes every later change visible with a dated change log; test cases are written from the acceptance criteria and walked through on the prototype (Weeks 2–5).
 3. **Design and prototype.** The student draws the architecture, the data model, the system-context diagram and the deployment diagram in Mermaid (a text notation for diagrams that GitHub draws inside a markdown file) in the repository, builds a clickable prototype and revises it after peer review (Weeks 4–5).
-4. **Develop a full-stack application.** The student builds a server with login by e-mail code or OTP, a web client and a mobile client, and the same feature runs on all three tiers (Weeks 5–8).
+4. **Develop a full-stack application.** The student builds a server with login by e-mail code or OTP, a web client and a mobile client, and the same feature runs on all three tiers. The product also gets a chatbot: the mobile client talks to the student's own server, and only the server calls a hosted LLM API (a large language model offered as a web service), with the key kept on the server (Weeks 5–8).
 5. **Develop a mobile application.** The student builds the mobile client with Flutter, React Native–Expo, Kotlin or Swift, and the client runs on a phone and is ready for a store (Weeks 7–8).
 6. **Use AI assistants as an engineering instrument.** The student prompts the assistant, verifies and corrects its output, documents its errors with evidence in a weekly AI log, and uses the assistant as a hostile reviewer of the student's own work. The course grades the evaluation, not the generation (every week).
 7. **Practise version control and continuous integration.** The student makes small daily commits, lets automatic checks run on GitHub, keeps the code quality up with ruff (a tool that reports style and error problems in Python code) and keeps secrets such as passwords out of the repository (every week; CI, continuous integration, from Week 7).
@@ -39,7 +39,7 @@ The course template and the weekly assignments are at github.com/vedatcoskun-cou
 
 The pre-reading for Week 1 is the paper by Vaswani et al., "Attention Is All You Need" (2017), and four course documents: AI Technical Background; Development Environment and Tools; Working with AI Tools; and Using AI Properly in Software Development (`AI_Doc5`, which describes the eight techniques that the weekly AI log asks for; it is examinable). For Week 2 the students read two complete SDLC document sets (an exam-hall allocation system; a lift controller with a simulator) and the Platforms and Stores handout.
 
-The tools are Python 3.12, Git/GitHub, VS Code, FastAPI for the server, Streamlit, two chat assistants of the student's choice on free tiers, and one mobile framework (Flutter / React Native–Expo / Kotlin / Swift). Students bring their own laptop every week.
+The tools are Python 3.12, Git/GitHub, VS Code, FastAPI for the server, Streamlit, two chat assistants of the student's choice on free tiers, a hosted LLM API of the student's choice for the product's chatbot, and one mobile framework (Flutter / React Native–Expo / Kotlin / Swift). Students bring their own laptop every week.
 
 ## Grading
 
@@ -69,7 +69,7 @@ The tools are Python 3.12, Git/GitHub, VS Code, FastAPI for the server, Streamli
 | 5 | 20/10 · 21/10 | Design and API contract; development starts with the server skeleton and the first automated tests; requirements and test cases become the baseline |
 | 6 | 27/10 · 28/10 | Login by e-mail code / OTP: the login works end to end on the server, and the login screen of the web client talks to the server; the app record is created (S2) |
 | 7 | 03/11 · 04/11 | The mobile client: the login screen runs on a phone and talks to the server; tests; CI |
-| 8 | 10/11 · 11/11 | The project's own core feature runs on all three tiers; the first build goes onto a test track (S3) |
+| 8 | 10/11 · 11/11 | The product's chatbot runs in the mobile client through the server and a hosted LLM API, and enters the requirements as a change request; the project's own core feature runs on all three tiers; the first build goes onto a test track (S3) |
 | 9 | 17/11 · 18/11 | Beta test: testers are enrolled, and the students keep a bug list and write a test report (S4) |
 | 10 | 24/11 · 25/11 | UAT and submission: the students write the UAT report and the deployment diagram, and the app is submitted for review (S5) |
 | 11 | 01/12 · 02/12 | Release and hardening: the students apply the review fixes, the app goes live on the store and the final README is written (S6) |

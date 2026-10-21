@@ -309,6 +309,14 @@ module which the code never uses); `ruff` catches them instantly.
 (roughly the width of a phone screen) now and then. If something is cut off or scrolls
 sideways, fix it while the window is small, not in Week 10.
 
+**Never force push.** A force push (`git push --force`, or "Force Push" in VS Code)
+deletes commits from your repository's history, and that history is part of the record of
+your work that I read. Do not let an assistant do it for you either. If git refuses your
+push, run `git pull` and then `git push` again (in VS Code: **Sync Changes**). If git reports
+a conflict and you are not sure what to do, ask in the lecture instead of forcing the push.
+Your marks are read from GitHub's own record of when each push arrived, not from the dates
+on your commits.
+
 **Do not break earlier weeks.** The checks are cumulative: in Week 5, Weeks 1 to 4 are
 re-checked. If a change breaks something older, CI (the automatic run of the checks on
 GitHub; see §3) tells you.

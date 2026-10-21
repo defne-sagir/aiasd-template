@@ -303,6 +303,14 @@ kodun hiç kullanmadığı bir modülü yükleyen satırdır); `ruff` bunları a
 (aşağı yukarı bir telefon ekranının genişliği) daraltın. Bir şey kesiliyor ya da yana
 kayıyorsa pencere küçükken düzeltin, 10. Hafta'da değil.
 
+**Asla force push yapmayın.** Force push (`git push --force` ya da VS Code'daki "Force Push")
+repo'nuzun geçmişinden commit siler; bu geçmiş de çalışmanızın benim okuduğum kaydının bir
+parçasıdır. Bir asistanın sizin yerinize yapmasına da izin vermeyin. Git push'unuzu reddederse
+önce `git pull`, sonra yeniden `git push` yapın (VS Code'da: **Sync Changes**). Git bir çakışma
+(conflict) bildirirse ve ne yapacağınızdan emin değilseniz, push'u zorlamak yerine derste sorun.
+Notlarınız commit'lerinizin üzerindeki tarihlerden değil, GitHub'ın her push'un ne zaman
+geldiğine dair kendi kaydından okunur.
+
 **Önceki haftaları bozmayın.** Kontroller birikimlidir: 5. Hafta'da 1–4. Haftalar
 yeniden denetlenir. Bir değişiklik eski bir şeyi bozarsa CI (kontrollerin GitHub'daki
 otomatik çalıştırması; bkz. §3) size söyler.

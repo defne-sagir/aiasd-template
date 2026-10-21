@@ -24,7 +24,7 @@ Dersi tamamlayan öğrenci:
 1. **Proje önerisi hazırlar.** Öğrenci kendi yaşadığı gerçek bir problemden yola çıkar; problemi ve çözümü anlatan, paydaşları adlandıran ve kullanım senaryolarını veren Bölüm A'yı, pazarı ve rakipleri inceleyen, ticari potansiyeli değerlendiren ve teknik riskleri sıralayan Bölüm B'yi yazar ve öneriyi beş dakikada pitch eder (2–3. Hafta).
 2. **Gereksinim mühendisliği yapar.** Öğrenci fonksiyonel ve fonksiyonel olmayan gereksinimleri bir SRS (Software Requirements Specification, sistemin ne yapması gerektiğini listeleyen belge) olarak yönetir. Her gereksinim REQ-NNN biçiminde bir kimlik taşır, izlenebilirdir, verildikten sonra anlamını korur ve prototip incelemesinden sonra taban çizgisine (baseline) girer; öğrenci sonraki her değişikliği tarihli bir değişiklik günlüğüyle görünür kılar; kabul ölçütlerinden test case'ler yazılır ve prototip üzerinde yürütülür (2–5. Hafta).
 3. **Tasarlar ve prototipler.** Öğrenci mimariyi, veri modelini, sistem bağlam diyagramını ve dağıtım diyagramını repoda Mermaid ile (GitHub'ın markdown dosyasının içinde çizdiği, metin tabanlı bir diyagram gösterimi) çizer, tıklanabilir bir prototip kurar ve onu akran incelemesinden sonra revize eder (4–5. Hafta).
-4. **Full-stack uygulama geliştirir.** Öğrenci e-posta kodu ya da OTP ile giriş yapılan bir sunucu, bir web istemcisi ve bir mobil istemci geliştirir; aynı özellik üç katmanda birden çalışır (5–8. Hafta).
+4. **Full-stack uygulama geliştirir.** Öğrenci e-posta kodu ya da OTP ile giriş yapılan bir sunucu, bir web istemcisi ve bir mobil istemci geliştirir; aynı özellik üç katmanda birden çalışır. Ürüne bir sohbet botu da eklenir: mobil istemci öğrencinin kendi sunucusuyla konuşur, barındırılan bir LLM API'sini (web hizmeti olarak sunulan bir büyük dil modeli) yalnızca sunucu çağırır ve anahtar sunucuda kalır (5–8. Hafta).
 5. **Mobil uygulama geliştirir.** Öğrenci mobil istemciyi Flutter, React Native–Expo, Kotlin ya da Swift ile geliştirir; istemci telefonda çalışır ve mağazaya hazırdır (7–8. Hafta).
 6. **Yapay zeka asistanlarını mühendislik aracı olarak kullanır.** Öğrenci asistana istem yazar, çıktısını doğrular ve düzeltir, hatalarını kanıtla haftalık yapay zeka günlüğünde belgeler ve asistanı kendi işinin düşman gözden geçireni olarak kullanır. Ders üretileni değil değerlendirmeyi notlar (her hafta).
 7. **Sürüm kontrolü ve sürekli entegrasyon uygular.** Öğrenci günlük küçük commit'ler yapar, GitHub'da otomatik kontrollerin çalışmasını sağlar, kod kalitesini ruff ile (Python kodundaki stil ve hata sorunlarını bildiren bir araç) korur ve parola gibi gizli anahtarları repo dışında tutar (her hafta; CI, yani sürekli entegrasyon, 7. Hafta'dan).
@@ -39,7 +39,7 @@ Ders şablonu ve haftalık ödevler github.com/vedatcoskun-course/aiasd-template
 
 1. Hafta'nın ön okuması Vaswani vd., "Attention Is All You Need" (2017) makalesi ve dört ders belgesidir: AI Technical Background; Development Environment and Tools; Working with AI Tools; ve Yazılım Geliştirmede Yapay Zekayı Doğru Kullanmak (`AI_Doc5`; haftalık yapay zeka günlüğünün istediği sekiz tekniği anlatır ve sınav kapsamındadır). 2. Hafta için öğrenciler iki tam SDLC belge seti (bir sınav salonu tahsis sistemi; simülatörlü bir asansör denetleyicisi) ile Platforms and Stores el kitabını okur.
 
-Araçlar: Python 3.12, Git/GitHub, VS Code, sunucu için FastAPI, Streamlit, öğrencinin seçtiği iki sohbet asistanı (ücretsiz katman) ve bir mobil çatı (Flutter / React Native–Expo / Kotlin / Swift). Öğrenciler her hafta kendi dizüstü bilgisayarlarını getirir.
+Araçlar: Python 3.12, Git/GitHub, VS Code, sunucu için FastAPI, Streamlit, öğrencinin seçtiği iki sohbet asistanı (ücretsiz katman), ürünün sohbet botu için öğrencinin seçtiği bir LLM API'si ve bir mobil çatı (Flutter / React Native–Expo / Kotlin / Swift). Öğrenciler her hafta kendi dizüstü bilgisayarlarını getirir.
 
 ## Notlandırma
 
@@ -69,7 +69,7 @@ Araçlar: Python 3.12, Git/GitHub, VS Code, sunucu için FastAPI, Streamlit, ö�
 | 5 | 20/10 · 21/10 | Tasarım ve API sözleşmesi; geliştirme sunucu iskeleti ve ilk otomatik testlerle başlar; gereksinimler ve test case'ler taban çizgisi (baseline) olur |
 | 6 | 27/10 · 28/10 | E-posta kodu / OTP ile giriş: giriş sunucuda uçtan uca çalışır ve web istemcisinin giriş ekranı sunucuyla konuşur; uygulama kaydı oluşturulur (S2) |
 | 7 | 03/11 · 04/11 | Mobil istemci: giriş ekranı telefonda çalışır ve sunucuyla konuşur; testler; CI |
-| 8 | 10/11 · 11/11 | Projenin kendi çekirdek özelliği üç katmanda birden çalışır; ilk build test kanalına çıkar (S3) |
+| 8 | 10/11 · 11/11 | Ürünün sohbet botu sunucu ve barındırılan bir LLM API'si üzerinden mobil istemcide çalışır ve gereksinimlere bir değişiklik talebiyle girer; projenin kendi çekirdek özelliği üç katmanda birden çalışır; ilk build test kanalına çıkar (S3) |
 | 9 | 17/11 · 18/11 | Beta testi: testçiler kaydedilir, öğrenciler hata listesi tutar ve test raporu yazar (S4) |
 | 10 | 24/11 · 25/11 | UAT ve gönderim: öğrenciler UAT raporunu ve dağıtım diyagramını yazar, uygulama incelemeye gönderilir (S5) |
 | 11 | 01/12 · 02/12 | Yayın ve sağlamlaştırma: öğrenciler inceleme düzeltmelerini uygular, uygulama mağazada canlıya çıkar ve son README yazılır (S6) |
