@@ -27,7 +27,8 @@
 > Evidence bloğunda, `AI:` altında, harfi harfine de bulunmalı. Kalın yazı başka hiçbir şey
 > için kullanılmaz: vurgu, başlık ya da etiket için değil.
 >
-> **Worth 2 points, and a person reads it.** It is not graded on how much you used AI,
+> **Part of the 2 human-involvement points, and a person reads it.** It is not graded on how
+> much you used AI,
 > but on whether you checked the answer against criteria that you wrote first. The
 > Evidence block is not optional. Delete these quoted instructions before you commit.
 
@@ -50,9 +51,9 @@ STRONG: "My criteria before the prompt: REQ-001 (a 4-digit code by e-mail, no pa
          **All requirements are met**, but it had a password field and a **Sign in with
          Google** button, both against REQ-001, and nothing happened on a wrong code. With
          the REQ lines in the prompt, the second answer met REQ-001 but was 480 px wide, so
-         I fixed the width by hand. While checking it I saw that REQ-001 does not say what
-         happens after three wrong codes; I added that to its acceptance criterion (Change
-         log, 2026-10-13) and wrote TC-001-03."
+         I fixed the width by hand. Later I saw that REQ-002 does not say whether a booking
+         may end exactly at closing time; I added that edge value to its acceptance
+         criterion (Change log, 2026-10-13) and wrote TC-002-03."
 
 WHO WROTE WHAT — the reader sees it at once.
   Plain text   = you. Every word, the grammar too. You type it; no assistant, not even
@@ -92,6 +93,8 @@ ME:
 
 AI:
 [the answer, untouched]
-<!-- ME: is your prompt, AI: is the assistant's answer exactly as it came: nothing removed,
-     nothing corrected, not even the grammar. Several rounds: repeat ME: and AI:. -->
+<!-- ME: is your prompt, AI: is the assistant's answer. Several rounds: repeat ME: and AI:.
+     Paste the rounds of the exchange that show the error; you may leave out whole rounds
+     that do not. Every ME: or AI: part you keep is pasted whole, exactly as it came: from
+     Week 4, nothing removed, nothing corrected, not even the grammar. -->
 ```

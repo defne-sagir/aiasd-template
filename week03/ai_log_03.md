@@ -1,13 +1,14 @@
 # Week 3 — AI log
 
-> **Worth 2 points, and a person reads it.** Not graded on how much you used AI — on
+> **Part of the 2 human-involvement points, and a person reads it.** Not graded on how much you used AI — on
 > whether you could tell a good objection from a bad one. The Evidence block is not
 > optional. **Write this file yourself, in your own words; outside the Evidence block no
 > assistant is used, not even for the language. A log written by an assistant earns at
 > most 1.** Delete these quoted instructions before you commit.
 
 <!--
-THIS WEEK'S TASK — the assistant is the investor who wants to say no.
+THIS WEEK'S TASK — the assistant is the investor who wants to say no (AI_Doc5 §3, the
+hostile reviewer).
 1. Give one assistant your PROPOSAL.md Part B (§8–§12) as it stands, and ask:
      "You are an investor deciding whether to fund this. Give me the three strongest
       reasons to say no. Be specific to this proposal, not generic."

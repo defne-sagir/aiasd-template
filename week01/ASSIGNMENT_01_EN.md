@@ -19,9 +19,9 @@ Go to `https://github.com/vedatcoskun-course/aiasd-template` and click
 find your work by that name, so a different one means I do not find it.
 
 **Visibility: Private.** ⚠️ **The form opens on Public.** You have to change it before
-you press Create. Leave it on Public and your student number and your name are on the
-open internet — which is the one thing this whole setup exists to avoid. If it happens
-anyway, do not panic: change it in Settings straight away and tell me.
+you press Create. If you leave it on Public, your student number and your name are on
+the open internet. That is exactly what we want to avoid. If it happens, do not worry:
+change it in Settings at once and tell me.
 
 **Include all branches:** leave it off.
 
@@ -48,7 +48,7 @@ all required:
 
 ```json
 {
-  "student_id": "20210042",
+  "student_id": "230500000",
   "first_name": "Ayşe",
   "last_name": "Yılmaz",
   "nickname": "kaplumbaga",
@@ -57,7 +57,7 @@ all required:
 ```
 
 The **nickname** is what appears on the class board projected at the end of each
-lecture, so you can find your own row at a glance. Letters, digits, `-` and `_` only,
+lecture, so you can find your own row quickly. Letters, digits, `-` and `_` only,
 2–20 characters. Beyond that it is your choice — pick
 something you will still recognise in December.
 
@@ -90,7 +90,7 @@ is the example, and if thirty people hand in the example I learn nothing about a
 them. Make it about a list that means something to you: the courses you are taking
 this term, the five stops on your way to campus, the players in a squad you follow,
 the ingredients of something you cook. Ten lines is still plenty. The point is that
-your file should be recognisably yours before anyone reads the name at the top.
+your file should be clearly yours before anyone reads the name at the top.
 
 ```
 python week01/hello.py
@@ -105,10 +105,10 @@ Write `week01/llm_notes.md` **in your own words, minimum 300 words**, answering:
 what is a transformer, what problem does the attention mechanism solve, and how does
 an LLM generate the next token?
 
-This is the one file in the course where I want your sentences and not a model's. I
-am not going to pretend I can detect that by reading, because I cannot, and neither
-can any tool that claims to — so instead the task is built so that a pasted answer
-does not fit it:
+Write this file in your own sentences, not a model's. Later weeks say which other files
+you write yourself.
+I cannot tell by reading who wrote a text, and no tool can either. So the task is
+built in a way that a pasted answer does not fit:
 
 - **Anchor every explanation to your own session.** Quote the actual answer one of
   your two assistants gave you and say where it was vague, wrong or better than you
@@ -121,9 +121,8 @@ does not fit it:
   and it is the part I read most carefully.
 
 A fluent, correct, general essay about transformers earns fewer marks than a rougher
-one that is visibly about *your* twenty minutes. The term ends with a project
-defence. Everything you write between now and then is a promise you make to that
-conversation.
+one that is clearly about *your* twenty minutes. The term ends with a project
+defence. In the defence, you must be able to explain everything you wrote.
 
 While you are there, ask one of your questions **twice**: once vaguely, once with the
 context and the constraints spelled out. Put both answers in `llm_notes.md` and say in
@@ -163,8 +162,20 @@ Run the same checks locally before you push:
 python .github/check_deliverables.py
 ```
 
-Fix what it reports. A red cross on GitHub is information, not a grade — it tells you
-what is missing while you can still do something about it.
+Every push also runs a second job, **"Lint and format"**. It checks your Python files with
+ruff 0.15.11. Run it locally too:
+
+```bash
+pip install ruff==0.15.11
+ruff check .
+ruff format .
+```
+
+`ruff check .` lists problems in your code. `ruff format .` formats your files the way
+the job expects.
+
+Fix what they report. A red cross on GitHub is information, not a grade. It tells you
+what is missing while you still have time to fix it.
 
 ### 10. Commit and push
 ```
@@ -173,15 +184,25 @@ git commit -m "week01: environment setup and first LLM exploration"
 git push
 ```
 
+The commit rule:
+
+- At least two commits with new work, pushed at least one hour apart.
+- GitHub's push time counts, not the date on a commit.
+- A commit made by a coding agent never counts.
+- **Never force push**, and never let an assistant do it.
+
+From Week 2 you also push in the lecture, near 10:00, 11:00 and 11:45 (within 15 minutes
+of each time), each push with new work.
+
 ### 11. Nothing to submit on the LMS this week
 
 There is no form, no link to paste, no username to send me. Adding me as a Collaborator
 **is** the submission — GitHub tells me who added me, and your `student.json` tells me
 which student that is.
 
-Which means two things carry the whole week, and both are in task 1 and task 2: I have
-to be a Collaborator, and your student number in `student.json` has to be correct. Get
-either wrong and your work is invisible to me, however good it is.
+So two things matter most this week, and both are in task 1 and task 2: I have to be a
+Collaborator, and your student number in `student.json` has to be correct. If either
+one is wrong, I cannot see your work, however good it is.
 
 If the board shown in Week 2 has nothing for you, say so in the room. It is
 almost always one of those two, and both take a minute to fix.
@@ -196,15 +217,15 @@ almost always one of those two, and both take a minute to fix.
 - [ ] `week01/llm_notes.md` — 300+ words in your own words, one model error, and the two phrasings of one question
 - [ ] `week01/ai_log_01.md` — filled in, **including the pasted Evidence block**
 - [ ] `.gitignore` covers `.venv`, `.env`, `__pycache__`; `.env.example` present
-- [ ] The checks pass green on GitHub
-- [ ] At least 3 commits pushed
+- [ ] Both jobs are green on GitHub: "Weekly deliverables" and "Lint and format"
+- [ ] At least two commits with new work, pushed at least one hour apart
 - [ ] Repository named exactly `aiasd-project`, under the username you submitted
 
 ---
 
 ## How this week is graded
 
-This week is the exception to the usual rhythm. From Week 2 on, five points are read from
+This week is different from the other weeks. From Week 2 on, five points are read from
 your repository at the end of each lecture and five at Saturday 23:59. In Week 1 nothing is
 captured at the end of the lecture — most of you will not have a working environment yet,
 and setup is not graded work. **This week is worth five points, all read from your
@@ -213,13 +234,13 @@ repository at Saturday 23:59:**
 - **3** — the automated checks: repository from the template, private, I am a Collaborator,
   `student.json` complete, `setup_proof.md`, `hello.py` meeting its three requirements,
   `llm_notes.md` in your own words, `.gitignore` and `.env.example`, checks green.
-- **1** — commit discipline: at least three commits spread across the week, not one push on
-  Saturday night.
+- **1** — commit discipline: at least two commits with new work, pushed at least one hour
+  apart (the rule in task 10). A coding agent's commit never counts.
 - **1** — your `week01/ai_log_01.md`: a real session, a real model error, the pasted exchange.
   I read this one myself.
 
-The deadline is the same every week, so there is nothing to work out: whatever is in
-your repository at Saturday midnight is what I grade.
+The deadline is the same every week: I grade what is in your repository at Saturday
+23:59.
 
 An LLM can produce every file this assignment asks for. What it cannot do is make those
 files agree with the ten weeks around them, or notice its own mistakes for you. That is

@@ -12,8 +12,8 @@
 WHAT A PROPOSAL IS FOR
 A proposal convinces a busy reader — an instructor, an investor, a manager — in five
 minutes that you know what you are building, for whom, and why it can be finished. It is
-also a promise to yourself: every week from now on the checker reads it, and in December
-you defend the product against it. Write it so that a classmate who has never heard of
+also your plan: the checker reads it every week from now on, and in December you defend
+your product against what it says. Write it so that a classmate who has never heard of
 your idea could explain it to someone else after one reading.
 
 HOW TO WRITE IT
@@ -21,12 +21,13 @@ HOW TO WRITE IT
   §1 Title LAST — you can only summarise what you have already written.
 - Plain and specific. Short sentences. Names, numbers, times, places. No marketing words:
   "innovative", "seamless", "revolutionary", "user-friendly" say nothing.
-- One product. If you catch yourself writing "and also…", you have two projects; keep one.
+- One product. If you find yourself writing "and also…", you have two projects; keep one.
 - Small enough to finish. You have ten weeks, alone, for a mobile app, a web client and a
-  server on a public store. A product with three features that ship beats one with ten that
-  do not. You can always add in Week 10; you can never subtract in Week 11.
+  server on a public store. A product with three finished features is better than one with
+  ten unfinished ones. You can still add a feature in Week 10; in Week 11 it is too late
+  to remove one.
 - AI may help you draft. Then read every sentence and ask: is this true about MY product?
-  Assistants love to add features you never asked for; delete them.
+  Assistants often add features you never asked for; delete them.
 
 HOW TO READ THE COMMENTS BELOW
 Each section has WHY (what the section is for), WHAT (what to write), CHECK YOURSELF
@@ -45,10 +46,10 @@ RULES
   spaces included, not the heading and not the comments. For scale: this paragraph is about
   450 characters.
 - DIAGRAMS: every diagram in this course is written in Mermaid, inside a mermaid fenced
-  block, in the markdown file itself. No images, no links to external tools. GitHub renders
-  Mermaid on the page and the checker parses it; a diagram that does not parse is shown as
-  raw text on GitHub and fails the check. The block must appear directly under the heading
-  that asks for it.
+  block, in the markdown file itself. No images, no links to external tools. GitHub draws
+  Mermaid on the page. The checker only finds the block; open the file on GitHub to see
+  that the diagram is drawn. A diagram with an error is shown as raw text. The block must
+  appear directly under the heading that asks for it.
 -->
 
 ---
@@ -134,15 +135,18 @@ STRONG: "A student logs in with a university e-mail code, sees the rooms as free
 ### 5. How it works (about 600 characters + one diagram)
 <!--
 WHY: the reader wants to know that you have thought about how the parts fit — before you
-spend ten weeks building them. It is also the first sketch of the design you write next week.
+spend ten weeks building them. It is also the first sketch of the design you write in Week 5.
 WHAT: the approach in plain words, one or two sentences for each of these:
   - the MOBILE app: who uses it and for what;
   - the WEB client: who uses it and for what — often a different user (an admin, a teacher,
     a shop owner), sometimes the same user on a laptop;
   - the SERVER: what it keeps and what it decides (rules, timers, permissions);
   - the DATA: which database, hosted where;
-  - LOGIN: every project logs in with an e-mail code or OTP — say who sends the code;
+  - LOGIN: users log in with a 4-digit code sent by e-mail; the login is the same in every
+    project (from Week 6 it is the course's module) — say which e-mail service sends it;
   - AI: where it is used inside the product, if at all.
+    In Week 8 every product gets a chatbot through your server and a hosted LLM API,
+    added by a change request.
 The words mobile, web and server must all appear; the checker looks for them.
 CHECK YOURSELF: for each feature in §4, can you say which part does it? Does any client
 store data that only the server should hold?
@@ -156,7 +160,7 @@ STRONG: "Students use the mobile app to see and book rooms and to check in. The 
 
 Then a SYSTEM CONTEXT DIAGRAM directly under this comment. It shows your whole system as
 ONE box (mobile + web + server inside it) and, around it, everything outside that it talks
-to: each kind of user, the e-mail/OTP service, any third-party API (maps, payments, an AI
+to: each kind of user, the e-mail service, any third-party API (maps, payments, an AI
 model), the app store. Label the arrows with what flows: "books a room", "login code". It
 answers one question: what is inside my system and what is not? The block below is an
 example: replace every line of it and delete the EXAMPLE line, or the checker treats it as
@@ -178,15 +182,19 @@ flowchart LR
 
 ### 6. Technologies (about 300 characters)
 <!--
-WHY: a stack you have not checked is the most common reason a project stalls in Week 6.
+WHY: a stack you have not checked is the most common reason a project stops in Week 6.
 WHAT: one line per layer, naming the actual tool: mobile, web, server, database, hosting,
 login e-mail, store, AI. Only things you will install and use this term. Before you write a
 line, check that it runs on YOUR laptop and phone — AI_PLATFORMS_AND_STORES tells you what
-each combination allows; native or hybrid is your choice.
+each combination allows. The web client is the same for everyone: plain HTML, CSS and
+JavaScript pages in web/, served by your FastAPI server (the Week 4 prototype screens
+become these pages in Week 6). Only the mobile framework is your choice (Week 7: Flutter,
+React Native–Expo, Kotlin or Swift).
 CHECK YOURSELF: have you installed or at least run a "hello world" in each one? Is the
 hosting free, or do you know the price? Does the store you have in mind accept this stack?
 WEAK:   "React, Python, AI, cloud, database."
-STRONG: "Mobile: Flutter (Android first). Web: Flutter web. Server: FastAPI (Python 3.12).
+STRONG: "Mobile: Flutter (Android first). Web: plain HTML/CSS/JS in web/, served by the
+         FastAPI server. Server: FastAPI (Python 3.12).
          Database: PostgreSQL on Render (free tier). Login e-mail: Resend. Store: Google
          Play. AI: none in the product."
 -->
@@ -214,8 +222,8 @@ STRONG: "1. A new student installs the app from the store and books a room in un
 ## Part B — Why it is worth building (Week 3)
 
 <!--
-Part B is next week's work, together with the design. Read it now so you know where you
-are going; write it in Week 3. The same StudyRoom examples continue.
+Part B is next week's work. Read it now so you know where you are going; write it in
+Week 3. The same StudyRoom examples continue.
 -->
 
 ### 8. Market and target users (about 500 characters)
@@ -294,9 +302,17 @@ STRONG: "1. Store: Google Play, 25 $ once; new personal accounts need a closed t
 
 ---
 
-## Change log (about 300 characters)
+## Change log
 <!--
 One dated line per change, newest first, from Week 3 on: what changed, in which section,
 and why. The proposal is allowed to change — it is not allowed to change silently.
 Example:  2026-10-11 — §4: dropped offline mode; §12 risk 2 made it unrealistic before Week 11.
+
+CHANGE REQUESTS: from the Sunday after Week 5 (the baseline), every change to
+requirements.json or test_cases.json, a dropped requirement included, is a change request:
+one line that begins with CR- and the next number, names the change and the ids, and lists
+every file it affects.
+Example:  2026-10-28 — CR-01: REQ-002 now allows 15-minute slots; affects requirements.json,
+          test_cases.json (TC-002-02), week05/api.md, server/bookings.py.
+Other changes (api.md, use cases, screens) get an ordinary dated line.
 -->

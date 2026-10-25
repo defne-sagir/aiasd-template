@@ -35,6 +35,9 @@ The three starter screens (`index.html`, `code.html`, `home.html`) are the login
 everyone shares (REQ-001). Replace the [bracketed] parts, then build your main flow from
 `home.html` onwards.
 
+In Week 6 these screens become the pages of your web client in `web/`. They stay plain HTML,
+CSS and JavaScript, served by your FastAPI server.
+
 **Invented data**
 
 - Login code: 1234

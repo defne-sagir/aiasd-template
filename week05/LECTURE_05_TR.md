@@ -6,7 +6,7 @@
 <!-- Eğitmen: tarayıcıyı %150'ye yakınlaştırın ve GitHub başlığını kapatın. Toplam ≈ 2 sa 45 dk:
 20 dk anlatım + kısa bir FastAPI gösterimi · 10:00'a kadar bileşenler ve api.md'nin giriş satırları, elle
 (push) · 11:00'e kadar route'lar (push) · ilk giriş testi, denetleyici ve 11:45'teki son push ·
-hemen ardından dondurma. -->
+not, dersin sonuna dek push edilen son commit'i okur. -->
 
 ---
 
@@ -31,7 +31,7 @@ Bir ay önce projeniz yalnızca aklınızdaki bir fikirdi.
 - **3. hafta:** pitch ve pazar; proje artık kalıcı olarak sizin
 - **4. hafta:** ekranlar ve onlara tıklayan bir sınıf arkadaşı
 - **Bu hafta proje yazılıma dönüşüyor:** bir iskelet, bir sözleşme, size ilk kez cevap veren bir sunucu
-- **Sonra:** e-posta kutunuza gelen kodla giriş (6) · aynı giriş telefonda (7) · ürününüzün kendi özelliği her yerde (8) · gerçek testçiler, mağaza ve Aralık'ta bir mağazadan kurulan uygulamanız
+- **Sonra:** dersin girişi ve kendi özelliğiniz, uçtan uca (6) · mobil istemci (7) · bir sohbet botu (8) · gerçek testçiler, mağaza ve Aralık'ta bir mağazadan kurulan uygulamanız
 
 Cumartesi gereksinimleriniz ve test case'leriniz **taban çizginiz (baseline)** olur.
 
@@ -46,7 +46,7 @@ Cumartesi gereksinimleriniz ve test case'leriniz **taban çizginiz (baseline)** 
 - **Sunucu iskeleti:** her endpoint'e, şimdilik "henüz yapılmadı" diyerek cevap veren gerçek bir sunucu
 - **İlk testler:** giriş test case'leriniz kod olarak, girişi bekliyor
 
-Girişi 6. hafta, bugünkü endpoint'lerin arkasına kurarsınız ve web istemcisi onları çağırır. Mobil istemci 7. haftada aynılarını, hiç değiştirmeden çağırır. 8. hafta aynı sözleşmeye satır ekler.
+6. haftada dersin girişi bugünkü giriş endpoint'lerinin arkasına girer, kendi özelliğiniz uçtan uca çalışır ve `web/` içindeki sayfalarınız onları çağırır. Mobil istemci 7. haftada aynılarını, hiç değiştirmeden çağırır. 8. haftanın sohbet botu aynı sözleşmeye satır ekler.
 
 **Sözleşmedeki bir hata bugün bulunursa bir satıra mal olur. 8. haftada bulunursa sunucuya ve iki istemciye.**
 
@@ -70,7 +70,7 @@ Girişi 6. hafta, bugünkü endpoint'lerin arkasına kurarsınız ve web istemci
 |---|---|
 | `api.md` dosyasının giriş satırları: metot, yol, istek, cevap, hatalar | **Yardım yok**: herhangi bir koddan önce siz yazarsınız |
 | Testleri ve sunucuyu çalıştırmak ve ekrana yazdıklarını okumak | **Yardım yok**: kendiniz çalıştırırsınız |
-| Değişiklik günlüğü satırları ve Pazar'dan itibaren değişiklik istekleri | **Yardım yok** |
+| Değişiklik günlüğü satırları ve Pazar'dan itibaren change request'ler | **Yardım yok** |
 | `ai_log_05.md` (Evidence bloğu ve kalın alıntılar dışında) | **Yardım yok** |
 
 <!-- Eğitmen: "Yardım yok" satırlarını yüksek sesle okuyun. Yeni olan ilk satırdır: giriş satırları, herhangi bir koddan önce elle yazılır. -->
@@ -129,7 +129,7 @@ Web istemciniz (6. hafta) ve mobil istemciniz (7. hafta) API sözleşmesine gör
 
 ## Bileşenler: kurallar
 
-- Her bileşene, kodunuzda vereceğiniz adı verin: "Sunucu: rezervasyonlar" `server/bookings.py` olur.
+- Her bileşene, kodunuzda vereceğiniz adı verin: "Sunucu: rezervasyonlar" `server/bookings.py` olur (6. hafta).
 - Ne yaptığına dair tek cümle. Üç kez "ve" diyorsanız, bunlar iki bileşendir.
 - REQ kimlikleri `requirements.json` içinde bulunur. Hiçbir gereksinime hizmet etmeyen bir bileşenin var olmak için bir nedeni olmalıdır.
 - Asistan önerebilir; **karar sizindir**.
@@ -156,7 +156,7 @@ ZAYIF: `| Backend | Her şeyi yapar | REQ-001, REQ-002, REQ-003, REQ-004, REQ-00
 
 ## Giriş: en az iki endpoint
 
-Her projede giriş aynı şekilde yapılır (REQ-001). **İkinci satır, yani kodla giriş, sizindir.** Kod doğru mu? Yanlış mı? Çok mu eski? TC-001-01 ve TC-001-02 test case'leriniz size söyler.
+Her projede giriş aynı şekilde yapılır (REQ-001). **İkinci satır, yani kodla giriş, sizindir.** Kod doğru mu? Yanlış mı? Çok mu eski? TC-001-01 ve TC-001-02 test case'leriniz söyler. Kurallar: 4 hane · 10 dk · bir kez · 60 sn içinde yeni kod → 429 · 3 yanlış → 15 dk kilit.
 
 | Metot | Yol | İstek | Cevap | Hatalar | REQ |
 |---|---|---|---|---|---|
@@ -268,7 +268,7 @@ python -m pytest
 
 ## Kırmızı, doğru nedenle
 
-Bugün test **başarısız olur**. Olmalıdır: giriş 6. haftada yapılır.
+Bugün test **başarısız olur**. Olmalıdır: giriş 6. haftada gelir.
 
 | Hata ne diyor | Anlamı |
 |---|---|
@@ -290,19 +290,19 @@ Başarısız bir testi beklenen değeri değiştirerek "düzelten" bir asistan, 
 
 ---
 
-## Bu haftadan itibaren commit düzeni
+## Bu haftadan itibaren commit disiplini
 
 **Derste:** her kontrol noktasında, **10:00, 11:00 ve 11:45**'te, her birinden en fazla on beş dakika farkla, yeni iş içeren bir push.
 
-**Ders dışında:** ayrı oturumlarda, yeni iş içeren en az iki commit.
+**Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde push edilmiş olsun. Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır.
 
-Sonda tek bir commit puan getirmez.
+Bir kodlama ajanının yaptığı commit hiçbir zaman sayılmaz. **Asla force push yapmayın** ve bir asistanın yapmasına da izin vermeyin.
 
 ---
 
 ## Cumartesi 23:59'a kadar
 
-- `api.md`: her route'un bir satırı var; istek, 2xx koduyla cevap ve 4xx koduyla her hata.
+- `api.md`: girişin "me" endpoint'i dahil her route'un bir satırı var; istek, 2xx koduyla cevap ve 4xx koduyla her hata.
 - **En az üç giriş testi**, her biri `test_cases.json` içindeki bir test case kimliğiyle adlandırılmış. 6. haftaya kadar doğru nedenle başarısız olurlar. Onları herhangi bir giriş kodundan önce commit edin.
 - `DESIGN.md`: her işlevsel `must` gereksinime hizmet ediliyor; **Mermaid diyagramı olarak mimari**.
 - `ai_log_05.md`: çalıştırarak doğrulama.
@@ -310,13 +310,13 @@ Sonda tek bir commit puan getirmez.
 
 ---
 
-## Taban çizgisi ve değişiklik istekleri
+## Taban çizgisi ve change request'ler
 
 **Cumartesi 23:59:** `requirements.json` ve `test_cases.json` taban çizginiz olur.
 
-**Pazar'dan itibaren**, ikisinden birindeki bir değişiklik bir **değişiklik isteğidir** (change request): `CR-` ve bir numarayla başlayan ve etkilediği her dosyayı sayan bir Değişiklik günlüğü satırı.
+**Pazar'dan itibaren**, ikisinden birindeki bir değişiklik bir **değişiklik talebidir** (change request): `CR-` ve bir numarayla başlayan ve etkilediği her dosyayı sayan bir Değişiklik günlüğü satırı.
 
-> 2026-10-28 — CR-01: REQ-004 artık 15 dakikalık dilimlere izin veriyor; etkilenenler: requirements.json, test_cases.json (TC-004-02), week05/api.md, server/bookings.py.
+> 2026-10-28 — CR-01: REQ-002 artık 15 dakikalık dilimlere izin veriyor; etkilenenler: requirements.json, test_cases.json (TC-002-02), week05/api.md, server/bookings.py.
 
 Henüz var olmayan bir test case'e mi ihtiyacınız var? Cumartesi'den **önce** ekleyin.
 
@@ -341,8 +341,8 @@ Sizin sözleriniz düz, asistanın sözleri kalın. **Asistana yazdırılmış b
 |---|---|---|
 | Dersin sonu (11:45) | 5 | bileşenler, `api.md` dosyasının giriş satırları, her satır için bir route, ilk giriş testi |
 | Cumartesi denetleyicisi | 2 | sözleşmenin tamamı, üç test, tamamlanmış tasarım, AI log |
-| İnsan katılımı | 2 | gerçek çıktıyla, sizin yazdığınız AI log; koddan önce elle yazılmış giriş satırları |
-| Commit düzeni | 1 | her kontrol noktasında bir push (10:00, 11:00, 11:45); ders dışında, ayrı oturumlarda iki commit |
+| İnsan katkısı | 2 | gerçek çıktıyla, sizin yazdığınız AI log; koddan önce elle yazılmış giriş satırları |
+| Commit disiplini | 1 | her kontrol noktasında bir push (10:00, 11:00, 11:45); ders dışında, aralarında en az bir saat olacak şekilde push edilmiş iki commit |
 
 Bu hafta katkı bonusu yok.
 
@@ -350,8 +350,8 @@ Bu hafta katkı bonusu yok.
 
 ## Gelecek hafta: giriş çalışır
 
-**6. hafta:** e-posta koduyla giriş, uçtan uca. Derste kod bir dosyaya yazılır; **Cumartesi'ye kadar gerçek e-postayla gelir**. Web istemcisi giriş ekranını alır. 5. haftanın testleri tek tek yeşile döner. S2: mağazanızda uygulama kaydı.
+**6. hafta:** ders size girişi bağlanmaya hazır olarak verir. Kendi özelliğiniz uçtan uca çalışır: sunucuda (StudyRoom için `server/bookings.py`) ve `web/` içindeki bir sayfada. Derste kod bir dosyaya yazılır; **Cumartesi'ye kadar gerçek e-postayla gelir**. 5. haftanın testlerini dersin girişine uyarlarsınız ve testler yeşile döner. S2: mağazanızda uygulama kaydı.
 
 **6. haftadan önce:** sunucunun e-posta gönderebileceği bir hesap. Gmail için: iki adımlı doğrulama açık, sonra bir uygulama şifresi. Asla repoya değil: `.env` dosyasına girer.
 
-<!-- Eğitmen: "Cumartesi 23:59'a kadar" slaytından itibaren olanlar, 11:45'teki push'tan önceki son on beş dakika içindir. 11:45'ten hemen sonra dondurun. -->
+<!-- Eğitmen: "Cumartesi 23:59'a kadar" slaytından itibaren olanlar, 11:45'teki push'tan önceki son on beş dakika içindir. Not, dersin sonuna dek push edilen son commit'i okur. -->

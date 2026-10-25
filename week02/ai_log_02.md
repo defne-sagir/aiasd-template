@@ -1,13 +1,13 @@
 # Week 2 — AI log
 
-> **Worth 2 points, and a person reads it.** Not graded on how much or how little you
+> **Part of the 2 human-involvement points, and a person reads it.** Not graded on how much or how little you
 > used AI — on whether you noticed something. The Evidence block is not optional: a
 > claim with nothing pasted under it earns nothing.
 >
 > Delete these quoted instructions before you commit.
 
 <!--
-THIS WEEK'S TASK
+THIS WEEK'S TASK (AI_Doc5 §4, cross-examination)
 1. Take your PROPOSAL.md §1–§4 as they stand.
 2. Give two different assistants (Claude, ChatGPT, Gemini, Copilot … any two) the SAME
    prompt, for example:

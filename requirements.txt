@@ -3,6 +3,6 @@
 #
 #   pip install -r requirements.txt
 
-streamlit==1.41.1
 python-dotenv==1.0.1
 requests==2.32.3
+ruff==0.15.11   # the same version as the "Lint and format" job on GitHub

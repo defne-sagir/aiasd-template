@@ -42,7 +42,7 @@ The six slides, each with its own instructions inside the file:
 
 1. the product in one sentence;
 2. **the last time the problem happened** — to you, or in front of you — date, place, who, what they did instead;
-3. **five real people who will test it in Week 9** — name, how you know them;
+3. **five real people who will test it** (enrolled on the test track in Week 8 at S3, the beta test in Week 9, the User Acceptance Test in Week 10) — name, how you know them;
 4. three things it does, one thing it does not;
 5. the main screen, **drawn by hand** (photo in `week03/`) or in text;
 6. the one thing you are not sure about.
@@ -57,7 +57,7 @@ different: AI is a tool there, as before, and `ai_log_03.md` asks you to use it.
 Two rules behind slides 2 and 3, and they stay for the whole term: **the project solves
 a problem of yours — your own, your friends' at the university, or your social
 circle's**, and **it is usable by real people around you** — at Atlas, in your family, in
-a club — because in Week 9 those people test it, and you will need them. If you cannot
+a club — because those people test it in Weeks 9 and 10, and you will need them. If you cannot
 name the last time the problem happened, or five people who would use the product, the
 problem is with the project, not the slide: change the project in this lecture.
 
@@ -88,14 +88,14 @@ questions on slide 7 — on paper or in a text file, handed to the presenter. Fo
 about 45 minutes. Say what you think; a polite "it is good" helps nobody and earns nobody
 anything.
 
-**This group is your group for the rest of the term.** From Week 4 your group meets
-**online for one hour every week, between the lecture and Saturday** — Teams, Meet,
-Discord, whatever you like — and each of you presents what changed in your project that
-week; the others say what they think. The entries in your
-`weekNN/group_NN.json` come from that meeting from then on: who said what, quoted,
-and what you did about it. Nobody can write those entries for someone who was not
-there, so missing the meeting shows by itself. You may hold the first one this week
-already.
+**This group is your group for the rest of the term.** It does not meet every week:
+each assignment says in which weeks it meets and what for. In Week 4, one classmate you
+choose, your **collaborator**, runs your test cases on your prototype.
+
+From Week 4, `weekNN/group_NN.json` holds the people that week's assignment names, with
+that week's role (the exact English word): 4 collaborator · 5 nobody (you work alone) ·
+6 attacker · 7 tester · 8 test-user · 9 beta-tester · 10 uat-participant ·
+11 release-tester · 12 poster-reviewer.
 
 ### 2. `week03/contributors_03.json` — three reviewers
 
@@ -116,7 +116,8 @@ it is not allowed to change silently.
 `requirements.json` may change this week too — add, drop (keep the id, set
 `"dropped": true`), reword. **From Saturday an id never changes its meaning**; the list
 itself stays open until the end of Week 5, when it becomes your baseline after the
-prototype review.
+prototype review. After that, every change to it is a **change request**: a Change log
+line that begins with `CR-` (the Change log comment in `PROPOSAL.md` shows how).
 
 ### 4. `week03/screens_03.md` — the screens of your main flow
 
@@ -134,7 +135,8 @@ clickable prototype.
 
 - read the acceptance criteria of each other's `must` requirements, and mark every one
   that a tester could not check (item 8 below);
-- agree on the day and the tool of your weekly one-hour online meeting;
+- agree how your group can reach each other (a chat group, for example) for the weeks
+  in which it meets;
 - start Part B, especially §8 and the store choice in §12, while I am in the room to answer.
 
 ### 5. Push
@@ -146,7 +148,9 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Push after the review round, and again at the end of the lecture, **11:45** — the usual 10:00 / 11:00 / end of the lecture (11:45). Right after it I freeze every repository. What is not pushed does not exist.
+In the lecture, push your work near 10:00 (after the review round), 11:00 and 11:45
+(within 15 minutes of each time), each push with new work. The lecture mark reads your last commit pushed by the end of the lecture.
+What is not pushed does not exist.
 
 ---
 
@@ -171,23 +175,31 @@ weak/strong pair inside the file; the StudyRoom examples continue.
 
 ### 7. Use AI as a hostile reviewer — `week03/ai_log_03.md`
 
-This week the assistant plays the investor who wants to say no. Give it your Part B and
+This week the assistant plays the investor who wants to say no (AI_Doc5 §3, the hostile
+reviewer). Give it your Part B and
 ask for the three strongest objections. Then **answer one of them in the proposal** and
 **show one objection to be wrong** — with evidence: a number, a source, a thing you
 checked. Paste the exchange. A log that says "it gave useful feedback" earns nothing.
 
 ### 8. Get your acceptance criteria ready for Week 4
 
-In Week 4 every acceptance criterion in `requirements.json` becomes a test case, and the
-members of your group run those test cases on your clickable prototype. A criterion that
+In Week 4 every acceptance criterion in `requirements.json` becomes a test case, and one
+classmate you choose, your collaborator, runs those test cases on your clickable prototype. A criterion that
 nobody can check, such as "users are satisfied", cannot become a test case. Read your
 criteria again this week and rewrite the ones that do not say what a tester should see.
 This is not marked this week; next week it is the starting point.
 
 ### 9. Push again, checks green
 
-Several commits as you work, each with some new work in it and a message that says what changed; a commit does not need to be a finished part. Everything the checker
-asks for is listed below.
+The commit rule outside the lecture:
+
+- At least two commits with new work, pushed at least one hour apart. A commit does not
+  need to be a finished part; its message says what changed.
+- GitHub's push time counts, not the date on a commit.
+- A commit made by a coding agent never counts.
+- **Never force push**, and never let an assistant do it.
+
+Everything the checker asks for is listed below.
 
 ---
 
@@ -229,11 +241,12 @@ write the same list loses one point, every member.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real
-sentences and real decisions behind them. Commit discipline: **1** — several pushes at
-different times in the lecture (at least three) and several commits as you work, each with some new work in it.
+sentences and real decisions behind them. Commit discipline: **1** — the lecture pushes
+(step 5) and the rule in step 9.
 
 **Contributors' bonus.** Each reviewer you name earns 10% of your week's mark; you earn
-the same for the reviews you give. From Week 4 the names are your group.
+the same for the reviews you give. From Week 4 each assignment says whom you name (Week 4:
+your collaborator).
 
 **One student, one computer, one GitHub account.** Work done on a classmate's machine or
 under a classmate's session earns nothing for the lecture.

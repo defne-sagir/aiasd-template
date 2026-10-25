@@ -13,15 +13,16 @@ Bir ay önce projeniz yalnızca aklınızdaki bir fikirdi, şimdi neye dönüşt
 
 Bu haftadan itibaren projeniz yazılıma dönüşüyor. Ürününüz bir iskelet kazanıyor: nelerden oluştuğuna karar
 veriyorsunuz, parçalarının birbirine verdiği sözleri (API sözleşmesi) yazıyorsunuz ve gerçek bir sunucu size
-ilk kez cevap veriyor. Gelecek hafta bir kullanıcı, e-posta kutusuna gelen bir kodla giriş yapacak. 7.
-haftada aynı giriş bir telefonda çalışacak. 8. haftada ürününüz, var oluş nedeni olan işi sunucuda, web'de
-ve telefonda yapacak. Ardından gerçek testçiler ve mağazanın incelemesi gelecek; Aralık'ta kendi
-uygulamanızı, juri önünde iken bir mağazadan indireceksiniz.
+ilk kez cevap veriyor. Gelecek hafta ders size girişi bağlanmaya hazır olarak verecek ve bir kullanıcı,
+e-posta kutusuna gelen bir kodla giriş yapacak. Ürününüzün kendi özelliği de uçtan uca çalışacak: sunucuda
+ve bir web sayfasında. 7. haftada bir telefonda çalışacak. 8. haftada ürününüze bir sohbet botu eklenecek.
+Ardından gerçek testçiler ve mağazanın incelemesi gelecek; Aralık'ta kendi uygulamanızı jüri önünde bir
+mağazadan indireceksiniz.
 
 Bu hafta, mühendislerin en çok keyif aldığı haftadır: bir tasarımın koda dönüştüğü an. Bir sözleşmenin
 birkaç satırını elle yazacak, sunucunuzun endpoint'lerini `/docs` sayfasında listelediğini görecek ve
-bilerek başarısız olan testler yazacaksınız, çünkü bekledikleri kod henüz yok. Gelecek hafta onları tek tek
-yeşile döndüreceksiniz.
+bilerek başarısız olan testler yazacaksınız, çünkü bekledikleri kod henüz yok. Gelecek hafta, dersin girişi
+bağlandığında, onları yeşile döndüreceksiniz.
 
 ## Bu hafta: ne kuruyorsunuz ve projedeki yeri ne
 
@@ -35,10 +36,11 @@ Bu hafta, geri kalan her şeyin üzerine kurulacağı parçayı kuruyorsunuz:
   yalnızca "henüz yapılmadı" diyerek de olsa.
 - **İlk testler**: giriş test case'leriniz, koda dönüşmüş ve girişi bekliyor.
 
-Neden önemli: 6. haftada bugün listelediğiniz endpoint'lerin arkasına girişi kuracaksınız ve web istemciniz
-[]()bu endpoint'leri çağıracak. 7. haftada mobil istemciniz aynı endpoint'leri, hiç değiştirmeden
-çağıracak. 8. haftada ürününüzün kendi özelliği aynı sözleşmeye yeni satırlar, aynı tasarıma yeni bileşenler
-ekleyecek. Şimdi yazdığınız her test, sonraki haftalarda bir asistan kodunuzu her değiştirdiğinde onu izlemeye
+Neden önemli: 6. haftada dersin girişi, bugün listelediğiniz giriş endpoint'lerinin arkasına girecek. Sonra
+kendi özelliğiniz uçtan uca çalışacak (StudyRoom için `server/bookings.py` içinde) ve `web/` içindeki
+sayfalarınız tam da bu endpoint'leri çağıracak. 7. haftada mobil istemciniz aynı endpoint'leri, hiç
+değiştirmeden çağıracak. 8. haftada sohbet botu aynı sözleşmeye yeni satırlar, aynı tasarıma yeni bir
+bileşen ekleyecek. Şimdi yazdığınız her test, sonraki haftalarda bir asistan kodunuzu her değiştirdiğinde onu izlemeye
 devam edecek. Sözleşmedeki bir hata bugün bulunursa size bir satıra mal olur; 8. haftada bulunursa sunucuya
 ve iki istemciye.
 
@@ -54,7 +56,7 @@ ve iki istemciye.
 | **API sözleşmesi** | Bütün endpoint'ler tek bir tabloda, `api.md`: sunucunun, iki istemcinin ve her testin üzerinde anlaştığı sayfa. |
 | **FastAPI, route, uvicorn** | FastAPI sunucunuzun Python kütüphanesidir; route, tek bir endpoint'e cevap veren tek bir fonksiyondur; uvicorn sunucuyu çalıştırır ve `/docs` her route'u listeler. Tek sayfada: `week05/FASTAPI_CARD_TR.md`. |
 | **Test, pytest** | Koda dönüşmüş bir test case; `pytest` hepsini çalıştırır. Bir testin adı test case kimliğiyle başlar. Kırmızı başarısız oldu, yeşil geçti demektir. |
-| **Taban çizgisi, değişiklik isteği** | Cumartesi'den itibaren gereksinimleriniz ve test case'leriniz sabittir; onları değiştirmek artık yazılı bir değişiklik isteği gerektirir. |
+| **Taban çizgisi, change request** | Cumartesi günü gereksinimleriniz ve test case'leriniz sabitlenir; Pazar'dan itibaren onları değiştirmek bir değişiklik talebi (change request) gerektirir: Değişiklik günlüğünde bir `CR-` satırı (§9). |
 | **Mermaid** | 2. haftadan bildiğiniz metin tabanlı diyagram gösterimi; bu hafta mimarinizi çizer. |
 
 ## Ne, ne zaman teslim edilir
@@ -143,7 +145,7 @@ endpoint'ini orada listeler ve her birini deneyebilirsiniz. Sunucuyu Ctrl+C ile 
 | Bir hata mesajını açıklamak | **Yardım eder** |
 | `api.md` dosyasının giriş satırları: metot, yol, istek, cevap, hatalar | **Yardım yok**: herhangi bir koddan önce siz yazarsınız |
 | Testleri ve sunucuyu çalıştırmak ve ekrana yazdıklarını okumak | **Yardım yok**: kendiniz çalıştırırsınız |
-| Değişiklik günlüğü satırları ve Pazar'dan itibaren değişiklik istekleri | **Yardım yok** |
+| Değişiklik günlüğü satırları ve Pazar'dan itibaren change request'ler | **Yardım yok** |
 | `ai_log_05.md` (Evidence bloğu ve kalın alıntılar dışında) | **Yardım yok** |
 
 ---
@@ -173,7 +175,7 @@ yaptığını tek cümleyle söyler ve hizmet ettiği gereksinimleri listeler. S
 
 Kurallar:
 
-- **Her bileşene, kodunuzda vereceğiniz adı verin.** "Sunucu: rezervasyonlar" 8. haftada
+- **Her bileşene, kodunuzda vereceğiniz adı verin.** "Sunucu: rezervasyonlar" 6. haftada
   `server/bookings.py` olur.
 - **Ne yaptığına dair tek cümle.** Üç kez "ve" demeniz gerekiyorsa, bunlar iki bileşendir.
 - **REQ kimlikleri `week02/requirements.json` içinde bulunur.** Hiçbir gereksinime hizmet
@@ -221,6 +223,11 @@ olabileceği her yol, her biri kendi durum koduyla. StudyRoom'un ilk satırı ş
 İkinci satırı, yani kodla girişi, siz yazarsınız. Test case'lerinizin neye ihtiyaç duyduğunu
 kendinize sorun: kod doğruysa istemci ne alır, yanlışsa ya da çok eskiyse ne
 alır?
+
+6. haftadan itibaren giriş, dersin modülüdür ve her projede aynıdır; bu yüzden satırlarınız onun
+kurallarına uyar: kod 4 hanelidir, 10 dakika geçerlidir ve bir kez kullanılır; 60 saniye içinde
+yeni kod → 429; üst üste 3 yanlış kod (yeni kod sayımı sıfırlamaz) → adres 15 dakika kilitlenir
+(429); doğru kod bir token verir; "me" token ister; şifre yok; sosyal giriş yok.
 
 **Bu satırları elle yazın ve herhangi bir koddan önce, 10:00'da push edin.** Hiçbir asistan
 onları yazmaz, düzeltmez ya da tamamlamaz. Bunlar için 10:00'daki push okunur.
@@ -292,7 +299,7 @@ python -m pytest
 ```
 
 Bugün bu test **başarısız olur** ve olmalıdır: route 501 ile cevap verir, çünkü giriş 6.
-haftada yapılır. Neden başarısız olduğunu okuyun. `assert 501 == 200` satırı doğru nedendir.
+haftada gelir. Neden başarısız olduğunu okuyun. `assert 501 == 200` satırı doğru nedendir.
 `assert 404 == 200`, route'un eksik olduğu ya da yolunun `api.md`'dekinden farklı olduğu
 anlamına gelir; `ImportError`, testin sunucunuzu bulamadığı anlamına gelir. Bunları düzeltin,
 çünkü yanlış nedenle başarısız olan bir test hiçbir şeyi test etmez. Kod var olmadan önce
@@ -313,7 +320,8 @@ git push
 
 **10:00**'da, **11:00**'de ve dersin sonunda, **11:45**'te push edin; her seferinde yeni işle
 ve o saatten en fazla on beş dakika farkla. 10:00'daki push giriş satırlarınızı taşır.
-11:45'ten hemen sonra bütün repoları dondururum. Push edilmemiş olan yoktur.
+11:45'e dek push edin. Ders notu, dersin sonuna dek push ettiğiniz son commit'i okur. Push edilmemiş
+olan yoktur.
 
 ---
 
@@ -322,13 +330,13 @@ ve o saatten en fazla on beş dakika farkla. 10:00'daki push giriş satırların
 ### 6. API sözleşmesinin tamamı — `week05/api.md`
 
 Sunucunuzun her endpoint'inin bir satırı, her satırın da bir route'u vardır. Şimdilik bunlar
-giriş ve `/health`. Bir giriş genellikle bir endpoint daha gerektirir: istemcinin, token bir
+giriş ve `/health`. Giriş bir endpoint daha gerektirir: "me", yani istemcinin, token bir
 `Authorization` başlığındayken, kimin giriş yaptığını öğrenmek için çağırdığı endpoint.
-Sizinkinin buna ihtiyacı olup olmadığına karar verin.
+6. haftadaki dersin girişinde bu endpoint vardır; bu yüzden satırını ve route'unu şimdi yazın.
 
 Bir gereksinime hizmet eden her endpoint için: istek, 2xx koduyla cevap ve 4xx koduyla her
-hata. Diğer özelliklerinizin endpoint'leri kendi haftalarını bekleyebilir; şimdi birini
-eklerseniz route'u da onunla birlikte gelir.
+hata. Kendi özelliğinizin endpoint'leri 6. haftayı bekleyebilir; orada onları herhangi bir
+route kodundan önce elle yazarsınız. Şimdi birini eklerseniz route'u da onunla birlikte gelir.
 
 ### 7. Giriş testleri — `server/tests/test_login.py`
 
@@ -336,11 +344,11 @@ Her biri `week04/test_cases.json` içindeki bir test case kimliğiyle adlandır�
 test: kod gönderilir, yanlış bir kod reddedilir, eski bir kod reddedilir, çok erken istenen
 ikinci bir kod reddedilir. Bir test henüz var olmayan bir test case'e ihtiyaç duyarsa
 (örneğin 429 kuralı), o test case'i Cumartesi'den önce, bir Değişiklik günlüğü satırıyla
-`test_cases.json` dosyasına ekleyin: Cumartesi'den sonra bu bir değişiklik isteği olur (§9).
+`test_cases.json` dosyasına ekleyin: Cumartesi'den sonra bu bir change request olur (§9).
 
-Hepsi 6. haftaya kadar, doğru nedenle başarısız olur. Plan budur: 6. haftada girişi, testler
-tek tek geçene kadar yaparsınız. Testleri herhangi bir giriş kodundan önce commit edin: commit
-geçmişiniz hangisinin önce geldiğini gösterir.
+Hepsi 6. haftaya kadar, doğru nedenle başarısız olur. Plan budur: 6. haftada ders size girişi
+bağlanmaya hazır olarak verir; testlerinizi ona uyarlarsınız ve testler geçer. Testleri herhangi
+bir giriş kodundan önce commit edin: commit geçmişiniz hangisinin önce geldiğini gösterir.
 
 ### 8. Tasarımın tamamı — `week05/DESIGN.md`
 
@@ -353,12 +361,12 @@ geçmişiniz hangisinin önce geldiğini gösterir.
 **Cumartesi 23:59**'da `week02/requirements.json` ve `week04/test_cases.json` **taban
 çizginiz** olur. Son değişikliklerinizi bundan önce, her birini kendi Değişiklik günlüğü satırıyla yapın.
 
-Pazar'dan itibaren bu iki dosyadan birindeki her değişiklik bir **değişiklik isteği (change
-request)** olur: `PROPOSAL.md` içinde, `CR-` ve bir numarayla başlayan, değişikliği ve
+Pazar'dan itibaren bu iki dosyadan birindeki her değişiklik bir **change request**
+olur: `PROPOSAL.md` içinde, `CR-` ve bir numarayla başlayan, değişikliği ve
 kimlikleri anan ve etkilediği her dosyayı listeleyen bir Değişiklik günlüğü satırı:
 
-"2026-10-28 — CR-01: REQ-004 artık 15 dakikalık dilimlere izin veriyor; etkilediği dosyalar: requirements.json,
-test_cases.json (TC-004-02), week05/api.md, server/bookings.py."
+"2026-10-28 — CR-01: REQ-002 artık 15 dakikalık dilimlere izin veriyor; etkilediği dosyalar: requirements.json,
+test_cases.json (TC-002-02), week05/api.md, server/bookings.py."
 
 ### 10. Çalıştırarak doğrulayın — `week05/ai_log_05.md`
 
@@ -375,9 +383,11 @@ yerde, kalındır ve 4. haftadaki gibi Evidence bloğunda da bulunur.
 
 ### 11. Yeniden push, denetimler yeşil
 
-Çalıştıkça yapılan, her birinde biraz yeni iş ve ne değiştiğini söyleyen bir mesaj olan
-commit'ler; ders dışında, en az iki ayrı oturumda. Denetleyicinin istediklerinin hepsi
-aşağıdadır.
+**Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde
+push edilmiş olsun. Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama
+ajanının yaptığı commit hiçbir zaman sayılmaz. **Asla force push yapmayın** ve bir asistanın
+yapmasına da izin vermeyin. Her commit mesajı neyin değiştiğini söyler. Denetleyicinin
+istediklerinin hepsi aşağıdadır.
 
 ---
 
@@ -402,8 +412,8 @@ aşağıdadır.
 ## Bu hafta yok
 
 Henüz giriş yok: route'lar 501 ile cevap verir ve kod gönderilmez (6. hafta). E-posta yok, veritabanı yok,
-web ya da mobil istemci yok (6. ve 7. haftalar). Grup çalışması ve katkı bonusu yok. Mağaza
-adımı yok: S2 6. haftada.
+web ya da mobil istemci yok (e-posta ve web: 6. hafta; mobil: 7. hafta). Grup çalışması ve katkı
+bonusu yok. Mağaza adımı yok: S2 6. haftada.
 
 ---
 
@@ -413,12 +423,12 @@ adımı yok: S2 6. haftada.
 route ve ilk giriş testi; reponuzun dersin sonundaki
 (11:45) halinden okunur.
 
-**Cumartesi 23:59 — 5 puan.** Son halinizde denetimlerin yeşil olması: **2**. İnsan katılımı:
+**Cumartesi 23:59 — 5 puan.** Son halinizde denetimlerin yeşil olması: **2**. İnsan katkısı:
 **2**; yani gerçek çıktısı yapıştırılmış, sizin yazdığınız `ai_log_05.md` (asistana yazdırılmış
 günlük **0** alır) ve koddan önce elle yazdığınız giriş satırları.
-Commit düzeni: **1**; yani üç kontrol noktasının her birinde (10:00, 11:00, 11:45; en fazla on
-beş dakika farkla) yeni iş içeren bir push ve ders dışında, ayrı oturumlarda en az iki
-commit.
+Commit disiplini: **1**; yani üç kontrol noktasının her birinde (10:00, 11:00, 11:45; en fazla on
+beş dakika farkla) yeni iş içeren bir push ve ders dışında, aralarında en az bir saat olacak
+şekilde push edilmiş, yeni iş içeren en az iki commit (§11).
 
 **Bir öğrenci, bir bilgisayar, bir GitHub hesabı.** Kendi bilgisayarınızdan, kendi hesabınızla
 commit edin. Bir arkadaşınızın bilgisayarında ya da onun oturumunda yapılan iş ders için puan

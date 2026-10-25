@@ -1,22 +1,24 @@
 {
   "_how_to_fill_this_in": [
     "One object per requirement. Fill in every field; replace every '…'. Do not rename the fields.",
-    "id: REQ-001, REQ-002 … in order. Ids never change after this week — design, tests and traceability point at them. A requirement you drop keeps its id and gets 'dropped': true.",
+    "id: REQ-001, REQ-002 … in order. Ids never change after this week: the chain requirement → use case → screen → test case → api.md row points at them. A requirement you drop keeps its id and gets 'dropped': true.",
+    "This file is the only place for the requirements. Do not copy them into SRS.md: SRS §4 and §5 hold one line, 'The requirements are in week02/requirements.json.'",
     "description: one sentence, one behaviour, something you could test. Not 'the app is user-friendly'; 'a student books a free slot of 30 to 120 minutes'.",
     "functional: true if it says WHAT the system does (a user can…, the system sends…); false if it says HOW WELL (speed, security, privacy, capacity, phone screen, language).",
     "priority: must (the product is pointless without it — ships in Week 11), should (important, cut only if time runs out), could (nice to have). Not everything is a must: that is the point of the field.",
-    "acceptance: the test that proves the requirement is met — what you do and what you must see. It is the test you will actually run in Week 9. Example: 'Enter the code from the e-mail within 10 minutes: logged in. A wrong code three times: locked for 15 minutes.'",
-    "At least 8: at least 5 functional and at least 3 non-functional. REQ-001 (login) and REQ-006 (phone screen) are the same for everyone: keep them, adjust the wording to your product if you need to.",
+    "acceptance: the test that proves the requirement is met — what you do and what you must see. From Week 4 it becomes a test case that you really run. Example: 'Enter the code from the e-mail within 10 minutes: logged in. Three wrong codes in a row: locked for 15 minutes.'",
+    "At least 8: at least 5 functional and at least 3 non-functional. REQ-001 (login) and REQ-006 (phone screen) are the same for everyone; adjust the wording to your product. The login rules are fixed: a 4-digit code sent by e-mail, valid for 10 minutes, works once; a new code within 60 seconds → 429; 3 wrong codes in a row → the address is locked for 15 minutes (429); no passwords; no social login.",
+    "Change requests: from the Sunday after Week 5 (the baseline), every change to this file, a dropped requirement included, is a change request: one line in the Change log of PROPOSAL.md that begins with CR- and the next number, names the change and the ids, and lists every file it affects. Example: '2026-10-28 — CR-01: REQ-002 now allows 15-minute slots; affects requirements.json, test_cases.json (TC-002-02), week05/api.md, server/bookings.py.'",
     "You may delete this _how_to_fill_this_in block once you have read it; the checker ignores it."
   ],
   "project": "the title from PROPOSAL.md §1",
   "requirements": [
     {
       "id": "REQ-001",
-      "description": "A new user signs up with an e-mail address and logs in with the 4-digit code sent to it; no passwords are stored.",
+      "description": "A new user signs up with an e-mail address and logs in with the 4-digit code sent to it; no passwords and no social login.",
       "functional": true,
       "priority": "must",
-      "acceptance": "The code arrives by e-mail within one minute; entering it within 10 minutes logs the user in; an expired or wrong code is refused with a message."
+      "acceptance": "The 4-digit code arrives by e-mail within one minute; entering it within 10 minutes logs the user in, and it works only once; an expired or wrong code is refused with a message; a new code asked within 60 seconds is refused (429); 3 wrong codes in a row lock the address for 15 minutes (429)."
     },
     {
       "id": "REQ-002",

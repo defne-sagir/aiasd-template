@@ -20,8 +20,8 @@
 
 **Visibility: Private.** ⚠️ **Form Public seçili açılır.** Create'e basmadan önce
 değiştirmeniz gerekiyor. Public bırakırsanız öğrenci numaranız ve adınız açık internete
-düşer — bu düzenin var olma nedeni tam da bunu önlemektir. Yine de olursa panik yapmayın:
-Settings'ten hemen değiştirin ve bana söyleyin.
+düşer. Tam olarak bunu önlemek istiyoruz. Yine de olursa endişelenmeyin: Settings'ten
+hemen değiştirin ve bana söyleyin.
 
 **Include all branches:** kapalı bırakın.
 
@@ -45,7 +45,7 @@ Yenisini oluşturmayın — o dosyayı açıp doldurun. Beş alan, hepsi zorunlu
 
 ```json
 {
-  "student_id": "20210042",
+  "student_id": "230500000",
   "first_name": "Ayşe",
   "last_name": "Yılmaz",
   "nickname": "kaplumbaga",
@@ -101,9 +101,9 @@ tarayıcıda açın: Claude, Gemini, ChatGPT, Copilot, Codex — erişebildiğin
 soruları yanıtlayın: transformer nedir, attention mekanizması hangi sorunu çözer ve bir
 LLM bir sonraki token'ı nasıl üretir?
 
-Bu, derste bir modelin değil sizin cümlelerinizi istediğim tek dosya. Bunu okuyarak
-anlayabilirmişim gibi yapmayacağım, çünkü anlayamam; anladığını iddia eden hiçbir araç da
-anlayamaz — bu yüzden görev, yapıştırılmış bir yanıtın oturmayacağı biçimde kuruldu:
+Bu dosyayı bir modelin değil, kendi cümlelerinizle yazın. Başka hangi dosyaları kendiniz
+yazacağınızı sonraki haftalar söyler. Bir metni kimin yazdığını okuyarak anlayamam; hiçbir araç da
+anlayamaz. Bu yüzden görev, yapıştırılmış bir yanıtın oturmayacağı biçimde kuruldu:
 
 - **Her açıklamayı kendi oturumunuza bağlayın.** İki asistanınızdan birinin verdiği gerçek
   yanıtı alıntılayın ve nerede belirsiz, yanlış ya da beklediğinizden iyi olduğunu
@@ -114,9 +114,9 @@ anlayamaz — bu yüzden görev, yapıştırılmış bir yanıtın oturmayacağ�
   olduğu kısım budur, çünkü neyi kaçırdığınızı bilmez — ve en dikkatle okuduğum kısım
   da budur.
 
-Transformer'lar hakkında akıcı, doğru, genel bir kompozisyon; sizin yirmi dakikanız
-olduğu görülen daha kaba bir metinden daha az puan alır. Dönem bir proje savunmasıyla
-biter. Şimdiden o güne kadar yazdığınız her şey, o konuşmaya verdiğiniz bir sözdür.
+Transformer'lar hakkında akıcı, doğru, genel bir kompozisyon; açıkça sizin yirmi
+dakikanızı anlatan daha kaba bir metinden daha az puan alır. Dönem bir proje
+savunmasıyla biter. Savunmada yazdığınız her şeyi açıklayabilmeniz gerekir.
 
 Oradayken sorularınızdan birini **iki kez** sorun: bir kez belirsiz biçimde, bir kez de
 bağlamı ve kısıtları açıkça yazarak. İki yanıtı da `llm_notes.md` içine koyun ve neyin
@@ -156,8 +156,20 @@ Push etmeden önce aynı kontrolleri yerelde çalıştırın:
 python .github/check_deliverables.py
 ```
 
-Bildirdiklerini düzeltin. GitHub'daki kırmızı çarpı bir not değil, bilgidir — hala bir şey
-yapabilecekken neyin eksik olduğunu söyler.
+Her push ikinci bir işi de çalıştırır: **"Lint and format"**. Bu iş Python dosyalarınızı
+ruff 0.15.11 ile denetler. Onu da yerelde çalıştırın:
+
+```bash
+pip install ruff==0.15.11
+ruff check .
+ruff format .
+```
+
+`ruff check .` kodunuzdaki sorunları listeler. `ruff format .` dosyalarınızı işin
+beklediği biçime getirir.
+
+Bildirdiklerini düzeltin. GitHub'daki kırmızı çarpı bir not değil, bilgidir. Düzeltmek
+için hala zamanınız varken neyin eksik olduğunu söyler.
 
 ### 10. Commit ve push
 ```
@@ -166,15 +178,25 @@ git commit -m "week01: environment setup and first LLM exploration"
 git push
 ```
 
+Commit kuralı:
+
+- Yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde push edilmiş olsun.
+- Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır.
+- Bir kodlama ajanının yaptığı commit hiçbir zaman sayılmaz.
+- **Asla force push yapmayın** ve bir asistanın yapmasına da izin vermeyin.
+
+2. haftadan itibaren derste de push edersiniz: 10:00, 11:00 ve 11:45 civarında (her
+saatten en fazla 15 dakika önce ya da sonra); her push'ta yeni iş olsun.
+
 ### 11. Bu hafta LMS'e teslim edilecek bir şey yok
 
 Form yok, yapıştırılacak bağlantı yok, bana gönderilecek kullanıcı adı yok. Beni
 Collaborator olarak eklemek teslimin **kendisidir** — GitHub kimin eklediğini bana söyler,
 `student.json` dosyanız da o kişinin hangi öğrenci olduğunu.
 
-Bu, haftanın tamamını iki şeyin taşıdığı anlamına gelir ve ikisi de 1. ve 2. görevde:
-Collaborator olmalıyım ve `student.json` içindeki öğrenci numaranız doğru olmalı. Birini
-yanlış yaparsanız çalışmanız, ne kadar iyi olursa olsun, benim için görünmezdir.
+Yani bu hafta en önemli iki şey var ve ikisi de 1. ve 2. görevde: Collaborator olmalıyım
+ve `student.json` içindeki öğrenci numaranız doğru olmalı. Biri yanlışsa çalışmanızı,
+ne kadar iyi olursa olsun, göremem.
 
 2. Hafta'da gösterilen panoda sizin için bir şey yoksa sınıfta söyleyin. Neredeyse her
 zaman bu ikisinden biridir ve ikisi de bir dakikada düzelir.
@@ -189,15 +211,15 @@ zaman bu ikisinden biridir ve ikisi de bir dakikada düzelir.
 - [ ] `week01/llm_notes.md` — kendi cümlelerinizle 300+ kelime, bir model hatası ve bir sorunun iki farklı ifadesi
 - [ ] `week01/ai_log_01.md` — doldurulmuş, **yapıştırılmış Evidence bloğu dahil**
 - [ ] `.gitignore` `.venv`, `.env`, `__pycache__` içeriyor; `.env.example` mevcut
-- [ ] Kontroller GitHub'da yeşil
-- [ ] En az 3 commit push edilmiş
+- [ ] İki iş de GitHub'da yeşil: "Weekly deliverables" ve "Lint and format"
+- [ ] Yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde push edilmiş
 - [ ] Repo adı tam olarak `aiasd-project`, bildirdiğiniz kullanıcı adının altında
 
 ---
 
 ## Bu hafta nasıl notlanıyor
 
-Bu hafta olağan ritmin istisnasıdır. 2. Hafta'dan itibaren her dersin sonunda reponuzdan
+Bu hafta diğer haftalardan farklıdır. 2. Hafta'dan itibaren her dersin sonunda reponuzdan
 beş puan, Cumartesi 23:59'da beş puan okunur. 1. Hafta'da ders sonunda hiçbir şey
 alınmaz — çoğunuzun henüz çalışan bir ortamı olmayacak ve kurulum notlanan bir iş
 değildir. **Bu hafta beş puan değerindedir; tamamı Cumartesi 23:59'da reponuzdan
@@ -206,13 +228,13 @@ okunur:**
 - **3** — otomatik kontroller: şablondan oluşturulmuş repo, private, ben Collaborator,
   `student.json` tam, `setup_proof.md`, üç gereksinimi karşılayan `hello.py`, kendi
   cümlelerinizle `llm_notes.md`, `.gitignore` ve `.env.example`, kontroller yeşil.
-- **1** — commit disiplini: haftaya yayılmış en az üç commit; Cumartesi gecesi tek push
-  değil.
+- **1** — commit disiplini: yeni iş içeren en az iki commit, aralarında en az bir saat
+  olacak şekilde push edilmiş (10. görevdeki kural). Bir kodlama ajanının commit'i hiçbir
+  zaman sayılmaz.
 - **1** — `week01/ai_log_01.md` dosyanız: gerçek bir oturum, gerçek bir model hatası,
   yapıştırılmış yazışma. Bunu kendim okuyorum.
 
-Teslim saati her hafta aynıdır, dolayısıyla hesaplanacak bir şey yok: Cumartesi gece
-yarısı reponuzda ne varsa, notladığım odur.
+Teslim saati her hafta aynıdır: Cumartesi 23:59'da reponuzda ne varsa, onu notlarım.
 
 Bir LLM bu ödevin istediği her dosyayı üretebilir. Yapamadığı şey, o dosyaları
 çevresindeki on haftayla tutarlı kılmak ya da kendi hatalarını sizin yerinize fark

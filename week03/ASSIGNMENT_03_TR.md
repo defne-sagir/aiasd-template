@@ -43,7 +43,7 @@ Altı slayt, her birinin yönergesi dosyanın içinde:
 
 1. ürün tek cümleyle;
 2. **sorun en son ne zaman oldu** — size ya da gözünüzün önünde — tarih, yer, kim, onun yerine ne yaptı;
-3. **9. haftada test edecek beş gerçek kişi** — ad, nereden tanıdığınız;
+3. **onu test edecek beş gerçek kişi** (8. haftada S3'te test kanalına kayıt, 9. haftada beta testi, 10. haftada Kullanıcı Kabul Testi) — ad, nereden tanıdığınız;
 4. yaptığı üç şey, yapmadığı bir şey;
 5. ana ekran, **elle çizilmiş** (fotoğraf `week03/` içinde) ya da metinle;
 6. emin olmadığınız tek şey.
@@ -58,7 +58,7 @@ her zamanki gibi bir araçtır ve `ai_log_03.md` onu kullanmanızı ister.
 2. ve 3. slaytların arkasında iki kural var ve dönem boyunca geçerli: **proje sizin bir
 sorununuzu çözer — kendinizin, üniversitedeki arkadaşlarınızın ya da sosyal çevrenizin**
 ve **çevrenizdeki gerçek kişiler tarafından kullanılabilir** — Atlas'ta, ailenizde, bir
-kulüpte — çünkü 9. haftada o kişiler test edecek ve onlara ihtiyacınız olacak. Sorunun en
+kulüpte — çünkü 9. ve 10. haftalarda o kişiler test edecek ve onlara ihtiyacınız olacak. Sorunun en
 son ne zaman olduğunu ya da ürünü kullanacak beş kişiyi
 söyleyemiyorsanız sorun slaytta değil projededir: projeyi bu derste değiştirin.
 
@@ -88,13 +88,14 @@ kağıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 4
 düşünüyorsanız söyleyin; nazik bir "iyi olmuş" kimseye yardım etmez, kimseye puan
 getirmez.
 
-**Bu grup, dönemin geri kalanında sizin grubunuzdur.** 4. Hafta'dan itibaren grubunuz
-**her hafta, ders ile Cumartesi arasında, bir saatlik bir çevrimiçi toplantı** yapar
-— Teams, Meet, Discord, ne isterseniz — ve her biriniz o hafta projesinde neyin değiştiğini
-anlatır; diğerleri ne düşündüğünü söyler. O andan sonra `weekNN/group_NN.json`
-içindeki kayıtlar bu toplantıdan gelir: kim ne dedi, alıntıyla, ve siz ne yaptınız.
-Toplantıda olmayan biri için kimse o kaydı yazamaz; toplantıyı kaçırmak kendiliğinden
-görünür. İlkini bu hafta yapabilirsiniz.
+**Bu grup, dönemin geri kalanında sizin grubunuzdur.** Her hafta toplanmaz: hangi
+haftalarda ve ne için toplandığını her ödev söyler. 4. Hafta'da seçtiğiniz bir sınıf
+arkadaşınız, **collaborator**'ınız, test case'lerinizi prototipiniz üzerinde yürütür.
+
+4. Hafta'dan itibaren `weekNN/group_NN.json`, o haftanın ödevinin adını verdiği kişileri
+o haftanın rolüyle (tam İngilizce kelimeyle) tutar: 4 collaborator · 5 kimse (tek
+başınıza çalışırsınız) · 6 attacker · 7 tester · 8 test-user · 9 beta-tester ·
+10 uat-participant · 11 release-tester · 12 poster-reviewer.
 
 ### 2. `week03/contributors_03.json` — üç değerlendiren
 
@@ -116,7 +117,9 @@ değişemez.
 `requirements.json` bu hafta da değişebilir — ekleyin, çıkarın (id kalır, `"dropped":
 true`), yeniden yazın. **Cumartesiden itibaren bir id'nin anlamı hiç değişmez**; listenin
 kendisi 5. Hafta sonuna kadar açık kalır ve prototip incelemesinden sonra taban çizginiz
-(baseline) olur.
+(baseline) olur. Ondan sonra listedeki her değişiklik bir **değişiklik talebidir (change
+request)**: `CR-` ile başlayan bir Değişiklik günlüğü satırı (nasıl yazılacağını
+`PROPOSAL.md` içinde "## Change log" başlığının altındaki yorum gösterir).
 
 ### 4. `week03/screens_03.md` — ana akışınızın ekranları
 
@@ -133,7 +136,8 @@ satır, tıklanabilir prototipinizin bir ekranı olur.
 
 - birbirinizin `must` gereksinimlerinin kabul ölçütlerini okuyun ve test edenin kontrol
   edemeyeceği her birini işaretleyin (aşağıda 8. madde);
-- haftalık bir saatlik çevrim içi toplantınızın gününü ve aracını kararlaştırın;
+- grubunuzun toplandığı haftalar için birbirinize nasıl ulaşacağınızı (örneğin bir
+  mesajlaşma grubu) kararlaştırın;
 - ben sınıftayken Bölüm B'ye, özellikle §8'e ve §12'deki mağaza seçimine başlayın.
 
 ### 5. Push
@@ -145,7 +149,9 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-İnceleme turundan sonra ve dersin sonunda, **11:45**'te bir kez daha push edin — her zamanki 10:00 / 11:00 / ders sonu (11:45). Hemen ardından her repoyu donduruyorum. Push edilmeyen yoktur.
+Derste çalışmanızı 10:00 (inceleme turundan sonra), 11:00 ve 11:45 civarında (her
+saatten en fazla 15 dakika önce ya da sonra) push edin; her push'ta yeni iş olsun.
+Ders notu, dersin sonuna dek push ettiğiniz son commit'i okur. Push edilmeyen yoktur.
 
 ---
 
@@ -170,7 +176,8 @@ zayıf/güçlü örneği var; StudyRoom örnekleri devam ediyor.
 
 ### 7. Yapay zekayı düşman gözüyle okutun — `week03/ai_log_03.md`
 
-Bu hafta asistan, hayır demek isteyen yatırımcıyı oynar. Bölüm B'nizi verin ve en güçlü
+Bu hafta asistan, hayır demek isteyen yatırımcıyı oynar (AI_Doc5 §3, düşman gözden
+geçiren). Bölüm B'nizi verin ve en güçlü
 üç itirazı isteyin. Sonra **birini teklifte cevaplayın** ve **birinin yanlış olduğunu
 gösterin** — kanıtla: bir sayı, bir kaynak, kontrol ettiğiniz bir şey. Yazışmayı
 yapıştırın. "Yararlı geri bildirim verdi" diyen bir günlük puan getirmez.
@@ -178,15 +185,23 @@ yapıştırın. "Yararlı geri bildirim verdi" diyen bir günlük puan getirmez.
 ### 8. Kabul ölçütlerinizi 4. Hafta'ya hazırlayın
 
 4. Hafta'da `requirements.json` içindeki her kabul ölçütü bir test case'e dönüşür ve
-grubunuzun üyeleri bu test case'leri tıklanabilir prototipiniz üzerinde yürütür. "Kullanıcılar
+seçtiğiniz bir sınıf arkadaşınız, collaborator'ınız, bu test case'leri tıklanabilir
+prototipiniz üzerinde yürütür. "Kullanıcılar
 memnun kalır" gibi kimsenin kontrol edemeyeceği bir ölçüt test case'e dönüşemez. Bu hafta
 ölçütlerinizi yeniden okuyun ve bir testçinin ne görmesi gerektiğini söylemeyenleri yeniden
 yazın. Bu hafta notlanmaz; gelecek hafta başlangıç noktası budur.
 
 ### 9. Yeniden push, kontroller yeşil
 
-Çalıştıkça yapılan, her birinde biraz yeni iş ve ne değiştiğini söyleyen bir mesaj olan commit'ler; bir commit'in bitmiş bir parça olması gerekmez. Denetleyicinin istediği
-her şey aşağıda.
+Ders dışındaki commit kuralı:
+
+- Yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde push edilmiş
+  olsun. Bir commit'in bitmiş bir parça olması gerekmez; mesajı ne değiştiğini söyler.
+- Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır.
+- Bir kodlama ajanının yaptığı commit hiçbir zaman sayılmaz.
+- **Asla force push yapmayın** ve bir asistanın yapmasına da izin vermeyin.
+
+Denetleyicinin istediği her şey aşağıda.
 
 ---
 
@@ -226,10 +241,11 @@ cümlelerle, Değişiklik günlüğü başlamış, ana akışın ekranları yaz�
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2** —
 kanıtıyla `ai_log_03.md` ve arkasında gerçek cümleler, gerçek kararlar olan incelemeler.
-Commit disiplini: **1** — derste farklı zamanlarda birkaç push (en az üç) ve çalıştıkça yapılan birkaç commit; her birinde biraz yeni iş olsun.
+Commit disiplini: **1** — dersteki push'lar (5. adım) ve 9. adımdaki kural.
 
 **Katkı bonusu.** Adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır;
-siz de verdiğiniz incelemeler için aynısını kazanırsınız. 4. Hafta'dan itibaren isimler grubunuzdur.
+siz de verdiğiniz incelemeler için aynısını kazanırsınız. 4. Hafta'dan itibaren kimin adını
+yazacağınızı her ödev söyler (4. Hafta: collaborator'ınız).
 
 **Bir öğrenci, bir bilgisayar, bir GitHub hesabı.** Arkadaşınızın bilgisayarında ya da
 onun oturumunda yapılan iş ders için puan getirmez.

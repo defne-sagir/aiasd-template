@@ -5,7 +5,7 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header. Total ≈ 3 h:
 25 min explanation · build until about 10:30 (push at 10:00) · walk-through until about 11:30,
-12 min per prototype (push at 11:00) · files, checker and the last push at 11:45 · freeze right after it. -->
+12 min per prototype (push at 11:00) · files, checker and the last push at 11:45 · the mark reads the last commit pushed by the end of the lecture. -->
 
 ---
 
@@ -60,14 +60,14 @@ That is why your requirements stay open until the end of Week 5: this week shows
 
 ## The prototype — `week04/prototype/`
 
-- **One HTML file for each screen.** `index.html` is the first. A double click opens it: no server, no framework, no build step.
-- **Every screen can be reached by clicking.** Write links as `href="rooms.html"`: the full name, lower case, in quotes.
+- **One HTML file for each screen.** `index.html` is the first. A double click opens it: no server, no framework.
+- **Every screen is reached by clicking:** links like `href="rooms.html"`.
 - **Every screen names its requirements:** `<!-- serves: REQ-002, REQ-006 -->`
 - **The invented data is fixed**, so that your collaborator can follow the steps. The login code is always **1234**. Your own values go in `prototype/README.md`.
 - **Three starter screens** arrive with the checker: the login that everyone shares (REQ-001). Your main flow starts at `home.html`.
-- **No server, so no memory:** after a booking, the next screen shows the same fixed data with the booking already in it.
+- **No server, so no memory:** after a booking, the next screen shows fixed data with the booking in it.
 
-**By the end of the lecture (11:45): at least five screens. By Saturday: the whole flow, at least seven.**
+**By 11:45: at least five screens. By Saturday: the whole flow, at least seven.**
 
 ---
 
@@ -82,6 +82,10 @@ What assistants like to add, and what it breaks:
 | a password field, "Sign in with Google" | REQ-001: a code by e-mail, no password |
 | a layout 480 px wide | REQ-006: 390 px, no horizontal scroll |
 | no message when something goes wrong | the test case for the wrong code |
+
+---
+
+## Build it with your assistant — what to ask for
 
 **Tell it what you want:** plain HTML and CSS, one file for each screen, the shared `style.css`, no framework. One screen at a time, and **one commit for each screen**.
 
@@ -113,12 +117,16 @@ What it looks like in your log:
 
 > The first answer ended with **All requirements are met**. But it had a password field, and REQ-001 says no password. I had written that criterion before the prompt.
 
+<!-- Instructor: point at the example. Bold is the assistant, the rest is the student. The reader of the log must see it in one glance. -->
+
+---
+
+## The AI log: four rules
+
 1. A bold phrase must also stand, letter for letter, in the Evidence block.
 2. A phrase or one sentence, never a paragraph. The whole answer goes in the Evidence block under `AI:`, your prompt under `ME:`.
 3. Bold is for the assistant and for nothing else: no bold for emphasis, headings or labels.
 4. Everything else you type yourself: not the sentences, not the grammar, not the translation, not the "polish" from an assistant.
-
-<!-- Instructor: point at the example. Bold is the assistant, the rest is the student. The reader of the log must see it in one glance. -->
 
 ---
 
@@ -225,7 +233,7 @@ Ids never change meaning: new id, or `"dropped": true`. **Every change: one date
 |---|---|---|
 | `pass` | the collaborator saw what "expected" says | a few words |
 | `fail` | they did not | what they saw instead |
-| `blocked` | it cannot be checked on a prototype, such as "the code arrives within one minute" | why; it is checked on the real system from Week 5 |
+| `blocked` | it cannot be checked on a prototype, such as "the code arrives within one minute" | why; it is checked on the real system from Week 6 |
 
 A screen that does not exist yet is a `fail`.
 
@@ -256,14 +264,14 @@ git commit -m "week04: prototype, test cases, walk-through"
 git push
 ```
 
-The last push is at **the end of the lecture (11:45)**. Right after it I freeze every repository.
+The last push is at **the end of the lecture (11:45)**. The lecture mark reads the last commit you pushed.
 
 ---
 
 ## By Saturday — fix, run again, update
 
 - **Fix every fail.** Usually the prototype changes; sometimes the test case or the requirement was wrong.
-- **Round 2 with your collaborator, online.** Share your screen; your collaborator reads the steps of each failed test case, and you click exactly what they say: `"round": 2` in `walkthrough_04.json`, written by you. Your group meeting is the natural place if they are in your group; otherwise any call you both choose.
+- **Round 2 with your collaborator, online.** Share your screen; your collaborator reads the steps of each failed test case, and you click exactly what they say: `"round": 2` in `walkthrough_04.json`, written by you. Use any online call you both choose.
 - **Update `requirements.json` and `test_cases.json`.** Each change gets one dated line in the Change log, with the ids:
 
 `2026-10-13 — REQ-011 added: my collaborator looked for a way to cancel a booking and found none; TC-011-01 written.`
@@ -274,9 +282,9 @@ The last push is at **the end of the lecture (11:45)**. Right after it I freeze 
 
 Every functional `must` requirement has a screen that serves it. **At least seven screens.** Colours and fonts do not matter; the flow does.
 
-**End of Week 5: `requirements.json` + `test_cases.json` = your baseline.** After that, a change goes through a change request.
+**End of Week 5: `requirements.json` + `test_cases.json` = your baseline.** From the Sunday after it, a change is a change request: a Change log line that begins with `CR-` and lists every file it affects.
 
-From Week 5 your test cases become automated tests, and each test's name carries its id: `test_TC_002_02_busy_slot_is_refused`.
+From Week 5 your test cases with `"run": "server"` become automated tests, and each test's name carries its id: `test_TC_002_02_busy_slot_is_refused`.
 
 ---
 
@@ -327,15 +335,15 @@ The fee is your decision. Huawei AppGallery and Samsung Galaxy Store cost nothin
 | End of lecture (11:45) | 5 | prototype, test cases, walk-through, a quoted finding from your collaborator |
 | Saturday checker | 2 | round 2, updates, seven screens, S1, the AI log |
 | Human involvement | 2 | the AI log; what your collaborator said, written by you by hand; real findings, real decisions |
-| Commit discipline | 1 | several lecture pushes (at least 3); several commits as you work |
+| Commit discipline | 1 | pushes near 10:00, 11:00, 11:45; two outside commits an hour apart |
 
-The collaborator you name earns 10 % of your week's mark; so do you, for the tests you run for the classmate who names you. S1 also counts for the store bonus.
+No agent commits count. **Never force push.** Bonus: 10 % for the collaborator you name, and for the tests you run for a classmate. S1 counts for the store bonus.
 
 ---
 
 ## Next week: design and the first real code
 
-**Week 5:** the design and the API contract (the list of what your server answers, and how), the server skeleton, and the login by e-mail code working end to end.
+**Week 5:** the design and the API contract (the list of what your server answers, and how), a server whose routes answer 501 ("not built yet"), and login tests that fail until Week 6, when the course's login arrives.
 
 At the end of Week 5, your requirements and test cases become your **baseline**.
 
@@ -372,4 +380,4 @@ Run the checker. `week04/prototype/` arrives.
 
 **Replace the [bracketed] parts, then build your main flow from `home.html`.**
 
-<!-- Start the clock. Build until about 10:30, walk-through until about 11:30, files and push until 11:45. Freeze right after 11:45: push.md block 3. -->
+<!-- Start the clock. Build until about 10:30, walk-through until about 11:30, files and push until 11:45. The mark reads the last commit pushed by the end of the lecture: push.md block 3. -->

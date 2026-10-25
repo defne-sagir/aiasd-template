@@ -8,12 +8,12 @@ This card is what you need to read it, run it and say no to it.*
 ```python
 from fastapi import FastAPI
 
-app = FastAPI(title="StudyRoom")          # the server; uvicorn runs this object
+app = FastAPI(title="StudyRoom")  # the server; uvicorn runs this object
 
 
-@app.get("/health")                      # method + path: one row of api.md
+@app.get("/health")  # method + path: one row of api.md
 def health() -> dict:
-    return {"status": "ok"}               # a dict becomes JSON: {"status": "ok"}
+    return {"status": "ok"}  # a dict becomes JSON: {"status": "ok"}
 ```
 
 `@app.get`, `@app.post`, `@app.put`, `@app.patch`, `@app.delete`: the decorator says which method
@@ -26,13 +26,12 @@ method, the same path, letter for letter.
 from pydantic import BaseModel
 
 
-class CodeRequest(BaseModel):             # the JSON body, field by field
+class CodeRequest(BaseModel):  # the JSON body, field by field
     email: str
 
 
 @app.post("/auth/code")
-def ask_for_code(body: CodeRequest) -> dict:
-    ...
+def ask_for_code(body: CodeRequest) -> dict: ...
 ```
 
 A `BaseModel` lists the fields of the JSON body. If a field is missing, FastAPI answers **422**
@@ -71,7 +70,7 @@ from fastapi.testclient import TestClient
 
 from server.main import app
 
-client = TestClient(app)                  # a client that talks to the app without a network
+client = TestClient(app)  # a client that talks to the app without a network
 
 
 def test_TC_002_02_a_busy_slot_is_refused():

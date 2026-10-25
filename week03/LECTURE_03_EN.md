@@ -5,7 +5,7 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header (press "." for
 the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3 h:
-10 min intro · 50 min review round · at least 30 min settling the project (title, §3–§4) · 20 min screens · work until 11:45 · freeze right after 11:45. -->
+10 min intro · 50 min review round · at least 30 min settling the project (title, §3–§4) · 20 min screens · work until 11:45 · the mark reads the last commit pushed by the end of the lecture. -->
 
 ---
 
@@ -44,8 +44,8 @@ Not "students struggle with X". The last time it happened — to you, or in fron
 date, place, who, what they did instead.
 
 **2. Real people around you can use it.**
-At Atlas, in your family, in a club. In Week 9 five of them test it — the User
-Acceptance Test. You name them today.
+At Atlas, in your family, in a club. Five of them test it: the beta test in Week 9
+and the User Acceptance Test in Week 10. You name them today.
 
 If you cannot name the last time, or the five people: the problem is the project, not
 the slide. **Change the project in this lecture:** at the end of the lecture (11:45) it becomes fixed.
@@ -97,7 +97,7 @@ Saturday, is the second half. The December defence is a small jury.
 
 1. The product in one sentence
 2. **The last time it happened — to you, or in front of you**
-3. **Five people who will test it in Week 9** — name, how you know them, why
+3. **Five people who will test it** (Weeks 9–10) — name, how you know them, why
 4. Three requirements — *the same id and text as `requirements.json`* — and one "does not"
 5. The main screen, **drawn by hand**
 6. The one thing you are not sure about
@@ -126,7 +126,7 @@ plain preview. 2 minutes. -->
 
 ## The review round — groups of four
 
-**Form your group of four now, yourselves.** It stays with you for the term, so choose people you can meet online once a week. Left over when the class does not divide into fours? Join a group: it becomes five. No groups of three.
+**Form your group of four now, yourselves.** It stays with you for the term; the assignments say in which weeks it meets. Left over when the class does not divide into fours? Join a group: it becomes five. No groups of three.
 
 **Write your group in `week03/group_03.json`:** the numbers of all members, yours included. Every member writes the same list. If the lists differ, every member of the group loses one point.
 
@@ -183,22 +183,20 @@ The path from logging in to the one thing your app exists for. The rows below ar
 ## If you have time left
 
 - Read the acceptance criteria of each other's `must` requirements. Mark every one that a tester could not check, such as "users are satisfied".
-- Agree on the day and the tool of your weekly one-hour online meeting.
+- Agree how your group can reach each other (a chat group) for the weeks it meets.
 - Start Part B: §8, and the store choice in §12, while I am here to answer.
 - Your store choice is firm? You may already open the developer account (S1). The identity check takes days; S1 is marked in Week 4.
 
 ---
 
-## This group stays — every week, one hour online
+## This group stays
 
-From **Week 4**: your group meets **online, one hour, between the lecture and
-Saturday**. Teams, Meet, Discord — your choice.
+Your group of today stays your group. It does **not** meet every week: each assignment
+says in which weeks it meets and what for.
 
-Each of you: what changed in your project this week. The others: what they think.
+**Week 4:** one classmate you choose, your **collaborator**, runs your test cases on your prototype.
 
-**Every week**, `weekNN/group_NN.json` has an entry for each of them: their sentences, quoted, and what you did about them.
-
-Nobody can write that for someone who was not there. First meeting: this week, if you like.
+`weekNN/group_NN.json` holds the people that week's assignment names, with that week's role: 4 collaborator · 5 nobody (you work alone) · 6 attacker · 7 tester · 8 test-user · 9 beta-tester · 10 uat-participant · 11 release-tester · 12 poster-reviewer.
 
 ---
 
@@ -210,9 +208,9 @@ Nobody can write that for someone who was not there. First meeting: this week, i
 
 **The list stays open until the end of Week 5.** In Week 4 you walk through test cases from your acceptance criteria on the clickable prototype; what is missing goes in, with a change-log line.
 
-**End of Week 5: requirements + test cases = your baseline.** After that, changes go through a change request.
+**End of Week 5: requirements + test cases = your baseline.** After that, each change is a change request: a Change log line that begins with `CR-`.
 
-REQ-001 (e-mail-code login) and REQ-006 (390 px phone screen) stay as they are for everyone.
+REQ-001 (login with a 4-digit e-mail code) and REQ-006 (390 px phone screen) are the same for everyone; adjust the wording to your product.
 
 ---
 
@@ -225,10 +223,10 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Push after the round, and at the end of the lecture, **11:45**. Right after it I
-freeze every repository. What is not pushed does not exist.
+Push by 11:45. The lecture mark reads your last commit pushed by the end of the lecture. What is not pushed does not exist.
 
-Push times this term: **10:00, 11:00 and the end of the lecture (11:45)** — and whenever you finish something.
+In the lecture: push near **10:00, 11:00 and 11:45** (±15 minutes), each push with new work.
+Outside the lecture: at least two commits, pushed at least one hour apart. **Never force push.**
 
 ---
 
@@ -271,7 +269,7 @@ English. Your language is not graded; a log written by an assistant earns at mos
 | End of lecture (11:45) | 5 | pitch complete, three reviewers with real sentences, change log started, five screens listed |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
-| Commit discipline | 1 | several lecture pushes (at least 3); several commits as you work |
+| Commit discipline | 1 | pushes near 10:00, 11:00, 11:45; outside: two commits, an hour apart |
 
 Contributors' bonus: each reviewer you name earns 10 % of your week's mark; so do you, for the reviews you give.
 
@@ -281,7 +279,7 @@ Contributors' bonus: each reviewer you name earns 10 % of your week's mark; so d
 
 **Week 4:** a clickable prototype of your main flow, and test cases written from your acceptance criteria.
 
-Your group runs the test cases on the prototype; what does not work shows what is missing from the requirements.
+One classmate you choose, your collaborator, runs the test cases on the prototype; what does not work shows what is missing from the requirements.
 
 **Before next week:** read your acceptance criteria again. Rewrite every criterion that does not say what a tester should see.
 
@@ -306,4 +304,4 @@ Groups formed. Laptops open, `PITCH_03.md` in the preview.
 **At the end of the lecture (11:45) your project's title and content become final.** Take the time it needs.
 
 <!-- Start the clock. Walk around. After the round: slide "After the round" stays on the
-projector until 11:35; "Push" from 11:35. Freeze right after 11:45: push.md block 3. -->
+projector until 11:35; "Push" from 11:35. The mark reads the last commit pushed by the end of the lecture: push.md block 3. -->

@@ -5,7 +5,7 @@
 
 <!-- Eğitmen: tarayıcıyı %150'ye yakınlaştırın ve GitHub başlığını kapatın. Toplam ≈ 3 saat:
 25 dk anlatım · 10:30 civarına kadar yapım (10:00'da push) · 11:30 civarına kadar walk-through,
-prototip başına 12 dk (11:00'de push) · dosyalar, denetleyici ve 11:45'teki son push · hemen ardından dondurma. -->
+prototip başına 12 dk (11:00'de push) · dosyalar, denetleyici ve 11:45'teki son push · not, dersin sonuna dek push edilen son commit'i okur. -->
 
 ---
 
@@ -60,14 +60,14 @@ Gereksinimleriniz bu yüzden 5. haftanın sonuna kadar açık kalır: bu hafta s
 
 ## Prototip — `week04/prototype/`
 
-- **Her ekran için bir HTML dosyası.** İlki `index.html`'dir. Çift tıklayınca açılır: sunucu yok, framework yok, derleme adımı yok.
-- **Her ekrana tıklayarak ulaşılır.** Bağlantıları `href="rooms.html"` biçiminde yazın: tam ad, küçük harf, tırnak içinde.
+- **Her ekran için bir HTML dosyası.** İlki `index.html`'dir. Çift tıklayınca açılır: sunucu yok, framework yok.
+- **Her ekrana tıklayarak ulaşılır:** `href="rooms.html"` (tam ad, küçük harf).
 - **Her ekran gereksinimlerini söyler:** `<!-- serves: REQ-002, REQ-006 -->`
 - **Uydurma veriler sabittir**, böylece collaborator'ınız adımları izleyebilir. Giriş kodu her zaman **1234**'tür. Kendi değerleriniz `prototype/README.md` dosyasına yazılır.
 - **Üç başlangıç ekranı** denetleyiciyle gelir: herkesin ortak girişi (REQ-001). Ana akışınız `home.html`'den başlar.
-- **Sunucu yok, hafıza yok:** bir rezervasyondan sonra bir sonraki ekran, aynı sabit veriyi o rezervasyon zaten içinde olacak şekilde gösterir.
+- **Sunucu yok, hafıza yok:** bir rezervasyondan sonraki ekran, sabit veriyi rezervasyonla birlikte gösterir.
 
-**Dersin sonuna (11:45) kadar en az beş ekran. Cumartesi'ye kadar akışın tamamı, en az yedi.**
+**11:45'e kadar en az beş ekran. Cumartesi'ye kadar akışın tamamı, en az yedi.**
 
 ---
 
@@ -82,6 +82,10 @@ Asistanların eklemeyi sevdikleri ve bozdukları:
 | şifre alanı, "Google ile giriş" | REQ-001: e-postayla kod, şifre yok |
 | 480 px genişliğinde bir yerleşim | REQ-006: 390 px, yatay kaydırma yok |
 | bir şey ters gittiğinde hiçbir mesaj | yanlış kodun test case'i |
+
+---
+
+## Asistanınızla yapın — ne isteyeceğiniz
 
 **Ne istediğinizi söyleyin:** düz HTML ve CSS, her ekran için ayrı bir dosya, ortak `style.css`, framework yok. Bir seferde tek ekran ve **her ekran için bir commit**.
 
@@ -113,12 +117,16 @@ Günlüğünüzde böyle görünür:
 
 > İlk cevap şu cümleyle bitti: **Tüm gereksinimler karşılandı**. Ama bir şifre alanı vardı ve REQ-001 şifre yok diyor. Bu ölçütü istemden önce yazmıştım.
 
+<!-- Hoca: örneği gösterin. Kalın olan asistan, geri kalanı öğrenci. Günlüğü okuyan bunu tek bakışta görmeli. -->
+
+---
+
+## AI log: dört kural
+
 1. Kalın bir ifade Evidence bloğunda da harfi harfine bulunmalı.
 2. Bir ifade ya da tek cümle; asla paragraf değil. Cevabın tamamı Evidence bloğunda `AI:` altına, sizin isteminiz `ME:` altına gider.
 3. Kalın yazı asistan içindir, başka hiçbir şey için değil: vurgu, başlık ya da etiket için kalın yok.
 4. Geri kalanını siz yazarsınız: ne cümleleri, ne dil bilgisini, ne çeviriyi, ne de bir asistanın "cilasını".
-
-<!-- Hoca: örneği gösterin. Kalın olan asistan, geri kalanı öğrenci. Günlüğü okuyan bunu tek bakışta görmeli. -->
 
 ---
 
@@ -225,7 +233,7 @@ Kimliklerin anlamı değişmez: yeni kimlik ya da `"dropped": true`. **Her deği
 |---|---|---|
 | `pass` | collaborator "expected" alanında yazanı gördü | birkaç kelime |
 | `fail` | görmedi | onun yerine ne gördüğü |
-| `blocked` | prototip üzerinde kontrol edilemez; örneğin "kod bir dakika içinde gelir" | nedeni; 5. haftadan itibaren gerçek sistem üzerinde kontrol edilir |
+| `blocked` | prototip üzerinde kontrol edilemez; örneğin "kod bir dakika içinde gelir" | nedeni; 6. haftadan itibaren gerçek sistem üzerinde kontrol edilir |
 
 Henüz var olmayan bir ekran `fail`'dir.
 
@@ -256,14 +264,14 @@ git commit -m "week04: prototype, test cases, walk-through"
 git push
 ```
 
-Son push **dersin sonunda (11:45)**. Hemen ardından bütün repoları dondururum.
+Son push **dersin sonunda (11:45)**. Ders notu, push ettiğiniz son commit'i okur.
 
 ---
 
 ## Cumartesi'ye kadar — düzeltin, yeniden yürütün, güncelleyin
 
 - **Her `fail`'i düzeltin.** Genellikle prototip değişir; bazen yanlış olan test case ya da gereksinimdir.
-- **Collaborator'ınızla çevrim içi ikinci tur.** Ekranınızı paylaşın; collaborator'ınız `fail` olan her test case'in adımlarını okur, siz tam olarak söylediğini tıklarsınız: `walkthrough_04.json` içinde `"round": 2`, sizin yazdığınız. Collaborator'ınız grubunuzdaysa grup toplantınız bunun için doğal yerdir; değilse ikinizin seçeceği herhangi bir görüşme olur.
+- **Collaborator'ınızla çevrim içi ikinci tur.** Ekranınızı paylaşın; collaborator'ınız `fail` olan her test case'in adımlarını okur, siz tam olarak söylediğini tıklarsınız: `walkthrough_04.json` içinde `"round": 2`, sizin yazdığınız. İkinizin seçeceği herhangi bir çevrim içi görüşmeyi kullanın.
 - **`requirements.json` ve `test_cases.json` dosyalarını güncelleyin.** Her değişiklik, Değişiklik günlüğünde kimlikleri anan tarihli bir satır alır:
 
 `2026-10-14 — REQ-011 eklendi: collaborator'ım ayırmayı iptal etmenin bir yolunu aradı ve bulamadı; TC-011-01 yazıldı.`
@@ -274,9 +282,9 @@ Son push **dersin sonunda (11:45)**. Hemen ardından bütün repoları dondururu
 
 Her işlevsel `must` gereksinimin ona hizmet eden bir ekranı vardır. **En az yedi ekran.** Renkler ve yazı tipleri önemli değildir; önemli olan akıştır.
 
-**5. haftanın sonu: `requirements.json` + `test_cases.json` = taban çizginiz (baseline).** Ondan sonra bir değişiklik, bir değişiklik isteğiyle (change request) yapılır.
+**5. haftanın sonu: `requirements.json` + `test_cases.json` = taban çizginiz (baseline).** Ondan sonraki Pazar gününden itibaren bir değişiklik bir değişiklik talebidir (change request): `CR-` ile başlayan ve etkilediği her dosyayı sayan bir Değişiklik günlüğü satırı.
 
-5. haftadan itibaren test case'leriniz otomatik testlere dönüşür ve her testin adı kendi kimliğini taşır: `test_TC_002_02_busy_slot_is_refused`.
+5. haftadan itibaren `"run": "server"` olan test case'leriniz otomatik testlere dönüşür ve her testin adı kendi kimliğini taşır: `test_TC_002_02_busy_slot_is_refused`.
 
 ---
 
@@ -326,16 +334,16 @@ Geliştirici konsolunuzun ya da başvurunuzun **ekran görüntüsünü** `week04
 |---|---|---|
 | Ders sonu (11:45) | 5 | prototip, test case'ler, walk-through, collaborator'ınızdan alıntılanmış bir bulgu |
 | Cumartesi denetleyicisi | 2 | ikinci tur, güncellemeler, yedi ekran, S1, yapay zeka günlüğü |
-| İnsan katılımı | 2 | yapay zeka günlüğü; collaborator'ınızın söylediklerinin sizin elle yazdığınız kaydı; gerçek bulgular, gerçek kararlar |
-| Commit düzeni | 1 | derste birkaç push (en az 3); çalıştıkça birkaç commit |
+| İnsan katkısı | 2 | yapay zeka günlüğü; collaborator'ınızın söylediklerinin sizin elle yazdığınız kaydı; gerçek bulgular, gerçek kararlar |
+| Commit disiplini | 1 | 10:00, 11:00, 11:45 civarında push; bir saat arayla iki ders dışı commit |
 
-Adını yazdığınız collaborator haftalık notunuzun %10'unu kazanır; sizi yazan sınıf arkadaşınız için yürüttüğünüz testler için siz de. S1 mağaza bonusuna da sayılır.
+Ajan commit'i sayılmaz. **Asla force push yok.** Bonus: collaborator'ınız ve bir arkadaşa yürüttüğünüz testler için %10; S1 mağaza bonusuna sayılır.
 
 ---
 
 ## Gelecek hafta: tasarım ve ilk gerçek kod
 
-**5. hafta:** tasarım ve API sözleşmesi (sunucunuzun neye ve nasıl cevap verdiğinin listesi), sunucu iskeleti ve uçtan uca çalışan e-posta kodu ile giriş.
+**5. hafta:** tasarım ve API sözleşmesi (sunucunuzun neye ve nasıl cevap verdiğinin listesi), route'ları 501 ("henüz yapılmadı") ile cevap veren bir sunucu ve dersin girişi gelene kadar, yani 6. haftaya kadar başarısız olan giriş testleri.
 
 5. haftanın sonunda gereksinimleriniz ve test case'leriniz **taban çizginiz (baseline)** olur.
 
@@ -348,7 +356,7 @@ Adını yazdığınız collaborator haftalık notunuzun %10'unu kazanır; sizi y
 - `requirements/` → artık `weekNN/requirements.txt`
 - `docs/` → artık kökte `AI_Doc1`–`AI_Doc4` ve `AI_Doc2_media`
 - `SETUP_CARD_EN.md`, `SKELETON.md`, `WEEKLY_WORKFLOW_STUDENT_EN.md` → artık başında `AI_` ile
-- `CURRENT_WEEK.txt` → checker dersin kopyasını ağdan okuyor; sizdeki etkisiz
+- `CURRENT_WEEK.txt` → denetleyici dersin kopyasını ağdan okuyor; sizdeki etkisiz
 
 ```
 git rm -r --ignore-unmatch requirements docs CURRENT_WEEK.txt \
@@ -372,4 +380,4 @@ Denetleyiciyi çalıştırın. `week04/prototype/` gelir.
 
 **Köşeli parantezli kısımları değiştirin, sonra ana akışınızı `home.html`'den itibaren kurun.**
 
-<!-- Saati başlatın. 10:30 civarına kadar yapım, 11:30 civarına kadar walk-through, 11:45'e kadar dosyalar ve push. 11:45'ten hemen sonra dondurma: push.md blok 3. -->
+<!-- Saati başlatın. 10:30 civarına kadar yapım, 11:30 civarına kadar walk-through, 11:45'e kadar dosyalar ve push. Not, dersin sonuna dek push edilen son commit'i okur: push.md blok 3. -->

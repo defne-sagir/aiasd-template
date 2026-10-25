@@ -6,7 +6,7 @@
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header. Total ≈ 2 h 45 min:
 20 min explanation + a short FastAPI demonstration · components and the login rows of api.md by hand
 until 10:00 (push) · the routes until 11:00 (push) · the first login test, the checker and the last
-push at 11:45 · freeze right after it. -->
+push at 11:45 · the mark reads the last commit pushed by the end of the lecture. -->
 
 ---
 
@@ -31,7 +31,7 @@ A month ago your project was an idea in your head.
 - **Week 3:** the pitch and the market; the project became yours for good
 - **Week 4:** screens, and a classmate who clicked through them
 - **This week, it becomes software:** a skeleton, a contract, a server that answers you for the first time
-- **Next:** a login with a code from your mailbox (6) · the same login on a phone (7) · your product's own feature everywhere (8) · real testers, the store, and in December your app, installed from a store
+- **Next:** the course's login and your own feature, end to end (6) · the mobile client (7) · a chatbot (8) · real testers, the store, and in December your app, installed from a store
 
 On Saturday your requirements and test cases become your **baseline**.
 
@@ -46,7 +46,7 @@ On Saturday your requirements and test cases become your **baseline**.
 - **The server skeleton:** a real server that answers every endpoint, for now with "not built yet"
 - **The first tests:** your login test cases as code, waiting for the login
 
-Week 6 builds the login behind today's endpoints, and the web client calls them. Week 7's mobile client calls the same ones, unchanged. Week 8 adds rows to the same contract.
+In Week 6 the course's login goes behind today's login endpoints, your own feature works end to end, and your pages in `web/` call them. Week 7's mobile client calls the same ones, unchanged. Week 8's chatbot adds rows to the same contract.
 
 **A mistake in the contract found today costs one line. Found in Week 8, it costs the server and both clients.**
 
@@ -119,17 +119,17 @@ A **component** is one part of your system with one job. **In the lecture: at le
 
 | Component | What it does | REQ |
 |---|---|---|
-| Server: login | Sends a 4-digit code to an e-mail address, checks it and gives a token | REQ-001 |
-| Server: bookings | Saves a booking for a free slot of 30 to 120 minutes and refuses a busy one | REQ-002, REQ-003 |
+| Server: login | Sends a 4-digit code by e-mail, checks it and gives a token | REQ-001 |
+| Server: bookings | Books a free slot of 30 to 120 minutes and refuses a busy one | REQ-002, REQ-003 |
 | Database | Keeps the users, the rooms and the bookings | REQ-002, REQ-004 |
-| Web client | The screens of the prototype, in the browser, 390 px wide | REQ-006 |
+| Web client | The prototype's screens in a browser (390 px) | REQ-006 |
 | Mobile client | The same screens on a phone | REQ-006 |
 
 ---
 
 ## Components: the rules
 
-- Name each component as you will name it in your code: "Server: bookings" becomes `server/bookings.py`.
+- Name each component as you will name it in your code: "Server: bookings" becomes `server/bookings.py` (Week 6).
 - One sentence of what it does. "And" three times means two components.
 - The REQ ids exist in `requirements.json`. A component that serves no requirement needs a reason to exist.
 - The assistant may propose; **you decide**.
@@ -156,7 +156,7 @@ An **endpoint** is one thing your server answers: a method and a path, `POST /au
 
 ## The login: at least two endpoints
 
-Every project logs in the same way (REQ-001). **The second row, logging in with the code, is yours.** Right code? Wrong code? Too old? Your test cases TC-001-01 and TC-001-02 tell you.
+Every project logs in the same way (REQ-001). **The second row, logging in with the code, is yours.** Right code? Wrong? Too old? TC-001-01 and TC-001-02 tell you. Rules: 4 digits · 10 min · once · new code in 60 s → 429 · 3 wrong → 15 min lock.
 
 | Method | Path | Request | Response | Errors | REQ |
 |---|---|---|---|---|---|
@@ -268,7 +268,7 @@ python -m pytest
 
 ## Red, for the right reason
 
-Today the test **fails**. It must: the login is built in Week 6.
+Today the test **fails**. It must: the login comes in Week 6.
 
 | The failure says | It means |
 |---|---|
@@ -294,15 +294,15 @@ An assistant that "fixes" a failing test by changing the expected value has made
 
 **In the lecture:** a push with new work at each checkpoint, **10:00, 11:00 and 11:45**, within fifteen minutes of each.
 
-**Outside the lecture:** at least two commits with new work, in separate sittings.
+**Outside the lecture:** at least two commits with new work, pushed at least one hour apart. GitHub's push time counts, not the date on a commit.
 
-One commit at the end scores nothing.
+A commit made by a coding agent never counts. **Never force push**, and never let an assistant do it.
 
 ---
 
 ## By Saturday 23:59
 
-- `api.md`: every route has its row; request, response with its 2xx code, and every error with its 4xx code.
+- `api.md`: every route has its row, the login's "me" endpoint included; request, response with its 2xx code, and every error with its 4xx code.
 - **At least three login tests**, each named by a test case id from `test_cases.json`. They fail until Week 6, for the right reason. Commit them before any login code.
 - `DESIGN.md`: every functional `must` requirement served; **the architecture as a Mermaid diagram**.
 - `ai_log_05.md`: verify by running.
@@ -316,7 +316,7 @@ One commit at the end scores nothing.
 
 **From Sunday**, a change to either is a **change request**: a Change log line that begins with `CR-` and a number, and lists every file it affects.
 
-> 2026-10-28 — CR-01: REQ-004 now allows 15-minute slots; affects requirements.json, test_cases.json (TC-004-02), week05/api.md, server/bookings.py.
+> 2026-10-28 — CR-01: REQ-002 now allows 15-minute slots; affects requirements.json, test_cases.json (TC-002-02), week05/api.md, server/bookings.py.
 
 Need a test case that does not exist yet? Add it **before** Saturday.
 
@@ -342,7 +342,7 @@ Your words plain, the assistant's words bold. **A log written by an assistant ea
 | End of lecture (11:45) | 5 | components, the login rows of `api.md`, a route for every row, the first login test |
 | Saturday checker | 2 | the whole contract, three tests, the design complete, the AI log |
 | Human involvement | 2 | the AI log with the real output, written by you; login rows written by hand before the code |
-| Commit discipline | 1 | a push at each checkpoint (10:00, 11:00, 11:45); two commits outside the lecture, in separate sittings |
+| Commit discipline | 1 | a push at each checkpoint (10:00, 11:00, 11:45); two commits outside the lecture, pushed at least an hour apart |
 
 No contributors' bonus this week.
 
@@ -350,8 +350,8 @@ No contributors' bonus this week.
 
 ## Next week: the login works
 
-**Week 6:** the login by e-mail code, end to end. In the lecture the code is written to a file; **by Saturday it arrives by real e-mail**. The web client gets its login screen. Your Week 5 tests turn green, one by one. S2: the app record in your store.
+**Week 6:** the course gives you the login, ready to connect. Your own feature works end to end: on the server (`server/bookings.py` for StudyRoom) and on a page in `web/`. In the lecture the code is written to a file; **by Saturday it arrives by real e-mail**. You adjust your Week 5 tests to the course's login, and they turn green. S2: the app record in your store.
 
 **Before Week 6:** an e-mail account that the server can send from. For Gmail: two-step verification on, then an app password. Never in the repository: it goes into `.env`.
 
-<!-- Instructor: the slides from "By Saturday" on are for the last fifteen minutes, before the 11:45 push. Freeze right after 11:45. -->
+<!-- Instructor: the slides from "By Saturday" on are for the last fifteen minutes, before the 11:45 push. The mark reads the last commit pushed by the end of the lecture. -->

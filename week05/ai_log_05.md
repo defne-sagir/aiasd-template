@@ -23,7 +23,8 @@
 > bir ifade, tek bir cümle ya da kodundan tek bir satır. Her kalın ifade Evidence bloğunda,
 > `AI:` altında, harfi harfine de bulunur. Kalın yazı başka hiçbir şey için kullanılmaz.
 >
-> **Worth 2 points, and a person reads it.** It is not graded on how much you used AI, but
+> **Part of the 2 human-involvement points, and a person reads it.** It is not graded on how
+> much you used AI, but
 > on whether you ran what the assistant gave you and looked at what really happened. Delete
 > these quoted instructions before you commit.
 
@@ -31,7 +32,7 @@
 THIS WEEK'S TASK — verify by running (AI_Doc5 §2). Short answers, one per heading.
 1. Choose one route of server/ or one test of server/tests/ that the assistant wrote for you.
 2. BEFORE you run it, write what you expect, with the test case id: "TC-001-02 must fail
-   with 501 today, because the login is built in Week 6."
+   with 501 today, because the login comes in Week 6."
 3. Run it yourself: python -m pytest, or the server and /docs, or curl. Copy the command and
    its output, untouched, into the Evidence block under TERMINAL:.
 4. Say what you saw, and one line of the assistant's code that you changed or refused, and why.
@@ -74,7 +75,9 @@ AI:
 
 TERMINAL:
 [output]
-<!-- ME: your prompt. AI: the answer exactly as it came. TERMINAL: the command you typed and
-     its output, down to the last line, the one that counts the tests. Nothing removed,
-     nothing corrected. Several rounds: repeat ME: and AI:. -->
+<!-- ME: your prompt. AI: the assistant's answer. TERMINAL: the command you typed and its
+     output, down to the last line, the one that counts the tests. Paste the rounds of the
+     exchange that show the error; you may leave out whole rounds that do not. Every ME:, AI:
+     or TERMINAL: part you keep is pasted whole, exactly as it came: nothing removed, nothing
+     corrected, not even the grammar. Several rounds: repeat ME: and AI:. -->
 ```

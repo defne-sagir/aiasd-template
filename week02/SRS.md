@@ -2,15 +2,18 @@
 
 <!--
 WHAT THIS DOCUMENT IS
-The requirements of your product, written so that someone else could build it, and so
-that you can test it in Week 9. PROPOSAL.md says why and what, in a few paragraphs; this
-says exactly what the system must do. A page or two — not thirty.
+How people use your product: the scope, the actors, the use cases (with what can go
+wrong), the use case diagram and the constraints. PROPOSAL.md says why and what, in a few
+paragraphs; this says who does what with the system, step by step. A page or two — not
+thirty.
 
 RULES
 - Keep the headings. Write under them.
-- Requirement ids are the ones in requirements.json: REQ-001, REQ-002 … Every id there
-  appears here, and nothing appears here that is not there. Ids never change after this
-  week; design, tests and the traceability matrix all point at them.
+- week02/requirements.json is the only place for the requirements. Do not copy them into
+  this file. §4 and §5 hold one line: "The requirements are in week02/requirements.json."
+- Each use case names its requirement ids from requirements.json: REQ-001, REQ-002 …
+  Ids never change after this week: the chain requirement → use case → screen → test
+  case → api.md row points at them.
 - The examples in the comments describe one invented project, "StudyRoom" (booking a
   library study room). They show the level of detail wanted; write about your project.
   Comments are invisible on GitHub and not counted by the checker.
@@ -30,8 +33,8 @@ spaces, payments and the library catalogue are out of scope."
 
 <!--
 WHAT: every kind of person and every outside system that interacts with yours, one line
-each: who they are and what they want from the system. Include the e-mail/OTP service
-that sends login codes, any third-party API, and the app store.
+each: who they are and what they want from the system. Include the e-mail service that
+sends the login codes, any third-party API, and the app store.
 EXAMPLE:
 - Student — finds a free room, books it, checks in.
 - Librarian — sees the day's bookings, blocks a room for cleaning or an event.
@@ -82,37 +85,29 @@ flowchart LR
 ## 4. Functional requirements
 
 <!--
-WHAT: what the system does. One line per requirement, the same as in requirements.json:
-id — description — priority — the use case it belongs to. Then its acceptance criterion
-on the next line: the test that proves it is met.
-EXAMPLE:
-- REQ-002 — A student books a free slot of 30 to 120 minutes in a room. — must — UC1
-  Acceptance: a booking for a free slot is saved and shown as busy on every client; a
-  booking longer than 120 minutes or for a busy slot is refused with a message.
-At least five.
+Nothing to write here. week02/requirements.json is the only place for the functional
+requirements (what the system does); do not copy them into this file. Keep the one line
+below.
 -->
+
+The requirements are in `week02/requirements.json`.
 
 ## 5. Non-functional requirements
 
 <!--
-WHAT: how well the system does it — speed, capacity, security, privacy, language,
-availability, cost. Each with a number or a yes/no test, never an adjective alone.
-"Fast" is not a requirement; "the free/busy screen loads in under two seconds on 4G" is.
-One is fixed for everyone: every screen is usable on a phone about 390 px wide without
-horizontal scrolling. Keep it.
-EXAMPLE:
-- REQ-008 — A booking made on one client is visible on every other client within five
-  seconds. — must
-  Acceptance: book on the phone, watch the web page; measured ten times, all under five seconds.
-At least three.
+Nothing to write here. week02/requirements.json is the only place for the non-functional
+requirements (how well the system does it: speed, security, privacy, the phone screen);
+do not copy them into this file. Keep the one line below.
 -->
+
+The requirements are in `week02/requirements.json`.
 
 ## 6. Constraints and assumptions
 
 <!--
 WHAT: what you take as given and cannot change — the store you will publish on, the
-devices you own, the hosting you can afford, the model sizes your laptop can run, the
-term calendar, rules of the organisation (the library's opening hours, say).
+devices you own, the hosting you can afford, the term calendar, rules of the organisation
+(the library's opening hours, say).
 EXAMPLE: "Published on Google Play only; I own an Android phone and no Mac. Free hosting
 tier (the server may sleep after 15 minutes idle). The library is open 08:30–22:00."
 -->

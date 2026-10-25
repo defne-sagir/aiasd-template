@@ -1,6 +1,6 @@
 # Week 1 — AI log
 
-> **Worth 2 points, and a person reads it.** Not graded on how much or how little you
+> **Worth 1 point, and a person reads it.** Not graded on how much or how little you
 > used AI — on whether you noticed something. The Evidence block is not optional: a
 > claim with nothing pasted under it earns nothing.
 >

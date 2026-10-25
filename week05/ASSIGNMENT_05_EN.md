@@ -13,13 +13,15 @@ A month ago your project was an idea in your head. Look at what it has become:
 
 From this week on it becomes software. Your product gets a skeleton: you decide what it is made of, you write
 the promise its parts make to each other (the API contract), and a real server answers you for the first time.
-Next week a user logs in with a code that arrives in their mailbox. In Week 7 the same login runs on a phone.
-In Week 8 your product does the one thing it exists for, on the server, the web and the phone. Then come real
-testers and the store's review, and in December you install your own app from a store in front of the examiner.
+Next week the course gives you the login, ready to connect, and a user logs in with a code that arrives in
+their mailbox. Your product's own feature then works end to end: on the server and on a web page. In Week 7
+it runs on a phone. In Week 8 your product gets a chatbot. Then come real testers and the store's review, and
+in December you install your own app from a store in front of the examiner.
 
 This week is the one engineers enjoy most: the moment a design turns into code. You write a few lines of a
 contract by hand, watch your server list its endpoints at `/docs`, and write tests that fail on purpose,
-because the code they are waiting for does not exist yet. Next week you make them turn green, one by one.
+because the code they are waiting for does not exist yet. Next week, with the course's login connected, you
+make them turn green.
 
 ## This week: what you build, and its place in the project
 
@@ -32,9 +34,10 @@ This week you build the part that everything else stands on:
   if for now only with "not built yet".
 - **The first tests**: your login test cases turned into code, waiting for the login.
 
-Why it matters: in Week 6 you build the login behind the endpoints you list today, and your web client calls
-exactly those endpoints. In Week 7 your mobile client calls the same endpoints, unchanged. In Week 8 your
-product's own feature adds new rows to the same contract and new components to the same design. Every test you
+Why it matters: in Week 6 the course's login goes behind the login endpoints you list today. Your own feature
+then works end to end (in `server/bookings.py` for StudyRoom), and your pages in `web/` call exactly those
+endpoints. In Week 7 your mobile client calls the same endpoints, unchanged. In Week 8 the chatbot adds new
+rows to the same contract and a new component to the same design. Every test you
 write now keeps watching your code whenever an assistant changes it in a later week. A mistake in the contract
 found today costs you one line; found in Week 8, it costs you the server and both clients.
 
@@ -50,7 +53,7 @@ found today costs you one line; found in Week 8, it costs you the server and bot
 | **API contract** | All the endpoints in one table, `api.md`: the page that the server, both clients and every test agree on. |
 | **FastAPI, route, uvicorn** | FastAPI is the Python library of your server; a route is one function that answers one endpoint; uvicorn runs the server, and `/docs` lists every route. In one page: `week05/FASTAPI_CARD_EN.md`. |
 | **Test, pytest** | A test case turned into code; `pytest` runs them all. A test's name begins with its test case id. Red means it failed, green that it passed. |
-| **Baseline, change request** | From Saturday your requirements and test cases are fixed; changing them then takes a written change request. |
+| **Baseline, change request** | On Saturday your requirements and test cases become fixed; from Sunday, changing them takes a change request: a `CR-` line in the Change log (§9). |
 | **Mermaid** | The text notation for diagrams that you know from Week 2; this week it draws your architecture. |
 
 ## When is what due
@@ -171,7 +174,7 @@ what it does in one sentence, and lists the requirements it serves. For StudyRoo
 The rules:
 
 - **Name each component as you will name it in your code.** "Server: bookings" becomes
-  `server/bookings.py` in Week 8.
+  `server/bookings.py` in Week 6.
 - **One sentence of what it does.** If you need "and" three times, it is two components.
 - **The REQ ids exist** in `week02/requirements.json`. A component that serves no requirement
   needs a reason to exist; without one, it does not belong in the table.
@@ -218,6 +221,12 @@ every way it can fail, each with its status code. Here is StudyRoom's first row:
 The second row, logging in with the code, is yours to write. Ask yourself what your test
 cases need: what does the client get when the code is right, and what when it is wrong or
 too old?
+
+From Week 6 the login is the course's module, the same in every project, so your rows follow
+its rules: the code has 4 digits, is valid for 10 minutes and works once; a new code within 60
+seconds → 429; 3 wrong codes in a row (a new code does not reset the count) → the address is
+locked for 15 minutes (429); the right code gives a token; "me" needs the token; no passwords; no
+social login.
 
 **Write these rows by hand, and push them at 10:00, before any code.** No assistant writes,
 corrects or completes them. The 10:00 push is read for them.
@@ -288,7 +297,7 @@ Run every test from the root of your repository:
 python -m pytest
 ```
 
-Today this test **fails**, and it must: the route answers 501, because the login is built in
+Today this test **fails**, and it must: the route answers 501, because the login comes in
 Week 6. Read why it fails. The line `assert 501 == 200` is the right reason. `assert 404 == 200`
 means the route is missing or its path differs from `api.md`; an `ImportError` means the test
 cannot find your server. Fix those, because a test that fails for the wrong reason tests
@@ -308,8 +317,9 @@ git push
 ```
 
 Push at **10:00**, at **11:00** and at the end of the lecture, **11:45**, each time with new
-work in it and within fifteen minutes of that time. The 10:00 push carries your login rows. Right
-after 11:45 I freeze every repository. What is not pushed does not exist.
+work in it and within fifteen minutes of that time. The 10:00 push carries your login rows. Push
+by 11:45. The lecture mark reads your last commit pushed by the end of the lecture. What is not pushed does
+not exist.
 
 ---
 
@@ -318,12 +328,13 @@ after 11:45 I freeze every repository. What is not pushed does not exist.
 ### 6. The whole API contract — `week05/api.md`
 
 Every endpoint of your server has its row, and every row has its route. So far that is the
-login and `/health`. A login usually needs one more endpoint: the one a client calls to know
-who is logged in, with the token in an `Authorization` header. Decide whether yours does.
+login and `/health`. The login needs one more endpoint: "me", the one a client calls to know
+who is logged in, with the token in an `Authorization` header. The course's login of Week 6
+has it, so write its row and its route now.
 
 For each endpoint that serves a requirement: the request, the response with its 2xx code,
-and every error with its 4xx code. The endpoints of your other features may wait until their
-week; if you add one now, its route comes with it.
+and every error with its 4xx code. The endpoints of your own feature may wait until Week 6,
+where you write them by hand before any route code; if you add one now, its route comes with it.
 
 ### 7. The login tests — `server/tests/test_login.py`
 
@@ -333,9 +344,9 @@ If a test needs a test case that does not exist yet (the 429 rule, for example),
 case to `test_cases.json` with a Change log line, before Saturday: after Saturday it would be
 a change request (§9).
 
-They all fail until Week 6, for the right reason. That is the plan: in Week 6 you build the
-login until they pass, one by one. Commit the tests before any login code: your history shows
-which came first.
+They all fail until Week 6, for the right reason. That is the plan: in Week 6 the course gives
+you the login, ready to connect; you adjust your tests to it, and they pass. Commit the tests
+before any login code: your history shows which came first.
 
 ### 8. The design, complete — `week05/DESIGN.md`
 
@@ -352,8 +363,8 @@ From Sunday on, a change to either file is a **change request**: a Change log li
 `PROPOSAL.md` that begins with `CR-` and a number, names the change and the ids, and lists
 every file it affects:
 
-"2026-10-28 — CR-01: REQ-004 now allows 15-minute slots; affects requirements.json,
-test_cases.json (TC-004-02), week05/api.md, server/bookings.py."
+"2026-10-28 — CR-01: REQ-002 now allows 15-minute slots; affects requirements.json,
+test_cases.json (TC-002-02), week05/api.md, server/bookings.py."
 
 ### 10. Verify by running — `week05/ai_log_05.md`
 
@@ -370,9 +381,10 @@ you point at them, are bold and also stand in the Evidence block, as in Week 4.
 
 ### 11. Push again, checks green
 
-Several commits as you work, each with some new work in it and a message that says what
-changed, in at least two separate sittings outside the lecture. Everything the checker asks
-for is listed below.
+**Outside the lecture:** at least two commits with new work, pushed at least one hour apart.
+GitHub's push time counts, not the date on a commit. A commit made by a coding agent never
+counts. **Never force push**, and never let an assistant do it. Each commit message says what
+changed. Everything the checker asks for is listed below.
 
 ---
 
@@ -397,8 +409,8 @@ for is listed below.
 ## Not this week
 
 No login yet: the routes answer 501, and the code is not sent (Week 6). No e-mail, no database,
-no web or mobile client (Weeks 6 and 7). No group work and no contributors' bonus. No store
-step: S2 is in Week 6.
+no web or mobile client (e-mail and web: Week 6; mobile: Week 7). No group work and no
+contributors' bonus. No store step: S2 is in Week 6.
 
 ---
 
@@ -412,8 +424,8 @@ lecture (11:45).
 **2**, which means your `ai_log_05.md` with the real output pasted, written by you (a log
 written by an assistant earns **0**), and login rows that you wrote by hand before the code.
 Commit discipline: **1**, which means a push with new work at each of the three checkpoints
-(10:00, 11:00, 11:45, within fifteen minutes) and at least two commits outside the lecture, in
-separate sittings.
+(10:00, 11:00, 11:45, within fifteen minutes) and at least two commits with new work outside
+the lecture, pushed at least one hour apart (§11).
 
 **One student, one computer, one GitHub account.** Commit from your own computer, under your
 own account. Work done on a classmate's machine or under a classmate's session earns nothing

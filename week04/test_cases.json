@@ -7,8 +7,10 @@
     "precondition: what must be true before the first step, such as 'A code has been sent to deniz@example.com'. Write 'none' if nothing is needed.",
     "steps: what the tester does, one action per line, with the real values to type: 'Enter deniz@example.com and tap Send code'. Someone who has never seen your project must be able to follow them.",
     "expected: what the tester must see at the end, in one full sentence: a screen, a message, a number. Not 'it works', but 'The home screen opens and shows the three free rooms'.",
+    "run: how the test case is run on the real product: 'server' if a test in server/tests/ runs it, 'web' if a person runs it in the browser on your web page, 'manual' if a person runs it by hand (on a phone, in the store, with a user). This week your collaborator runs every test case by hand on the prototype, whatever its run says. The checker asks for run on every test case from Week 6.",
     "Every must requirement has at least one test case. For at least three requirements, write a second test case for what happens when something goes wrong: a wrong code, an empty field, a slot that is already taken.",
     "The three test cases below belong to the two requirements that everyone shares, REQ-001 and REQ-006. Keep them and adjust the wording to your screens. If your phone-screen requirement has another id, change the id and the req of TC-006-01 to match it (REQ-007 gives TC-007-01). Replace the fourth one with your own, and add as many as you need.",
+    "From the Sunday after Week 5 (the baseline), every change to this file, a dropped test case included, is a change request: one line in the Change log of PROPOSAL.md that begins with CR- and the next number, names the change and the ids, and lists every file it affects.",
     "You may delete this block once you have read it; the checker ignores it."
   ],
   "project": "the title from PROPOSAL.md §1",
@@ -23,7 +25,8 @@
         "Enter deniz@example.com and tap Send code",
         "Enter the 4-digit code from the e-mail and tap Log in"
       ],
-      "expected": "The home screen opens. No screen asks for a password."
+      "expected": "The home screen opens. No screen asks for a password.",
+      "run": "web"
     },
     {
       "id": "TC-001-02",
@@ -33,7 +36,8 @@
       "steps": [
         "On the code screen, enter 0000 (a code that was not sent) and tap Log in"
       ],
-      "expected": "The message 'Wrong code' appears; the user stays on the code screen and can try again."
+      "expected": "The message 'Wrong code' appears; the user stays on the code screen and can try again.",
+      "run": "web"
     },
     {
       "id": "TC-006-01",
@@ -43,7 +47,8 @@
       "steps": [
         "Open every screen of the app, one after the other"
       ],
-      "expected": "No screen has a horizontal scroll bar, no text is cut off, and every button can be reached."
+      "expected": "No screen has a horizontal scroll bar, no text is cut off, and every button can be reached.",
+      "run": "manual"
     },
     {
       "id": "TC-002-01",
@@ -53,7 +58,8 @@
       "steps": [
         "…"
       ],
-      "expected": "…"
+      "expected": "…",
+      "run": "…"
     }
   ]
 }

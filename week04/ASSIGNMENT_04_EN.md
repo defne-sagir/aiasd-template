@@ -79,10 +79,12 @@ the rules), `week04/test_cases.json`, `week04/walkthrough_04.json`,
 
 ## In the lecture — pushed by 11:45
 
-The lab has three parts. About 25 minutes of explanation; then you build until about
-10:30 (push at 10:00, whatever state the work is in); then the walk-through with your
-collaborator until about 11:30 (push at 11:00, or right after your own turn if 11:00 falls in it); and
-the last fifteen minutes for your files, the checker and the push at the end of the lecture (11:45).
+The lab has three parts, after about 25 minutes of explanation:
+
+1. You build until about 10:30. Push at 10:00, whatever state the work is in.
+2. The walk-through with your collaborator, until about 11:30. Push at 11:00, or right after
+   your own turn if 11:00 falls in it.
+3. The last fifteen minutes: your files, the checker and the push at the end of the lecture (11:45).
 
 ### 1. The prototype — `week04/prototype/`
 
@@ -162,6 +164,9 @@ The rules:
 - **The steps use real values** ("Room 3, 16:00 to 17:30", not "a room and a time"), and
   **the expected result is something a tester can see** ("the message 'This slot is
   taken'", not "it works").
+- **`run`**: `server` if a server test can check it (it becomes an automated test from
+  Week 5), `web` if a person checks it on a screen in the browser, `manual` if a person
+  checks it by hand (for example on a phone).
 - **By Saturday, at least three requirements also have a test case for when something
   goes wrong**: a wrong code, an empty field, a slot that is already taken. TC-001-02 in
   the file is the first one.
@@ -193,7 +198,7 @@ take turns, but they do not have to. Each prototype gets about twelve minutes.
 - **Each run has one result.** `pass`: the collaborator saw what "expected" says. `fail`:
   they did not, and the note says what they saw instead. `blocked`: it cannot be checked on a
   prototype, for example "the code arrives within one minute", which needs the real
-  server; it is checked on the real system from Week 5. A screen that does not exist
+  server; it is checked on the real system from Week 6. A screen that does not exist
   yet is a `fail`.
 
 The collaborator works on your laptop because the prototype is in your private repository.
@@ -234,8 +239,9 @@ git commit -m "week04: prototype, test cases, walk-through"
 git push
 ```
 
-Push at 10:00, at 11:00 and at the end of the lecture, **11:45**. Right after it I
-freeze every repository. What is not pushed does not exist.
+Push near 10:00, 11:00 and the end of the lecture, **11:45** (within 15 minutes of each
+time), each push with new work. The lecture mark reads your last commit pushed by the end of the lecture. What is not
+pushed does not exist.
 
 ---
 
@@ -247,8 +253,8 @@ freeze every repository. What is not pushed does not exist.
   or the requirement was: then change that instead, and say why in the Change log.
 - **Round 2 with your collaborator, online, before Saturday 23:59.** Only the test cases that
   failed in round 1 are run again, each after its fix: you share the screen with the fixed prototype, your collaborator reads the steps of
-  each failed test case aloud, and you click exactly what they say. Your group meeting is the
-  natural place if your collaborator is in your group; otherwise use any call you both choose.
+  each failed test case aloud, and you click exactly what they say. Use any
+  online call you both choose.
   Add these runs to `walkthrough_04.json` with `"round": 2`, written by you. A test case that you
   dropped instead (`"dropped": true`, with a Change log line) needs no round 2.
 - **Update `requirements.json` and `test_cases.json`** with what the walk-through showed:
@@ -259,8 +265,10 @@ freeze every repository. What is not pushed does not exist.
   found none; TC-011-01 written."
 
 Both files can still change for one more week. At the end of Week 5 they become your
-**baseline**. After that, every change needs a change request: a short written request
-that names the change and every file it affects.
+**baseline**. From the Sunday after Week 5, every change to either file, a dropped
+requirement included, is a **change request**: one line in the Change log of `PROPOSAL.md`
+that begins with `CR-` and the next number, names the change and the ids, and lists every
+file it affects.
 
 ### 7. The full screen flow
 
@@ -302,8 +310,10 @@ Two kinds of words, and the reader must see which is which. Your words are plain
 
 ### 10. Push again, checks green
 
-Several commits as you work, each with some new work in it and a message that says what changed; a commit does not need to be a finished part. Everything the checker
-asks for is listed below.
+**Outside the lecture:** at least two commits with new work, pushed at least one hour apart.
+GitHub's push time counts, not the date on a commit. A commit made by a coding agent never
+counts. **Never force push**, and never let an assistant do it. A commit does not need to be a
+finished part; its message says what changed. Everything the checker asks for is listed below.
 
 ---
 
@@ -330,8 +340,9 @@ asks for is listed below.
 ## Not this week
 
 No server code and no design documents yet (both in Week 5). No framework for the
-prototype: React, Flutter and the rest come with the real clients. No real e-mail is sent;
-the code is 1234.
+prototype. The web client stays plain HTML, CSS and JavaScript: in Week 6 these screens
+become the pages of `web/`, served by your FastAPI server. Only the mobile client uses a
+framework, of your choice (Week 7). No real e-mail is sent; the code is 1234.
 
 ---
 
@@ -342,8 +353,9 @@ your collaborator, and a quoted finding from them, read from your repository as 
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2**, which means your `ai_log_04.md` with its evidence, written by you (a log written by an assistant earns **0**), the record of what your collaborator said, written by you by hand, and real findings
-with real decisions behind them. Commit discipline: **1**, which means several pushes at
-different times in the lecture (at least three) and several commits as you work, each with some new work in it.
+with real decisions behind them. Commit discipline: **1**, which means a push with new work
+near 10:00, 11:00 and 11:45 (within 15 minutes of each time), and at least two commits with
+new work outside the lecture, pushed at least one hour apart (§10).
 
 **S1** is also a graded step of the store bonus, as S0 was in Week 3.
 

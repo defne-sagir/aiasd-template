@@ -79,9 +79,12 @@ python .github/check_deliverables.py
 
 ## Derste — dersin sonuna (11:45) kadar push edilir
 
-Ders üç bölümdür. Yaklaşık 25 dakika anlatım; sonra 10:30 civarına kadar yaparsınız
-(10:00'da, iş hangi durumdaysa push); sonra 11:30 civarına kadar collaborator'ınızla walk-through
-(11:00'de push; 11:00 sizin turunuza denk gelirse turunuz biter bitmez); son on beş dakika da dosyalarınız, denetleyici ve dersin sonundaki (11:45) push için.
+Yaklaşık 25 dakikalık anlatımdan sonra ders üç bölümdür:
+
+1. 10:30 civarına kadar yaparsınız. 10:00'da, iş hangi durumdaysa, push edin.
+2. 11:30 civarına kadar collaborator'ınızla walk-through. 11:00'de push edin; 11:00 sizin
+   turunuza denk gelirse turunuz biter bitmez.
+3. Son on beş dakika: dosyalarınız, denetleyici ve dersin sonundaki (11:45) push.
 
 ### 1. Prototip — `week04/prototype/`
 
@@ -164,6 +167,9 @@ Kurallar:
 - **Adımlar gerçek değerler kullanır** ("bir oda ve bir saat" değil, "Oda 3, 16:00–17:30")
   ve **beklenen sonuç, test edenin görebileceği bir şeydir** ("çalışır" değil, "'Bu dilim
   dolu' mesajı").
+- **`run`**: bir sunucu testi kontrol edebiliyorsa `server` (5. haftadan itibaren otomatik
+  bir teste dönüşür), bir kişi tarayıcıda bir ekranda kontrol ediyorsa `web`, bir kişi
+  elle kontrol ediyorsa (örneğin bir telefonda) `manual`.
 - **Cumartesi'ye kadar en az üç gereksinimin, bir şey ters gittiğinde ne olacağını test
   eden bir test case'i de olur**: yanlış bir kod, boş bir alan, zaten dolu bir dilim.
   Dosyadaki TC-001-02 bunların ilkidir.
@@ -197,7 +203,7 @@ yaklaşık on iki dakika düşer.
 - **Her yürütmenin tek bir sonucu vardır.** `pass`: collaborator "expected" alanında yazanı
   gördü. `fail`: görmedi; not, onun yerine ne gördüğünü söyler. `blocked`: prototip
   üzerinde kontrol edilemez; örneğin "kod bir dakika içinde gelir" gerçek sunucu ister ve
-  5. haftadan itibaren gerçek sistem üzerinde kontrol edilir. Henüz var olmayan bir
+  6. haftadan itibaren gerçek sistem üzerinde kontrol edilir. Henüz var olmayan bir
   ekran `fail`'dir.
 
 Prototip sizin özel reponuzda olduğu için collaborator sizin bilgisayarınızda çalışır.
@@ -239,8 +245,9 @@ git commit -m "week04: prototype, test cases, walk-through"
 git push
 ```
 
-10:00'da, 11:00'de ve dersin sonunda, **11:45**'te push edin. Hemen ardından bütün
-repoları dondururum. Push edilmemiş olan yoktur.
+10:00, 11:00 ve dersin sonu olan **11:45** civarında (her saatten en fazla 15 dakika önce
+ya da sonra) push edin; her push'ta yeni iş olsun. Ders notu, dersin sonuna dek push ettiğiniz son commit'i okur.
+Push edilmemiş olan yoktur.
 
 ---
 
@@ -253,8 +260,7 @@ repoları dondururum. Push edilmemiş olan yoktur.
 - **Collaborator'ınızla çevrim içi ikinci tur, Cumartesi 23:59'dan önce.** Yalnızca 1. turda
   `fail` olan test case'ler, her biri düzeltildikten sonra, yeniden yürütülür: düzeltilmiş prototipi ekran paylaşımıyla açarsınız, collaborator'ınız
   `fail` olan her test case'in adımlarını yüksek sesle okur ve siz tam olarak söylediğini
-  tıklarsınız. Collaborator'ınız grubunuzdaysa grup toplantınız bunun için doğal yerdir; değilse
-  ikinizin seçeceği herhangi bir görüşme olur. Bu yürütmeleri `walkthrough_04.json` dosyasına
+  tıklarsınız. İkinizin seçeceği herhangi bir çevrim içi görüşmeyi kullanın. Bu yürütmeleri `walkthrough_04.json` dosyasına
   `"round": 2` ile, kendi elinizle yazarak ekleyin. Bunun yerine çıkardığınız (`"dropped": true`,
   Değişiklik günlüğünde bir satırla) bir test case'in ikinci tura ihtiyacı yoktur.
 - **`requirements.json` ve `test_cases.json` dosyalarını** walk-through'un gösterdiklerine
@@ -265,8 +271,10 @@ repoları dondururum. Push edilmemiş olan yoktur.
   bulamadı; TC-011-01 yazıldı."
 
 İki dosya bir hafta daha değişebilir. 5. haftanın sonunda **taban çizginiz (baseline)**
-olurlar. Ondan sonra her değişiklik bir değişiklik isteği (change request) gerektirir:
-değişikliği ve etkilediği her dosyayı söyleyen kısa, yazılı bir istek.
+olurlar. 5. haftadan sonraki Pazar gününden itibaren iki dosyadaki her değişiklik, düşürülen
+bir gereksinim de dahil, bir **değişiklik talebidir (change request)**: `PROPOSAL.md`
+Değişiklik günlüğünde `CR-` ve sıradaki numarayla başlayan, değişikliği ve kimlikleri söyleyen
+ve etkilediği her dosyayı sayan tek bir satır.
 
 ### 7. Ekran akışının tamamı
 
@@ -308,8 +316,11 @@ zayıf/güçlü örnek dosyanın içindedir. **AI log'u bir insan yazar: siz.** 
 
 ### 10. Yeniden push, denetimler yeşil
 
-Çalıştıkça yapılan, her birinde biraz yeni iş ve ne değiştiğini söyleyen bir mesaj olan commit'ler; bir commit'in bitmiş bir parça olması gerekmez. Denetleyicinin
-istediklerinin hepsi aşağıdadır.
+**Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde
+push edilmiş olsun. Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama
+ajanının yaptığı commit hiçbir zaman sayılmaz. **Asla force push yapmayın** ve bir asistanın
+yapmasına da izin vermeyin. Bir commit'in bitmiş bir parça olması gerekmez; mesajı neyin
+değiştiğini söyler. Denetleyicinin istediklerinin hepsi aşağıdadır.
 
 ---
 
@@ -336,8 +347,9 @@ istediklerinin hepsi aşağıdadır.
 ## Bu hafta yok
 
 Henüz sunucu kodu ve tasarım belgesi yok (ikisi de 5. haftada). Prototip için framework
-yok: React, Flutter ve diğerleri gerçek istemcilerle gelir. Gerçek e-posta gönderilmez;
-kod 1234'tür.
+yok. Web istemcisi düz HTML, CSS ve JavaScript olarak kalır: 6. haftada bu ekranlar `web/`
+klasörünün sayfalarına dönüşür ve FastAPI sunucunuz onları sunar. Framework'ü yalnızca mobil
+istemci kullanır ve onu siz seçersiniz (7. hafta). Gerçek e-posta gönderilmez; kod 1234'tür.
 
 ---
 
@@ -347,9 +359,10 @@ kod 1234'tür.
 ondan alıntılanmış bir bulgu; reponuzun dersin sonundaki (11:45) halinden okunur.
 
 **Cumartesi 23:59 — 5 puan.** Son halinizde denetimlerin yeşil olması: **2**. İnsan
-katılımı: **2**; yani kanıtıyla birlikte, sizin yazdığınız `ai_log_04.md` (asistana yazdırılmış günlük **0** alır), collaborator'ınızın söylediklerinin sizin elle yazdığınız kaydı ve arkasında gerçek kararlar olan
-gerçek bulgular. Commit düzeni: **1**; yani derste farklı zamanlarda birkaç push (en az üç) ve
-çalıştıkça yapılan birkaç commit; her birinde biraz yeni iş olsun.
+katkısı: **2**; yani kanıtıyla birlikte, sizin yazdığınız `ai_log_04.md` (asistana yazdırılmış günlük **0** alır), collaborator'ınızın söylediklerinin sizin elle yazdığınız kaydı ve arkasında gerçek kararlar olan
+gerçek bulgular. Commit disiplini: **1**; yani 10:00, 11:00 ve 11:45 civarında (her saatten en
+fazla 15 dakika farkla) yeni iş içeren birer push ve ders dışında, aralarında en az bir saat
+olacak şekilde push edilmiş, yeni iş içeren en az iki commit (§10).
 
 **S1**, 3. haftadaki S0 gibi mağaza bonusunun notlanan adımlarından biridir.
 

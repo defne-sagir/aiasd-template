@@ -4,7 +4,7 @@
 *Bu sayfadan sunulur. Bölüm bölüm kaydırın; her `---` bir slayttır.*
 
 <!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 saat:
-10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:45'e kadar çalışma · 11:45'in hemen ardından dondurma. -->
+10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:45'e kadar çalışma · not, dersin sonuna dek push edilen son commit'i okur. -->
 
 ---
 
@@ -43,8 +43,8 @@ ya da sosyal çevrenizin.**
 tarih, yer, kim, onun yerine ne yaptı.
 
 **2. Çevrenizdeki gerçek kişiler kullanabilir.**
-Atlas'ta, ailenizde, bir kulüpte. 9. haftada beşi test edecek — Kullanıcı Kabul Testi.
-Onları bugün adlandırıyorsunuz.
+Atlas'ta, ailenizde, bir kulüpte. Beşi test edecek: 9. haftada beta testi, 10. haftada
+Kullanıcı Kabul Testi. Onları bugün adlandırıyorsunuz.
 
 Son seferi ya da beş kişiyi söyleyemiyorsanız sorun slaytta değil projededir. **Projeyi bu
 derste değiştirin:** dersin sonunda (11:45) kesinleşiyor.
@@ -94,7 +94,7 @@ Bugünkü altı slaydınız bu listenin ilk yarısı; cumartesi teslim edeceğin
 
 1. Ürün tek cümleyle
 2. **Sorun en son ne zaman oldu — size ya da gözünüzün önünde**
-3. **9. haftada test edecek beş kişi** — ad, nereden tanıdığınız, neden
+3. **Onu test edecek beş kişi** (9.–10. haftalar) — ad, nereden tanıdığınız, neden
 4. Üç gereksinim — *`requirements.json` ile aynı id ve aynı metin* — ve bir "yapmaz"
 5. Ana ekran, **elle çizilmiş**
 6. Emin olmadığınız tek şey
@@ -122,7 +122,7 @@ bir slaytı sorabilirim.
 
 ## İnceleme turu — dörtlü gruplar
 
-**Dört kişilik grubunuzu şimdi kendiniz kurun.** Grup dönem boyunca sizinle kalacak; haftada bir çevrim içi buluşabileceğiniz kişileri seçin. Sınıf dörde bölünmediği için açıkta mı kaldınız? Bir gruba katılın; o grup beş kişi olur. Üç kişilik grup yok.
+**Dört kişilik grubunuzu şimdi kendiniz kurun.** Grup dönem boyunca sizinle kalacak; hangi haftalarda toplandığını ödevler söyler. Sınıf dörde bölünmediği için açıkta mı kaldınız? Bir gruba katılın; o grup beş kişi olur. Üç kişilik grup yok.
 
 **Grubunuzu `week03/group_03.json` dosyasına yazın:** kendi numaranız dahil bütün üyelerin numaraları. Her üye aynı listeyi yazar. Listeler farklıysa grubun her üyesi bir puan kaybeder.
 
@@ -174,21 +174,20 @@ Girişten uygulamanızın var olma nedeni olan tek işe kadar izlenen yol. Aşa�
 ## Vaktiniz kalırsa
 
 - Birbirinizin `must` gereksinimlerinin kabul ölçütlerini okuyun. Test edenin kontrol edemeyeceği her ölçütü işaretleyin; örneğin "kullanıcılar memnun kalır".
-- Haftalık bir saatlik çevrim içi toplantınızın gününü ve aracını kararlaştırın.
+- Grubunuzun toplandığı haftalar için birbirinize nasıl ulaşacağınızı (bir mesajlaşma grubu) kararlaştırın.
 - Ben buradayken Bölüm B'ye başlayın: §8'den ve §12'deki mağaza seçiminden.
 - Mağaza seçiminiz kesin mi? Geliştirici hesabınızı (S1) şimdiden açabilirsiniz. Kimlik kontrolü günler sürer; S1 4. haftada notlanır.
 
 ---
 
-## Bu grup kalıyor — her hafta bir saat çevrim içi
+## Bu grup kalıyor
 
-**4. haftadan** itibaren grubunuz **dersle cumartesi arasında çevrim içi bir saat** buluşur. Teams, Meet, Discord — siz seçin.
+Bugünkü grubunuz grubunuz olarak kalır. Her hafta **toplanmaz**: hangi haftalarda ve ne
+için toplandığını her ödev söyler.
 
-Her biriniz: bu hafta projenizde ne değişti. Diğerleri: ne düşünüyor.
+**4. hafta:** seçtiğiniz bir sınıf arkadaşınız, **collaborator**'ınız, test case'lerinizi prototipiniz üzerinde yürütür.
 
-**Her hafta** `weekNN/group_NN.json` dosyasında her üye için bir kayıt: söyledikleri alıntı olarak ve sizin ne yaptığınız.
-
-Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta.
+`weekNN/group_NN.json`, o haftanın ödevinin adını verdiği kişileri o haftanın rolüyle tutar: 4 collaborator · 5 kimse (tek başınıza çalışırsınız) · 6 attacker · 7 tester · 8 test-user · 9 beta-tester · 10 uat-participant · 11 release-tester · 12 poster-reviewer.
 
 ---
 
@@ -198,11 +197,11 @@ Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta
 
 **Cumartesiden itibaren bir id'nin anlamı hiç değişmez.** `REQ-004` aralıkta da aynı şeyi ifade etmeli.
 
-**Liste 5. haftanın sonuna kadar açık kalır.** 4. haftada kabul ölçütlerinizden test case'ler yazıp tıklanabilir prototip üzerinde yürütürsünüz; eksik çıkan her şey değişiklik günlüğüne bir satırla listeye girer.
+**Liste 5. haftanın sonuna kadar açık kalır.** 4. haftada kabul ölçütlerinizden test case'ler yazıp tıklanabilir prototip üzerinde yürütürsünüz; eksik çıkan her şey bir Change log satırıyla listeye girer.
 
-**5. haftanın sonu: gereksinimler + test case'ler = taban çizginiz (baseline).** Bundan sonra değişiklikler ancak bir değişiklik talebiyle yapılır.
+**5. haftanın sonu: gereksinimler + test case'ler = taban çizginiz (baseline).** Sonra her değişiklik bir change request'tir: `CR-` ile başlayan bir Change log satırı.
 
-REQ-001 (e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkeste olduğu gibi kalır.
+REQ-001 (4 haneli e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkes için aynıdır; ifadeyi ürününüze göre uyarlayın.
 
 ---
 
@@ -215,9 +214,10 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Turdan sonra ve dersin sonunda, **11:45**'te bir kez daha push edin. Hemen ardından her repoyu donduruyorum. Push edilmemiş iş yok sayılır.
+11:45'e dek push edin. Ders notu, dersin sonuna dek push ettiğiniz son commit'i okur. Push edilmemiş iş yok sayılır.
 
-Bu dönem push saatleri: **10:00, 11:00 ve ders sonu (11:45)** — ve bir şeyi her bitirdiğinizde.
+Derste: **10:00, 11:00 ve 11:45** civarında (±15 dakika) push edin; her push'ta yeni iş olsun.
+Ders dışında: aralarında en az bir saat olan en az iki commit. **Asla force push yapmayın.**
 
 ---
 
@@ -255,7 +255,7 @@ Bu hafta asistan, **hayır** demek isteyen yatırımcıyı oynar.
 | Ders sonu (11:45) | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış, beş ekran yazılmış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
-| Commit disiplini | 1 | derste birkaç push (en az 3); çalıştıkça birkaç commit |
+| Commit disiplini | 1 | 10:00, 11:00, 11:45 civarında push; ders dışında bir saat arayla iki commit |
 
 Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır; siz de verdiğiniz incelemeler için aynısını.
 
@@ -265,7 +265,7 @@ Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10
 
 **4. hafta:** ana akışınızın tıklanabilir bir prototipi ve kabul ölçütlerinizden yazılmış test case'ler.
 
-Grubunuz test case'leri prototip üzerinde yürütür; çalışmayan her şey gereksinimlerde neyin eksik olduğunu gösterir.
+Seçtiğiniz bir sınıf arkadaşınız, collaborator'ınız, test case'leri prototip üzerinde yürütür; çalışmayan her şey gereksinimlerde neyin eksik olduğunu gösterir.
 
 **Gelecek haftaya kadar:** kabul ölçütlerinizi yeniden okuyun. Bir testçinin ne görmesi gerektiğini söylemeyen her ölçütü yeniden yazın.
 
@@ -288,4 +288,4 @@ Gruplar kuruldu. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
 
 **Dersin sonunda (11:45) projenizin başlığı ve içeriği kesinleşiyor.** Gereken zamanı ayırın.
 
-<!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 11:35'e kadar projeksiyonda kalsın; 11:35'ten sonra "Push". 11:45'in hemen ardından dondur: push.md blok 3. -->
+<!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 11:35'e kadar projeksiyonda kalsın; 11:35'ten sonra "Push". Not, dersin sonuna dek push edilen son commit'i okur: push.md blok 3. -->
