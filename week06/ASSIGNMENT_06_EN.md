@@ -95,10 +95,18 @@ A small example from StudyRoom, the course's sample project:
 | When | What you do | Where |
 |---|---|---|
 | **Before the lecture** | Run the checker once; `pip install -r week06/requirements.txt`; `python -m pytest course_tests -q` (ten stop with an error: "Fill in server/login_contract.json"). Make the list of your functional `must` requirements, and choose the one you build first | the box below |
-| **In the lecture, push at 10:00** | The login connected: `login_contract.json` by hand, `course_login.router` in `main.py`, your own login stubs deleted. Your first requirement chosen, and its `api.md` rows checked (or written, §2) | §1–§2 |
-| **In the lecture, push at 11:00** | Its routes working, with `current_user` where it needs a user; its tests named by its test cases, **green on GitHub** | §3–§4 |
-| **In the lecture, push at 11:45** | Its prototype screen as a page of `web/` that calls those routes, behind the login · the attacker round, typed into `group_06.json` | §5–§7 |
+| **In the lecture, until about 10:00** | The login connected: `login_contract.json` by hand, `course_login.router` in `main.py`, your own login stubs deleted. Your first requirement chosen, and its `api.md` rows checked (or written, §2) | §1–§2 |
+| **In the lecture, until about 11:00** | Its routes working, with `current_user` where it needs a user; its tests named by its test cases, **green on GitHub** | §3–§4 |
+| **In the lecture, until 11:45** | Its prototype screen as a page of `web/` that calls those routes, behind the login · the attacker round, typed into `group_06.json` | §5–§7 |
 | **By Saturday 23:59** | **Every** functional `must` requirement end to end · the code by real e-mail · all tests green on GitHub · S2 · `"run"` on every test case · your decision on each finding · `ai_log_06.md` | §8–§16 |
+
+> ## Commit in the middle of the work, not at the end
+>
+> The times above are a pace, not push times. Commit each piece of work while it is still
+> unfinished, for example a route that answers but does not check the user yet, a test that is
+> written but still red, or a page that shows the screen but does not call the server yet. Commit it
+> again when it works, and push every commit right away. Your history shows how each file grew; a
+> piece that arrives finished in one commit does not count for the commit point.
 
 > ## The AI log is written by a human. No exceptions.
 >
@@ -196,13 +204,15 @@ A small example from StudyRoom, the course's sample project:
 The lecture has four parts:
 
 1. about twenty minutes of explanation;
-2. the login and your first requirement (push at **10:00**);
-3. its routes and its tests (push at **11:00**);
-4. its page and the attacker round (push at **11:45**).
+2. the login and your first requirement (until about **10:00**);
+3. its routes and its tests (until about **11:00**);
+4. its page and the attacker round (until **11:45**).
+
+In every part, commit and push while the work is still unfinished, and again when it works.
 
 ### 1. Connect the login — fifteen to twenty minutes
 
-**When:** in the lecture, pushed at 10:00.
+**When:** in the lecture, until about 10:00.
 
 **Why the login comes ready to use.** Every project logs in the same way. It is also easy to make
 small mistakes in a login (a code that never expires, a "me" that answers everyone). Writing it would
@@ -305,7 +315,7 @@ reads the file only when it starts.
 
 ### 2. Your first requirement — choose it, and check its chain
 
-**When:** in the lecture, pushed at 10:00.
+**When:** in the lecture, until about 10:00.
 
 Take the requirement that you chose before the lecture. Before you write any code, put its links side
 by side: the requirement and its acceptance criterion, its use case, its screen, its test cases and its
@@ -318,12 +328,11 @@ by side: the requirement and its acceptance criterion, its use case, its screen,
 If `api.md` has no rows yet for this requirement (Week 5 asked only for the login rows), write them now,
 by hand, before any route code, with a dated Change log line.
 
-If a link is missing or wrong, fix it now, with its line in `PROPOSAL.md` (§9). Push at 10:00, with the
-login connected.
+If a link is missing or wrong, fix it now, with its line in `PROPOSAL.md` (§9).
 
 ### 3. Its routes, for real
 
-**When:** in the lecture, pushed at 11:00.
+**When:** in the lecture, until about 11:00.
 
 In each of its routes, replace the 501 with the real work. This week, keep your data in memory: a
 dictionary or a list in one module of `server/` is enough. From Week 8, when testers use your app, your
@@ -393,7 +402,7 @@ of your test cases.
 
 ### 4. Its tests, named by its test cases — green on GitHub
 
-**When:** in the lecture, pushed at 11:00.
+**When:** in the lecture, until about 11:00.
 
 First add `"run"` to this requirement's test cases (§14). Then write one test in `server/tests/` for
 each of them with `"run": "server"`. Name the test by the test case id:
@@ -403,7 +412,7 @@ each of them with `"run": "server"`. Name the test by the test case id:
 
 ### 5. Its page — the prototype's screen, made real
 
-**When:** in the lecture, pushed at 11:45.
+**When:** in the lecture, until 11:45.
 
 Copy the requirement's screen from `week04/prototype/` into `web/`. Keep its look: it is your design.
 Keep its `<!-- serves: REQ-… -->` line too. Then make it real:
@@ -501,9 +510,9 @@ git push
 Then open your repository on GitHub. Open the **Actions** tab, the newest run and the job **Weekly
 deliverables**. If it is red there, it is red for the lecture mark, even if your laptop shows green.
 
-Push your work near **10:00**, **11:00** and **11:45** (within 15 minutes of each time), each push
-with new work. GitHub's push time counts. Push by 11:45, so that the run has time to finish. The
-lecture mark reads your last commit pushed by the end of the lecture, and its Actions run.
+Commit each piece of work in the middle, commit it again when it works, and push every commit right
+away. GitHub's push time counts, not the time on a commit. Push your last commit by 11:45, so that the
+run has time to finish. The lecture mark reads your last commit pushed by the end of the lecture, and its Actions run.
 
 ---
 
@@ -744,8 +753,8 @@ run:
 - Human involvement: **2**. This means your `ai_log_06.md`, written by you (a log written by an
   assistant earns **0**), and the two files you write by hand: `login_contract.json`, and the
   attacker's record with your decisions.
-- Commit discipline: **1**. In the lecture: a push with new work near 10:00, 11:00 and 11:45 (within
-  15 minutes of each time). Outside the lecture: at least two commits with new work, pushed at least one
+- Commit discipline: **1**. In the lecture: each piece of work (the login, its routes, its tests, its
+  page) in at least two pushed commits, the first while the piece is still unfinished. Outside the lecture: at least two commits with new work, pushed at least one
   hour apart. GitHub's push time counts, not the date on a commit. A commit made by a coding agent never
   counts.
 

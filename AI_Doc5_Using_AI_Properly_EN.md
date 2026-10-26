@@ -64,7 +64,7 @@ technique it uses.
 The techniques work inside the weekly routine you already know:
 
 - the checker before every push;
-- the pushes near 10:00, 11:00 and 11:45 in the lecture, and the reading of your
+- the commits in the middle of each piece of work in the lecture, and the reading of your
   repository at the end of the lecture;
 - the Saturday 23:59 deadline;
 - the ids in your `requirements.json`, and the Change log at the end of `PROPOSAL.md`;
@@ -153,7 +153,7 @@ fixed it with a check before the booking is saved, and test TC-002-02 now catche
 the Evidence block), and the fix.
 
 **In this course.** The first run is always `python .github/check_deliverables.py`: before
-the pushes near 10:00, 11:00 and 11:45, and before Saturday 23:59. A red check is
+every push in the lecture, and before Saturday 23:59. A red check is
 evidence, so paste it. From Week 6, also look at the **Actions** tab after each push: a
 test that passes only on your laptop does not count. The second run is on your own phone:
 the app must work at phone width in every week, not only in Week 10.
@@ -279,8 +279,8 @@ refused.
 
 **In this course.** This is what the weekly commit-discipline point looks for:
 
-- **In the lecture:** push your work near 10:00, 11:00 and 11:45 (within 15 minutes of
-  each time), each push with new work.
+- **In the lecture:** commit each piece of work in the middle, commit it again when it works,
+  and push every commit right away.
 - **Outside the lecture:** at least two commits with new work, pushed at least one hour
   apart.
 - GitHub's push time counts, not the date on a commit. A commit made by a coding agent

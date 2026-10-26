@@ -79,8 +79,8 @@ check again.
 
 **When you push:**
 
-- **In the lecture:** push your work near 10:00, 11:00 and 11:45 (within 15 minutes of
-  each time), each push with new work.
+- **In the lecture:** commit each piece of work in the middle, commit it again when it works,
+  and push every commit right away.
 - **Outside the lecture:** at least two commits with new work, pushed at least one hour
   apart.
 - GitHub's push time counts, not the date on a commit. A commit made by a coding agent

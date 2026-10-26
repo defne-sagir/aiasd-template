@@ -220,7 +220,7 @@ that a committed key is an automatic 10-point deduction.
 ## Repository rules
 
 - **Commits and pushes:**
-  - **In the lecture:** push your work near 10:00, 11:00 and 11:45 (within 15 minutes of each time), each push with new work.
+  - **In the lecture:** commit each piece of work in the middle, commit it again when it works, and push every commit right away. A piece that arrives finished in one commit does not count.
   - **Outside the lecture:** at least two commits with new work, pushed at least one hour apart.
   - GitHub's push time counts, not the date on a commit. A commit made by a coding agent never counts.
   - **Never force push**, and never let an assistant do it. If git refuses your push, run `git pull`, then `git push`.

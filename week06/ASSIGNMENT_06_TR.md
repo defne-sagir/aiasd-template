@@ -96,10 +96,18 @@ Dersin örnek projesi StudyRoom'dan küçük bir örnek:
 | Ne zaman | Ne yaparsınız | Nerede |
 |---|---|---|
 | **Dersten önce** | Denetleyiciyi (checker) bir kez çalıştırın; `pip install -r week06/requirements.txt`; `python -m pytest course_tests -q` (on testin hepsi bir hatayla durur: "Fill in server/login_contract.json"). İşlevsel `must` gereksinimlerinizin listesini çıkarın ve ilk kuracağınızı seçin | aşağıdaki kutu |
-| **Derste, 10:00'da push** | Giriş bağlanmış: `login_contract.json` elle, `main.py` içinde `course_login.router`, kendi giriş taslaklarınız silinmiş. İlk gereksiniminiz seçilmiş ve `api.md` satırları kontrol edilmiş (ya da yazılmış, §2) | §1–§2 |
-| **Derste, 11:00'de push** | Route'ları çalışıyor, kullanıcı gereken yerde `current_user` ile; test case'leriyle adlandırılmış testleri **GitHub'da yeşil** | §3–§4 |
-| **Derste, 11:45'te push** | Prototip ekranı, bu route'ları çağıran, girişin arkasında duran bir `web/` sayfası olmuş · saldırgan turu (attacker round), `group_06.json` dosyasına yazılmış | §5–§7 |
+| **Derste, yaklaşık 10:00'a kadar** | Giriş bağlanmış: `login_contract.json` elle, `main.py` içinde `course_login.router`, kendi giriş taslaklarınız silinmiş. İlk gereksiniminiz seçilmiş ve `api.md` satırları kontrol edilmiş (ya da yazılmış, §2) | §1–§2 |
+| **Derste, yaklaşık 11:00'e kadar** | Route'ları çalışıyor, kullanıcı gereken yerde `current_user` ile; test case'leriyle adlandırılmış testleri **GitHub'da yeşil** | §3–§4 |
+| **Derste, 11:45'e kadar** | Prototip ekranı, bu route'ları çağıran, girişin arkasında duran bir `web/` sayfası olmuş · saldırgan turu (attacker round), `group_06.json` dosyasına yazılmış | §5–§7 |
 | **Cumartesi 23:59'a kadar** | **Her** işlevsel `must` gereksinim uçtan uca · gerçek e-postayla kod · bütün testler GitHub'da yeşil · S2 · her test case'te `"run"` · her bulgu (finding) için kararınız · `ai_log_06.md` | §8–§16 |
+
+> ## İşin ortasında commit edin, sonunda değil
+>
+> Yukarıdaki saatler bir tempo, push saati değil. Her işi daha bitmeden commit edin; örneğin yanıt
+> veren ama henüz kullanıcıyı kontrol etmeyen bir route, yazılmış ama hala kırmızı olan bir test ya
+> da ekranı gösteren ama henüz sunucuyu çağırmayan bir sayfa. Çalıştığında yeniden commit edin ve
+> her commit'i hemen push edin. Geçmişiniz (history) her dosyanın nasıl büyüdüğünü gösterir; tek
+> commit'te bitmiş olarak gelen bir iş commit puanına sayılmaz.
 
 > ## AI log'u (yapay zeka günlüğü) insan yazar. İstisna yok.
 >
@@ -198,13 +206,15 @@ Dersin örnek projesi StudyRoom'dan küçük bir örnek:
 Ders dört bölümden oluşur:
 
 1. yaklaşık yirmi dakika anlatım;
-2. giriş ve ilk gereksiniminiz (**10:00**'da push);
-3. onun route'ları ve testleri (**11:00**'de push);
-4. sayfası ve saldırgan turu (**11:45**'te push).
+2. giriş ve ilk gereksiniminiz (yaklaşık **10:00**'a kadar);
+3. onun route'ları ve testleri (yaklaşık **11:00**'e kadar);
+4. sayfası ve saldırgan turu (**11:45**'e kadar).
+
+Her bölümde işi daha bitmeden commit edip push edin, çalıştığında yeniden.
 
 ### 1. Girişi bağlamak — on beş, yirmi dakika
 
-**Ne zaman:** derste, 10:00'da push.
+**Ne zaman:** derste, yaklaşık 10:00'a kadar.
 
 **Giriş neden kullanıma hazır geliyor.** Her proje aynı biçimde giriş yapar. Girişte küçük hatalar
 yapmak da kolaydır (süresi hiç dolmayan bir kod, herkese cevap veren bir "me"). Onu yazmak bütün
@@ -309,7 +319,7 @@ sunucuyu yeniden başlatın: sunucu bu dosyayı yalnızca başlarken okur.
 
 ### 2. İlk gereksiniminiz — seçin ve zincirini kontrol edin
 
-**Ne zaman:** derste, 10:00'da push.
+**Ne zaman:** derste, yaklaşık 10:00'a kadar.
 
 Dersten önce seçtiğiniz gereksinimi alın. Kod yazmadan önce halkalarını yan yana koyun: gereksinim ve
 kabul ölçütü, kullanım senaryosu, ekranı, test case'leri ve `api.md` satırları. Kontrol edin:
@@ -321,12 +331,11 @@ kabul ölçütü, kullanım senaryosu, ekranı, test case'leri ve `api.md` satı
 `api.md` dosyasında bu gereksinimin henüz satırı yoksa (5. hafta yalnızca giriş satırlarını istedi),
 satırları şimdi, elle, hiçbir route kodundan önce, tarihli bir Change log satırıyla yazın.
 
-Bir halka eksik ya da yanlışsa onu şimdi, `PROPOSAL.md` içindeki satırıyla (§9) düzeltin. Giriş bağlanmış
-olarak 10:00'da push edin.
+Bir halka eksik ya da yanlışsa onu şimdi, `PROPOSAL.md` içindeki satırıyla (§9) düzeltin.
 
 ### 3. Route'ları, gerçekten
 
-**Ne zaman:** derste, 11:00'de push.
+**Ne zaman:** derste, yaklaşık 11:00'e kadar.
 
 Her route'unda 501'i gerçek işle değiştirin. Bu hafta verilerinizi bellekte (in memory) tutun: `server/` içindeki
 bir modülde bir sözlük (dictionary) ya da liste yeter. 8. haftadan itibaren, testçiler uygulamanızı kullanırken,
@@ -397,7 +406,7 @@ test case'lerinizden birini bozar.
 
 ### 4. Test case'leriyle adlandırılmış testleri — GitHub'da yeşil
 
-**Ne zaman:** derste, 11:00'de push.
+**Ne zaman:** derste, yaklaşık 11:00'e kadar.
 
 Önce bu gereksinimin test case'lerine `"run"` ekleyin (§14). Sonra `"run": "server"` olan her biri için
 `server/tests/` içine bir test yazın. Testi test case kimliğiyle adlandırın:
@@ -408,7 +417,7 @@ geçirerek giriş yaptırır (aşağıda "Kendi testleriniz"e bakın). `python -
 
 ### 5. Sayfası — prototipin ekranı, gerçek oldu
 
-**Ne zaman:** derste, 11:45'te push.
+**Ne zaman:** derste, 11:45'e kadar.
 
 Gereksinimin ekranını `week04/prototype/` içinden `web/` klasörüne kopyalayın. Görünüşünü koruyun: o
 sizin tasarımınız. `<!-- serves: REQ-… -->` satırını da koruyun. Sonra onu gerçek yapın:
@@ -506,9 +515,9 @@ git push
 Sonra reponuzu GitHub'da açın. **Actions** sekmesini, en yeni çalıştırmayı ve **Weekly deliverables**
 işini açın. Orada kırmızıysa, bilgisayarınız yeşil gösterse bile ders notu için kırmızıdır.
 
-Çalışmanızı **10:00**, **11:00** ve **11:45** civarında (her saatten en fazla 15 dakika önce ya da
-sonra) push edin; her push'ta yeni iş olsun. GitHub'ın push saati sayılır. Çalıştırmanın bitmeye
-vakti olsun diye 11:45'e dek push edin. Ders notu, dersin sonuna dek push ettiğiniz son commit'i ve onun
+Her işi ortasında commit edin, çalıştığında yeniden commit edin ve her commit'i hemen push edin.
+Commit'in üzerindeki saat değil, GitHub'ın push saati sayılır. Çalıştırmanın bitmeye vakti olsun
+diye son commit'inizi 11:45'e dek push edin. Ders notu, dersin sonuna dek push ettiğiniz son commit'i ve onun
 Actions çalışmasını okur.
 
 ---
@@ -754,8 +763,8 @@ bekleyebilir.
 - Son halinizde yeşil kontroller: **2**.
 - İnsan katkısı (human involvement): **2**. Yani sizin yazdığınız `ai_log_06.md` (asistanın yazdığı bir günlük **0** alır)
   ve elle yazdığınız iki dosya: `login_contract.json` ve kararlarınızla birlikte saldırganın kaydı.
-- Commit disiplini: **1**. Derste: 10:00, 11:00 ve 11:45 civarında (her saatten en fazla 15 dakika önce ya
-  da sonra) yeni işle bir push. Ders dışında: yeni iş içeren en az iki commit, aralarında en az bir saat
+- Commit disiplini: **1**. Derste: her iş (giriş, route'ları, testleri, sayfası) en az iki push edilmiş
+  commit'te gelir; ilki iş daha bitmeden. Ders dışında: yeni iş içeren en az iki commit, aralarında en az bir saat
   olacak şekilde push edilmiş. Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama
   ajanının yaptığı commit hiçbir zaman sayılmaz.
 

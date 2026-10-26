@@ -5,8 +5,8 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header. Total ≈ 2 h 45 min:
 20 min explanation + a short demonstration (wire the course login into a fresh server in three minutes,
-/docs, the Actions tab) · the login wired and the first requirement chosen until 10:00 (push) · its
-routes and tests until 11:00 (push) · its page until about 11:25 · the attacker round 11:25–11:45 ·
+/docs, the Actions tab) · the login wired and the first requirement chosen until about 10:00 · its
+routes and tests until about 11:00 · commits and pushes in the middle of each piece · its page until about 11:25 · the attacker round 11:25–11:45 ·
 the last push at 11:45 · the mark reads the last commit pushed by the end of the lecture. -->
 
 ---
@@ -14,10 +14,10 @@ the last push at 11:45 · the mark reads the last commit pushed by the end of th
 ## Today
 
 1. Your project so far, and the chain every requirement of yours becomes
-2. The login comes ready to use: connect it — push at **10:00**
-3. Your first own requirement: its routes and its tests, green on GitHub — push at **11:00**
+2. The login comes ready to use: connect it — until about **10:00**
+3. Your first own requirement: its routes and its tests, green on GitHub — until about **11:00**
 4. Its page: the prototype's screen, now real, behind the login
-5. The attacker round: a groupmate tries to break your feature — push at **11:45**
+5. The attacker round: a groupmate tries to break your feature — until **11:45**
 6. By Saturday: every functional `must`, real e-mail, S2, the hostile reviewer
 7. How the week is graded
 
@@ -182,7 +182,7 @@ On every push, **GitHub Actions** runs the checker. The checker runs the course 
 2. `python -m pytest course_tests -q`: **10 passed**. Your TC-001 tests: with `AIASD_CODE_FILE` (assignment §1).
 3. Your first own requirement: put its links side by side. Do they say the same thing?
 4. A link missing or wrong (no `api.md` rows yet)? Fix it now, by hand, with its line in `PROPOSAL.md`.
-5. `ruff check . --fix`, `ruff format .`, checker, commit, **push at 10:00**.
+5. `ruff check . --fix`, `ruff format .`, checker, commit, **push: mid-way and when done**.
 
 <!-- Start the clock. Walk round: no assistant window open while login_contract.json is typed. -->
 
@@ -269,7 +269,7 @@ One test per test case with `"run": "server"` · a **new address** in every test
 1. The routes of your first requirement: no longer 501, `current_user` where it needs a user.
 2. `"run"` on its test cases first; then one test for each with `"run": "server"`, named by its id.
 3. `python -m pytest server/tests -q` green on your laptop.
-4. Ruff, checker, commit, **push at 11:00**.
+4. Ruff, checker, commit, **push: mid-way and when done**.
 5. The **Actions** tab: `AIASD-TEST … TC-002-02 passed`?
 
 ---
@@ -364,7 +364,7 @@ One entry for each attacker. `accepted` and `why` wait until Saturday: first see
 1. The page of your first requirement in `web/`, behind the login, at 390 px.
 2. The attacker round, both ways.
 3. `group_06.json`: one entry for each attacker, typed by you.
-4. Ruff, checker, commit, **push at 11:45**; the **Actions** tab: watch your run finish.
+4. Ruff, checker, commit, **push: mid-way and when done**; the **Actions** tab: watch your run finish.
 
 Push by 11:45. The lecture mark reads your last commit pushed by the end of the lecture, and its Actions run.
 
@@ -372,7 +372,7 @@ Push by 11:45. The lecture mark reads your last commit pushed by the end of the 
 
 ## Commit discipline
 
-**In the lecture:** a push with new work near **10:00, 11:00 and 11:45** (within 15 minutes of each time).
+**In the lecture:** commit each piece of work **in the middle**, again when it works, and push every commit right away. A piece that arrives finished in one commit does not count.
 
 **Outside the lecture:** at least two commits with new work, **pushed at least one hour apart**. GitHub's push time counts, not the date on a commit. A commit made by a coding agent never counts.
 
@@ -470,7 +470,7 @@ Your words plain, the assistant's words bold. Evidence block: `ME:`, `AI:`, `TER
 | End of lecture (GitHub) | 5 | login (LOGIN_01–06), one own route working, one test green on GitHub, its page, the attacker's record |
 | Saturday checker | 2 | every functional `must` end to end, real e-mail, all tests green, S2, `"run"`, decisions, AI log |
 | Human involvement | 2 | the AI log by you; `login_contract.json` and `group_06.json` by hand |
-| Commit discipline | 1 | pushes near 10:00, 11:00, 11:45; two outside commits an hour apart; no agent commits |
+| Commit discipline | 1 | 2 commits per piece, one mid-way; outside: two, an hour apart; no agent commits |
 
 Bonus: 10% per attacker named and per attack made; S2 counts for the store bonus. **One student, one computer, one GitHub account.**
 

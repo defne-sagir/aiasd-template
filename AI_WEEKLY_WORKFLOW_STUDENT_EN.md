@@ -11,7 +11,8 @@ as you do with every file that arrives.
 > [!IMPORTANT]
 > **What changed in version 2 (24 Oct 2026)**
 >
-> - Push times: in the lecture near 10:00, 11:00 and 11:45; outside the lecture at least
+> - Commits: in the lecture, commit each piece of work in the middle and again when it works, and
+>   push every commit right away; outside the lecture at least
 >   two commits with new work, pushed at least one hour apart; GitHub's push time counts (§2).
 > - Never force push, and never let an assistant do it (§2, §4).
 > - From the Sunday after Week 5, a change to `requirements.json` or `test_cases.json` is a
@@ -147,8 +148,9 @@ messages like these cost you the commit-discipline point (§3 describes it).
 
 **The commit and push rule:**
 
-- **In the lecture:** push your work near 10:00, 11:00 and 11:45 (within 15 minutes of
-  each time). Each push has new work in it, whatever state the work is in.
+- **In the lecture:** commit each piece of work in the middle, whatever state it is in, commit it
+  again when it works, and push every commit right away. A piece that arrives finished in one
+  commit does not count.
 - **Outside the lecture:** at least two commits with new work, pushed at least one hour
   apart.
 - GitHub's push time counts, not the date on a commit.

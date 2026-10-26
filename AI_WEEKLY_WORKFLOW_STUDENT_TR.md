@@ -11,7 +11,8 @@ gibi onu da `git add .` ile ekleyin.
 > [!IMPORTANT]
 > **Sürüm 2'de ne değişti (24 Ekim 2026)**
 >
-> - Push saatleri: derste 10:00, 11:00 ve 11:45 civarında; ders dışında yeni iş içeren, aralarında
+> - Commit'ler: derste her işi ortasında ve çalıştığında commit edin, her commit'i hemen push edin;
+>   ders dışında yeni iş içeren, aralarında
 >   en az bir saat olacak şekilde push edilmiş en az iki commit; GitHub'ın push saati sayılır (§2).
 > - Asla force push yapmayın ve bir asistanın yapmasına da izin vermeyin (§2, §4).
 > - 5. haftadan sonraki Pazar gününden itibaren `requirements.json` ya da `test_cases.json`
@@ -150,8 +151,8 @@ böyle mesajlar size commit disiplini puanına (§3'te anlatılır) mal olur.
 
 **Commit ve push kuralı:**
 
-- **Derste:** çalışmanızı 10:00, 11:00 ve 11:45 civarında (her saatten en fazla 15 dakika
-  önce ya da sonra) push edin. İş hangi durumda olursa olsun her push'ta yeni iş olsun.
+- **Derste:** her işi, hangi durumda olursa olsun, ortasında commit edin; çalıştığında yeniden
+  commit edin ve her commit'i hemen push edin. Tek commit'te bitmiş olarak gelen bir iş sayılmaz.
 - **Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak
   şekilde push edilmiş olsun.
 - Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır.

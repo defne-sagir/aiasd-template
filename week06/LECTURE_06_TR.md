@@ -5,8 +5,8 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header. Total ≈ 2 h 45 min:
 20 min explanation + a short demonstration (wire the course login into a fresh server in three minutes,
-/docs, the Actions tab) · the login wired and the first requirement chosen until 10:00 (push) · its
-routes and tests until 11:00 (push) · its page until about 11:25 · the attacker round 11:25–11:45 ·
+/docs, the Actions tab) · the login wired and the first requirement chosen until about 10:00 · its
+routes and tests until about 11:00 · commits and pushes in the middle of each piece · its page until about 11:25 · the attacker round 11:25–11:45 ·
 the last push at 11:45 · the mark reads the last commit pushed by the end of the lecture. -->
 
 ---
@@ -14,10 +14,10 @@ the last push at 11:45 · the mark reads the last commit pushed by the end of th
 ## Bugün
 
 1. Projeniz şimdiye kadar ve her gereksiniminizin (requirement) dönüştüğü zincir (chain)
-2. Giriş (login) kullanıma hazır geliyor: bağlayın — **10:00**'da push
-3. İlk kendi gereksiniminiz: route'ları ve testleri, GitHub'da yeşil — **11:00**'de push
+2. Giriş (login) kullanıma hazır geliyor: bağlayın — **10:00**'a kadar
+3. İlk kendi gereksiniminiz: route'ları ve testleri, GitHub'da yeşil — **11:00**'e kadar
 4. Sayfası (page): prototipin ekranı (screen), artık gerçek, girişin arkasında
-5. Saldırgan turu (attacker round): bir grup arkadaşınız (groupmate) özelliğinizi kırmaya çalışır — **11:45**'te push
+5. Saldırgan turu (attacker round): bir grup arkadaşınız (groupmate) özelliğinizi kırmaya çalışır — **11:45**'e kadar
 6. Cumartesi'ye kadar: her işlevsel (functional) `must`, gerçek e-posta, S2, düşman gözden geçiren (hostile reviewer)
 7. Hafta nasıl notlandırılır
 
@@ -182,7 +182,7 @@ Her push'ta **GitHub Actions** denetleyiciyi (checker) çalıştırır. Denetley
 2. `python -m pytest course_tests -q`: **10 passed**. TC-001 testleriniz: `AIASD_CODE_FILE` ile (ödev §1).
 3. İlk kendi gereksiniminiz: halkalarını yan yana koyun. Aynı şeyi mi söylüyorlar?
 4. Eksik ya da yanlış bir halka mı var (henüz `api.md` satırı yok mu)? Şimdi, elle, `PROPOSAL.md` içindeki satırıyla düzeltin.
-5. `ruff check . --fix`, `ruff format .`, denetleyici, commit, **10:00'da push**.
+5. `ruff check . --fix`, `ruff format .`, denetleyici, commit, **push: ortasında ve bitince**.
 
 <!-- Start the clock. Walk round: no assistant window open while login_contract.json is typed. -->
 
@@ -269,7 +269,7 @@ def test_TC_002_02_a_busy_slot_is_refused():
 1. İlk gereksiniminizin route'ları: artık 501 değil, kullanıcı gereken yerde `current_user`.
 2. Önce test case'lerine `"run"`; sonra `"run": "server"` olan her biri için, kimliğiyle adlandırılmış bir test.
 3. `python -m pytest server/tests -q` bilgisayarınızda yeşil.
-4. Ruff, denetleyici, commit, **11:00'de push**.
+4. Ruff, denetleyici, commit, **push: ortasında ve bitince**.
 5. **Actions** sekmesi: `AIASD-TEST … TC-002-02 passed` görünüyor mu?
 
 ---
@@ -364,7 +364,7 @@ Her saldırgan için bir kayıt (record). `accepted` ve `why` Cumartesi'yi bekle
 1. İlk gereksiniminizin sayfası `web/` içinde, girişin arkasında, 390 px'te.
 2. Saldırgan turu, iki yönde.
 3. `group_06.json`: her saldırgan için, sizin yazdığınız bir kayıt.
-4. Ruff, denetleyici, commit, **11:45'te push**; **Actions** sekmesi: çalıştırmanızın bitişini izleyin.
+4. Ruff, denetleyici, commit, **push: ortasında ve bitince**; **Actions** sekmesi: çalıştırmanızın bitişini izleyin.
 
 11:45'e dek push edin. Ders notu, dersin sonuna dek push ettiğiniz son commit'i ve onun Actions çalışmasını okur.
 
@@ -372,7 +372,7 @@ Her saldırgan için bir kayıt (record). `accepted` ve `why` Cumartesi'yi bekle
 
 ## Commit disiplini
 
-**Derste:** **10:00, 11:00 ve 11:45** civarında (her saatten en fazla 15 dakika önce ya da sonra) yeni işle bir push.
+**Derste:** her işi **ortasında** commit edin, çalıştığında yeniden; her commit'i hemen push edin. Tek commit'te bitmiş olarak gelen bir iş sayılmaz.
 
 **Ders dışında:** yeni iş içeren en az iki commit, **aralarında en az bir saat olacak şekilde push edilmiş**. Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama ajanının (coding agent) yaptığı commit hiçbir zaman sayılmaz.
 
@@ -470,7 +470,7 @@ Sizin sözleriniz düz, asistanın sözleri kalın. Evidence bloğu: `ME:`, `AI:
 | Ders sonu (GitHub) | 5 | giriş (LOGIN_01–06), kendi çalışan bir route'unuz, bir testi yeşil, sayfası, saldırganın kaydı |
 | Cumartesi denetleyicisi | 2 | uçtan uca her işlevsel `must`, gerçek e-posta, bütün testler yeşil, S2, `"run"`, kararlar, AI log |
 | İnsan katkısı | 2 | sizin yazdığınız AI log; elle `login_contract.json` ve `group_06.json` |
-| Commit disiplini | 1 | 10:00, 11:00, 11:45 civarında push; bir saat arayla iki ders dışı commit; ajan commit'i yok |
+| Commit disiplini | 1 | her iş en az iki push edilmiş commit'te, ilki ortasında; bir saat arayla iki ders dışı commit; ajan commit'i yok |
 
 Bonus: her saldırgan ve her saldırı için %10; S2 mağaza bonusuna (store bonus) sayılır. **Bir öğrenci, bir bilgisayar, bir GitHub hesabı.**
 

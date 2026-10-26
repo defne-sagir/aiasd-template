@@ -229,7 +229,7 @@ oluşturun) ve commit edilmiş bir anahtarın otomatik 10 puan kesinti olduğunu
 ## Repo kuralları
 
 - **Commit ve push:**
-  - **Derste:** çalışmanızı 10:00, 11:00 ve 11:45 civarında (her saatten en fazla 15 dakika önce ya da sonra) push edin; her push'ta yeni iş olsun.
+  - **Derste:** her işi ortasında commit edin, çalıştığında yeniden commit edin ve her commit'i hemen push edin. Tek commit'te bitmiş olarak gelen bir iş sayılmaz.
   - **Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak şekilde push edilmiş olsun.
   - Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama ajanının yaptığı commit hiçbir zaman sayılmaz.
   - **Asla force push yapmayın** ve bir asistanın yapmasına da izin vermeyin. Git push'unuzu reddederse önce `git pull`, sonra `git push` yapın.

@@ -81,8 +81,8 @@ sonra yeniden kontrol edin.
 
 **Ne zaman push edersiniz:**
 
-- **Derste:** çalışmanızı 10:00, 11:00 ve 11:45 civarında (her saatten en fazla 15 dakika
-  önce ya da sonra) push edin; her push'ta yeni iş olsun.
+- **Derste:** her işi ortasında commit edin, çalıştığında yeniden commit edin ve her commit'i
+  hemen push edin.
 - **Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak
   şekilde push edilmiş olsun.
 - Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama ajanının

@@ -64,7 +64,7 @@ yapay zeka günlüğü kullandığı tekniğin adını verir.
 Teknikler zaten bildiğiniz haftalık rutinin içinde işler:
 
 - her push'tan önce denetleyici;
-- derste 10:00, 11:00 ve 11:45 civarındaki push'lar ve ders sonunda reponuzun okunması;
+- derste her işin ortasındaki commit'ler ve ders sonunda reponuzun okunması;
 - Cumartesi 23:59 son teslim saati;
 - `requirements.json` dosyanızdaki kimlikler ve `PROPOSAL.md`'nin sonundaki Change log;
 - ödevin istediği haftalarda toplanan dörtlü grubunuz;
@@ -153,7 +153,7 @@ TC-002-02 testi artık bunu yakalıyor."*
 dokunulmadan) ve düzeltmeyi kaydedin.
 
 **Bu derste.** İlk çalıştırma her zaman `python .github/check_deliverables.py` komutudur:
-10:00, 11:00 ve 11:45 civarındaki push'lardan önce ve Cumartesi 23:59'dan önce. Kırmızı
+derste her push'tan önce ve Cumartesi 23:59'dan önce. Kırmızı
 bir kontrol kanıttır, bu yüzden yapıştırın. 6. haftadan itibaren her push'tan sonra
 **Actions** sekmesine de bakın: yalnızca kendi bilgisayarınızda geçen bir test sayılmaz.
 İkinci çalıştırma kendi telefonunuzdadır: uygulama her hafta telefon genişliğinde
@@ -283,8 +283,8 @@ yalnızca import değişikliklerini içeriyor."*
 
 **Bu derste.** Haftalık commit disiplini puanı şuna bakar:
 
-- **Derste:** çalışmanızı 10:00, 11:00 ve 11:45 civarında (her saatten en fazla 15 dakika
-  önce ya da sonra) push edin; her push'ta yeni iş olsun.
+- **Derste:** her işi ortasında commit edin, çalıştığında yeniden commit edin ve her commit'i
+  hemen push edin.
 - **Ders dışında:** yeni iş içeren en az iki commit, aralarında en az bir saat olacak
   şekilde push edilmiş olsun.
 - Commit'in üzerindeki tarih değil, GitHub'ın push saati sayılır. Bir kodlama ajanının
