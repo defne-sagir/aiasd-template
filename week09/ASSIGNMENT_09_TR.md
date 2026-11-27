@@ -215,7 +215,7 @@ uygulamasını test edersin.
 - **Sonra testçi uygulamayı birkaç dakika serbestçe kullanır**: bir kullanıcı gibi, test case'lerin olmadan.
 - **Sen izlersin ve yardım etmezsin.** Ekranlarını açıklama. Testçi ne yapacağını bilemiyorsa, bu bir bulgudur.
 
-Mağazan uygulamanı ya da hesabını senin değiştiremeyeceğin bir nedenle test kanalına kabul etmediyse, örneğin mağazanın kuralları gereği reddettiyse, testçilerin uygulamanın APK'sini kendi telefonlarına yükleyebilir. Bunun için mağazanın ret mesajının ekran görüntüsünü, kişisel bilgilerini kapatarak `week04/` içine kaydetmelisin. `beta_runs.json` içinde cihazın sonuna "(APK)" yaz, S4'ün `track` alanına da "APK" ve reddin nedenini yaz. Geç yapılmış ya da hiç yapılmamış bir adım, örneğin zamanında yüklenmemiş bir build ya da kaydedilmemiş testçiler, bu nedenlerden sayılmaz.
+Mağazan uygulamanı ya da hesabını senin değiştiremeyeceğin bir nedenle test kanalına kabul etmediyse, örneğin mağazanın kuralları gereği reddettiyse, testçilerin uygulamanın APK'sini kendi telefonlarına yükleyebilir ya da uygulamayı Expo Go'da çalıştırabilir. Bunun için mağazanın ret mesajının ekran görüntüsünü, kişisel bilgilerini kapatarak `week04/` içine kaydetmelisin. `beta_runs.json` içinde cihazın sonuna "(APK)" ya da "(Expo Go)" yaz, S4'ün `track` alanına da "APK" ya da "Expo Go" ve reddin nedenini yaz. Geç yapılmış ya da hiç yapılmamış bir adım, örneğin zamanında yüklenmemiş bir build ya da kaydedilmemiş testçiler, bu nedenlerden sayılmaz. Bu istisna yalnız 9. haftanın beta testi için geçerli: 10. haftadan itibaren uygulaman mağazandan kurulmalı.
 
 Her turdan hemen sonra her çalıştırmayı `week09/beta_runs.json` dosyasına elle yaz. Biçim, 7. haftanın
 `mobile_runs.json` dosyasıyla aynı:

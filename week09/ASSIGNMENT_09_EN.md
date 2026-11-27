@@ -210,7 +210,7 @@ Each of them who is in the lecture tests your app, and you test the app of each 
 - **You watch, and you do not help.** Do not explain your screens. When a tester does not know what to do, that is a
   finding.
 
-If your store did not accept your app or your account on its test track for a reason that you cannot change, for example because of the store's own rules, your testers may install an APK of your app on their own phones. Save the store's message of refusal as a screenshot in `week04/`, with your personal details covered. In `beta_runs.json`, add "(APK)" to the device, and in S4 write "APK" and the reason in `track`. A step that was late or not done, such as a build that was not uploaded in time or testers who were not enrolled, is not such a reason.
+If your store did not accept your app or your account on its test track for a reason that you cannot change, for example because of the store's own rules, your testers may install an APK of your app on their own phones, or run it in Expo Go. Save the store's message of refusal as a screenshot in `week04/`, with your personal details covered. In `beta_runs.json`, add "(APK)" or "(Expo Go)" to the device, and in S4 write "APK" or "Expo Go" and the reason in `track`. A step that was late or not done, such as a build that was not uploaded in time or testers who were not enrolled, is not such a reason. This is only for the Week 9 beta test: from Week 10, your app must be installed from your store.
 
 Right after each turn, type each run into `week09/beta_runs.json` by hand. The form is the same as
 `mobile_runs.json` of Week 7:
